@@ -1,0 +1,15 @@
+{
+  "hash": "6097cf2677afdf08a4bd91ef88761471",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Multiple Regression — Solutions\n\n## Setup\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'ggplot2' was built under R version 4.5.3\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'tibble' was built under R version 4.5.3\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'purrr' was built under R version 4.5.3\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'dplyr' was built under R version 4.5.3\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(broom)\nlibrary(modelsummary)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'modelsummary' was built under R version 4.5.3\n```\n\n\n:::\n:::\n\n\n## Exercise 4.1\n\nThe file `health.xls` contains data for birth_weight, cig, and fam_inc.\n\n### (a) Regression with both variables\n\n\n::: {.cell}\n\n:::\n\n\n### (b) Regression with fam_inc only\n\n\n::: {.cell}\n\n:::\n\n\n### (c) Regression with cig only\n\n\n::: {.cell}\n\n:::\n\n\n### (d) Model comparison table\n\n\n::: {.cell}\n\n:::\n\n\n### (e) Wald test: effect of cig is two times greater than fam_inc\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 4.2\n\nDeterminants of log(wage): educ, exper, tenure.\n\n### (a) Full model and results\n\n\n::: {.cell}\n\n:::\n\n\n### (b) Wald test: exper same effect as educ\n\n\n::: {.cell}\n\n:::\n\n\n### (c) Redundant variable test for exper\n\n\n::: {.cell}\n\n:::\n\n\n### (d) Omitted variable test for tenure\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 4.3\n\nAggregate demand for money: $\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t$\n\n### (a) Theory and interpretation\n\n<!-- Write your discussion here -->\n\n### (b) Tests of significance\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 4.4\n\nCobb–Douglas production function and test for constant returns to scale.\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 4.5\n\nMankiw, Romer and Weil (1992) growth regressions.\n\n### (a) Create data frame\n\n\n::: {.cell}\n\n:::\n\n\n### (b) Load data\n\n\n::: {.cell}\n\n:::\n\n\n### (c) Summary statistics by sub-sample\n\n\n::: {.cell}\n\n:::\n\n\n### (d) Variable transformations\n\n\n::: {.cell}\n\n:::\n\n\n### (e) Reproduce TABLE I: Textbook Solow Model\n\n\n::: {.cell}\n\n:::\n\n\n### (f) Compare results with MRW\n\n\n::: {.cell}\n\n:::\n\n\n### (g) Test restriction: coefficient of ln(pop) = −ln(iy)\n\n\n::: {.cell}\n\n:::\n\n\n### (h) Reproduce TABLE II: Augmented Solow Model\n\n\n::: {.cell}\n\n:::\n\n\n### (i) Latest Penn World Table data (Advanced)\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

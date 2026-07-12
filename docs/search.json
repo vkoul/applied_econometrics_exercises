@@ -1,0 +1,231 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Applied Econometrics Exercises in R",
+    "section": "",
+    "text": "Preface\nThis book contains R solutions to exercises from Applied Econometrics by Dimitrios Asteriou and Stephen G. Hall. Each chapter corresponds to a textbook chapter and walks through the data exploration, model building, and interpretation of results.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#tools",
+    "href": "index.html#tools",
+    "title": "Applied Econometrics Exercises in R",
+    "section": "Tools",
+    "text": "Tools\nAll exercises are solved using R with the tidyverse ecosystem, including:\n\ntidyverse for data wrangling and visualization\nbroom for tidy model output\nmodelsummary for model comparison tables",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html",
+    "href": "ch4-multiple-regression-questions.html",
+    "title": "1  Multiple Regression — Questions",
+    "section": "",
+    "text": "1.1 Essay-Type Question",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html#essay-type-question",
+    "href": "ch4-multiple-regression-questions.html#essay-type-question",
+    "title": "1  Multiple Regression — Questions",
+    "section": "",
+    "text": "Download data for at least 30 stock prices and for the general stock-market index for the stock market of your choice. Using the logarithmic return formula, create the return series for each stock and the market index.\nCalculate summary statistics for all stocks and for the market, as well as the correlation matrix of these returns. Comment on your results by referring to mean returns, volatilities, coefficients of skewness and kurtosis, and correlation coefficients.\nFor each stock, estimate the \\(\\beta\\) coefficient as it is suggested by the CAPM. Summarize and display your results in a table in the text. Comment on the significance of \\(\\alpha\\)s and \\(\\beta\\)s and on the values of \\(\\beta\\)s and \\(R^2\\)s in terms of what is expected a priori from the theoretical form of the CAPM.\nFrom the results derived in 3, create the required series in order to estimate the SML of the CAPM. Test the relevant hypotheses. Are your results supportive of the CAPM model?\nGraph the average returns against the estimated \\(\\beta\\)s (this is a graph of the SML) and comment on your graph with respect to CAPM findings.\nEstimate alternative versions with additional variables (such as squared terms of the obtained betas, and the standard deviation of the residuals). Comment on your results.\nCompare your findings with those of other empirical studies on this topic.\nWrite an analytical report of all your analysis. This should include: (a) a short Introduction; (b) a short Literature Review; (c) a Data Set section; (d) an Empirical Results section; and (e) a Conclusions section. Discuss the validity of the CAPM, including references if you refer to any similar studies.",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html#exercise-4.1",
+    "href": "ch4-multiple-regression-questions.html#exercise-4.1",
+    "title": "1  Multiple Regression — Questions",
+    "section": "1.2 Exercise 4.1",
+    "text": "1.2 Exercise 4.1\nThe file health.xls contains data for the following variables:\n\nbirth_weight = the weight of infants after birth; when low this can put an infant at risk of illness\ncig = number of cigarettes the mother was smoking during pregnancy\nfam_inc = the income of the family; the higher the family income the better the access to prenatal care for the family in general\n\nWe would expect that the latter two variables affect birth_weight.\n\nRun a regression that includes both variables and explain the signs of the coefficients.\nEstimate a regression that includes only fam_inc, and comment on your results.\nEstimate a regression that includes only cig and comment on your results.\nPresent all three regressions summarized in a table and comment on your results, especially by comparing the changes in the estimated effects and the \\(R^2\\) of the three different models. What does the F-statistic suggest about the joint significance of the explanatory variables in the multiple regression case?\nTest the hypothesis that the effect of cig is two times greater than the respective effect of fam_inc, using the Wald test.",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html#exercise-4.2",
+    "href": "ch4-multiple-regression-questions.html#exercise-4.2",
+    "title": "1  Multiple Regression — Questions",
+    "section": "1.3 Exercise 4.2",
+    "text": "1.3 Exercise 4.2\nUse the data from the file wage.wf1 and estimate an equation that includes as determinants of the logarithm of the wage rate the variables educ, exper and tenure.\n\nComment on your results.\nConduct a test of whether another year of general workforce experience (captured by exper) has the same effect on log(wage) as another year of education (captured by educ). State clearly your null and alternative hypotheses and your restricted and unrestricted models. Use the Wald test to check for that hypothesis.\nConduct a redundant variable test for the explanatory variable exper. Comment on your results.\nEstimate a model with exper and educ only and then conduct an omitted variable test for tenure in the model. Comment on your results.",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html#exercise-4.3",
+    "href": "ch4-multiple-regression-questions.html#exercise-4.3",
+    "title": "1  Multiple Regression — Questions",
+    "section": "1.4 Exercise 4.3",
+    "text": "1.4 Exercise 4.3\nUse the data in the file money_uk.wf1 to estimate the parameters \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) in the equation below:\n\\[\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t\\]\n\nBriefly outline the theory behind the aggregate demand for money. Relate your discussion to the specification of the equation given above. In particular, explain first the meaning of the dependent variable and then the interpretation of \\(\\beta\\) and \\(\\gamma\\).\nPerform appropriate tests of significance on the estimated parameters to investigate each of the following propositions: (i) that the demand for money increases with the level of real income; (ii) the demand for money is income-elastic; and (iii) the demand for money is inversely related to the rate of interest.",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html#exercise-4.4",
+    "href": "ch4-multiple-regression-questions.html#exercise-4.4",
+    "title": "1  Multiple Regression — Questions",
+    "section": "1.5 Exercise 4.4",
+    "text": "1.5 Exercise 4.4\nThe file Cobb_Douglas_us.wf1 contains data for output (\\(Y\\)), labour (\\(L\\)) and stock of capital (\\(K\\)) for the United States. Estimate a Cobb–Douglas type regression equation and check for constant returns to scale using the Wald test.",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-questions.html#exercise-4.5",
+    "href": "ch4-multiple-regression-questions.html#exercise-4.5",
+    "title": "1  Multiple Regression — Questions",
+    "section": "1.6 Exercise 4.5",
+    "text": "1.6 Exercise 4.5\nThe Excel dataset MRW.xls contains data on real GDP per capita and related variables from the Penn World Table for a sample of 121 countries. This dataset was used to estimate growth equations by N. G. Mankiw, D. Romer and D. N. Weil, “A contribution to the empirics of economic growth”, Quarterly Journal of Economics, 1992.\nThe dataset contains 11 variables:\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nnumber\na country identifier between 1 and 121\n\n\ncountry\ncountry name\n\n\nn\ndummy = 1 if country is in the non-oil sample\n\n\ni\ndummy = 1 if country is in the intermediate sample\n\n\no\ndummy = 1 if country is in the OECD sample\n\n\nrgdpw60\nreal GDP per working age population in 1960\n\n\nrgdpw85\nreal GDP per working age population in 1985\n\n\ngdpgrowth\naverage annual growth rate of real GDP per working age population (1960–1985)\n\n\npopgrowth\naverage annual growth rate of working age population (1960–1985)\n\n\niy\nreal investment as share of real GDP, averaged 1960–85\n\n\nschool\n% of working age population in secondary school\n\n\n\n\nCreate a suitable data frame for cross-sectional data for 121 observations.\nLoad all the relevant data.\nCalculate and report summary statistics for the full sample and the relevant sub-samples (non-oil, intermediate, OECD) for all variables. Briefly discuss your results.\nDo the necessary variable transformations before proceeding with regression analysis.\nReproduce the results reported in TABLE I: Estimation of the textbook Solow Model on page 414 of the paper.\nReport your results and check if they are different from MRW. Run the regressions for each sub-sample.\nCheck the restriction imposed by MRW (i.e., that the coefficient of \\(\\ln(\\text{pop}) = -\\ln(\\text{iy})\\)). Report the necessary results of this test.\nTake all the necessary steps to reproduce and report results for TABLE II: Estimation of the Augmented Solow Model. Report your results.\n(Advanced): Gather the latest data from Penn World Tables and redo everything for the latest available data. Are your conclusions similar to what MRW concluded in their seminal paper? If not, why? What can this mean?",
+    "crumbs": [
+      "Questions",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+    ]
+  },
+  {
+    "objectID": "ch2-multiple-regression.html",
+    "href": "ch2-multiple-regression.html",
+    "title": "2  Multiple Regression",
+    "section": "",
+    "text": "2.1 Setup\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.5.3\n\n\nWarning: package 'tibble' was built under R version 4.5.3\n\n\nWarning: package 'purrr' was built under R version 4.5.3\n\n\nWarning: package 'dplyr' was built under R version 4.5.3\n\nlibrary(broom)\nlibrary(modelsummary)\n\nWarning: package 'modelsummary' was built under R version 4.5.3\n\ndf &lt;- read_csv(\"health.csv\")",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression</span>"
+    ]
+  },
+  {
+    "objectID": "ch2-multiple-regression.html#exploring-the-data",
+    "href": "ch2-multiple-regression.html#exploring-the-data",
+    "title": "2  Multiple Regression",
+    "section": "2.2 Exploring the Data",
+    "text": "2.2 Exploring the Data\n\nglimpse(df)\n\nRows: 1,388\nColumns: 3\n$ faminc &lt;dbl&gt; 13.5, 7.5, 0.5, 15.5, 27.5, 7.5, 65.0, 27.5, 27.5, 37.5, 27.5, …\n$ bwght  &lt;dbl&gt; 109, 133, 129, 126, 134, 118, 140, 86, 121, 129, 101, 133, 61, …\n$ cigs   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n\nsummary(df)\n\n     faminc          bwght            cigs       \n Min.   : 0.50   Min.   : 23.0   Min.   : 0.000  \n 1st Qu.:14.50   1st Qu.:107.0   1st Qu.: 0.000  \n Median :27.50   Median :120.0   Median : 0.000  \n Mean   :29.03   Mean   :118.7   Mean   : 2.087  \n 3rd Qu.:37.50   3rd Qu.:132.0   3rd Qu.: 0.000  \n Max.   :65.00   Max.   :271.0   Max.   :50.000  \n\n\n\nggplot(df, aes(x = faminc, y = bwght, color = cigs)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(df, aes(x = cigs, y = bwght, color = faminc)) +\n  geom_point()",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression</span>"
+    ]
+  },
+  {
+    "objectID": "ch2-multiple-regression.html#model-1-full-model",
+    "href": "ch2-multiple-regression.html#model-1-full-model",
+    "title": "2  Multiple Regression",
+    "section": "2.3 Model 1: Full Model",
+    "text": "2.3 Model 1: Full Model\n\nmod1 &lt;- lm(bwght ~ ., data = df)\ntidy(mod1)\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic     p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1 (Intercept) 117.        1.05      112.   0          \n2 faminc        0.0928    0.0292      3.18 0.00151    \n3 cigs         -0.463     0.0916     -5.06 0.000000475\n\nglance(mod1)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df logLik    AIC    BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1    0.0298        0.0284  20.1      21.3 7.94e-10     2 -6130. 12269. 12290.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n\nFamily income has a statistically significant but very small positive impact on birth weight. Cigarettes smoked has a statistically significant negative impact on birth weight.",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression</span>"
+    ]
+  },
+  {
+    "objectID": "ch2-multiple-regression.html#model-2-family-income-only",
+    "href": "ch2-multiple-regression.html#model-2-family-income-only",
+    "title": "2  Multiple Regression",
+    "section": "2.4 Model 2: Family Income Only",
+    "text": "2.4 Model 2: Family Income Only\n\nmod2 &lt;- lm(bwght ~ faminc, data = df)\ntidy(mod2)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)  115.       1.00      115.   0        \n2 faminc         0.118    0.0290      4.08 0.0000476\n\nglance(mod2)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik    AIC    BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1    0.0119        0.0112  20.2      16.6 0.0000476     1 -6143. 12292. 12308.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n\nThe significance of family income increases when it is the sole predictor, but the overall model fit decreases.",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression</span>"
+    ]
+  },
+  {
+    "objectID": "ch2-multiple-regression.html#model-3-cigarettes-only",
+    "href": "ch2-multiple-regression.html#model-3-cigarettes-only",
+    "title": "2  Multiple Regression",
+    "section": "2.5 Model 3: Cigarettes Only",
+    "text": "2.5 Model 3: Cigarettes Only\n\nmod3 &lt;- lm(bwght ~ cigs, data = df)\ntidy(mod3)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic      p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)  120.       0.572     209.   0           \n2 cigs          -0.514    0.0905     -5.68 0.0000000166\n\nglance(mod3)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic     p.value    df logLik    AIC    BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1    0.0227        0.0220  20.1      32.2     1.66e-8     1 -6135. 12277. 12293.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression</span>"
+    ]
+  },
+  {
+    "objectID": "ch2-multiple-regression.html#model-comparison",
+    "href": "ch2-multiple-regression.html#model-comparison",
+    "title": "2  Multiple Regression",
+    "section": "2.6 Model Comparison",
+    "text": "2.6 Model Comparison\n\nmodels &lt;- list(\n  \"Model 1\" = mod1,\n  \"Model 2\" = mod2,\n  \"Model 3\" = mod3\n)\n\nmodelsummary(models)\n\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n                Model 3\n              \n        \n        \n        \n                \n                  (Intercept)\n                  116.974\n                  115.265\n                  119.772\n                \n                \n                  \n                  (1.049)\n                  (1.002)\n                  (0.572)\n                \n                \n                  faminc\n                  0.093\n                  0.118\n                  \n                \n                \n                  \n                  (0.029)\n                  (0.029)\n                  \n                \n                \n                  cigs\n                  -0.463\n                  \n                  -0.514\n                \n                \n                  \n                  (0.092)\n                  \n                  (0.090)\n                \n                \n                  Num.Obs.\n                  1388\n                  1388\n                  1388\n                \n                \n                  R2\n                  0.030\n                  0.012\n                  0.023\n                \n                \n                  R2 Adj.\n                  0.028\n                  0.011\n                  0.022\n                \n                \n                  AIC\n                  12268.8\n                  12292.3\n                  12276.9\n                \n                \n                  BIC\n                  12289.8\n                  12308.0\n                  12292.6\n                \n                \n                  Log.Lik.\n                  -6130.414\n                  -6143.128\n                  -6135.457\n                \n                \n                  F\n                  21.274\n                  16.646\n                  32.235\n                \n                \n                  RMSE\n                  20.04\n                  20.23\n                  20.11\n                \n        \n      \n    \n\n\n\n\nmodel_comparison &lt;- bind_rows(\n  glance(mod1) |&gt; mutate(model = \"Model 1\"),\n  glance(mod2) |&gt; mutate(model = \"Model 2\"),\n  glance(mod3) |&gt; mutate(model = \"Model 3\")\n) |&gt;\n  select(model, r.squared, adj.r.squared, sigma, AIC, BIC, p.value)\n\nmodel_comparison\n\n# A tibble: 3 × 7\n  model   r.squared adj.r.squared sigma    AIC    BIC  p.value\n  &lt;chr&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1 Model 1    0.0298        0.0284  20.1 12269. 12290. 7.94e-10\n2 Model 2    0.0119        0.0112  20.2 12292. 12308. 4.76e- 5\n3 Model 3    0.0227        0.0220  20.1 12277. 12293. 1.66e- 8",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-solutions.html",
+    "href": "ch4-multiple-regression-solutions.html",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "",
+    "text": "3.1 Setup\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.5.3\n\n\nWarning: package 'tibble' was built under R version 4.5.3\n\n\nWarning: package 'purrr' was built under R version 4.5.3\n\n\nWarning: package 'dplyr' was built under R version 4.5.3\n\nlibrary(broom)\nlibrary(modelsummary)\n\nWarning: package 'modelsummary' was built under R version 4.5.3",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-solutions.html#exercise-4.1",
+    "href": "ch4-multiple-regression-solutions.html#exercise-4.1",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.2 Exercise 4.1",
+    "text": "3.2 Exercise 4.1\nThe file health.xls contains data for birth_weight, cig, and fam_inc.\n\n3.2.1 (a) Regression with both variables\n\n\n3.2.2 (b) Regression with fam_inc only\n\n\n3.2.3 (c) Regression with cig only\n\n\n3.2.4 (d) Model comparison table\n\n\n3.2.5 (e) Wald test: effect of cig is two times greater than fam_inc",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-solutions.html#exercise-4.2",
+    "href": "ch4-multiple-regression-solutions.html#exercise-4.2",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.3 Exercise 4.2",
+    "text": "3.3 Exercise 4.2\nDeterminants of log(wage): educ, exper, tenure.\n\n3.3.1 (a) Full model and results\n\n\n3.3.2 (b) Wald test: exper same effect as educ\n\n\n3.3.3 (c) Redundant variable test for exper\n\n\n3.3.4 (d) Omitted variable test for tenure",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-solutions.html#exercise-4.3",
+    "href": "ch4-multiple-regression-solutions.html#exercise-4.3",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.4 Exercise 4.3",
+    "text": "3.4 Exercise 4.3\nAggregate demand for money: \\(\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t\\)\n\n3.4.1 (a) Theory and interpretation\n\n\n\n3.4.2 (b) Tests of significance",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-solutions.html#exercise-4.4",
+    "href": "ch4-multiple-regression-solutions.html#exercise-4.4",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.5 Exercise 4.4",
+    "text": "3.5 Exercise 4.4\nCobb–Douglas production function and test for constant returns to scale.",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-solutions.html#exercise-4.5",
+    "href": "ch4-multiple-regression-solutions.html#exercise-4.5",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.6 Exercise 4.5",
+    "text": "3.6 Exercise 4.5\nMankiw, Romer and Weil (1992) growth regressions.\n\n3.6.1 (a) Create data frame\n\n\n3.6.2 (b) Load data\n\n\n3.6.3 (c) Summary statistics by sub-sample\n\n\n3.6.4 (d) Variable transformations\n\n\n3.6.5 (e) Reproduce TABLE I: Textbook Solow Model\n\n\n3.6.6 (f) Compare results with MRW\n\n\n3.6.7 (g) Test restriction: coefficient of ln(pop) = −ln(iy)\n\n\n3.6.8 (h) Reproduce TABLE II: Augmented Solow Model\n\n\n3.6.9 (i) Latest Penn World Table data (Advanced)",
+    "crumbs": [
+      "Solutions",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-This book contains R solutions to exercises from an applied econometrics textbook. Each chapter corresponds to a textbook chapter and walks through the data exploration, model building, and interpretation of results.
+This book contains R solutions to exercises from *Applied Econometrics* by Dimitrios Asteriou and Stephen G. Hall. Each chapter corresponds to a textbook chapter and walks through the data exploration, model building, and interpretation of results.
 
 ## Tools
 

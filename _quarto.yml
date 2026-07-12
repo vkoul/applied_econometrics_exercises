@@ -1,13 +1,23 @@
 project:
   type: book
+  output-dir: docs
+
+execute:
+  freeze: auto
 
 book:
   title: "Applied Econometrics Exercises in R"
-  author: "Varun Koul"
+  author: "Vikesh Koul"
   date: today
   chapters:
     - index.qmd
-    - ch2-multiple-regression.qmd
+    - part: "Questions"
+      chapters:
+        - ch4-multiple-regression-questions.qmd
+    - part: "Solutions"
+      chapters:
+        - ch2-multiple-regression.qmd
+        - ch4-multiple-regression-solutions.qmd
 
 format:
   html:

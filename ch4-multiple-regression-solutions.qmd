@@ -1,0 +1,152 @@
+# Multiple Regression — Solutions
+
+## Setup
+
+```{r}
+#| message: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+```
+
+## Exercise 4.1
+
+The file `health.xls` contains data for birth_weight, cig, and fam_inc.
+
+### (a) Regression with both variables
+
+```{r}
+
+```
+
+### (b) Regression with fam_inc only
+
+```{r}
+
+```
+
+### (c) Regression with cig only
+
+```{r}
+
+```
+
+### (d) Model comparison table
+
+```{r}
+
+```
+
+### (e) Wald test: effect of cig is two times greater than fam_inc
+
+```{r}
+
+```
+
+## Exercise 4.2
+
+Determinants of log(wage): educ, exper, tenure.
+
+### (a) Full model and results
+
+```{r}
+
+```
+
+### (b) Wald test: exper same effect as educ
+
+```{r}
+
+```
+
+### (c) Redundant variable test for exper
+
+```{r}
+
+```
+
+### (d) Omitted variable test for tenure
+
+```{r}
+
+```
+
+## Exercise 4.3
+
+Aggregate demand for money: $\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t$
+
+### (a) Theory and interpretation
+
+<!-- Write your discussion here -->
+
+### (b) Tests of significance
+
+```{r}
+
+```
+
+## Exercise 4.4
+
+Cobb–Douglas production function and test for constant returns to scale.
+
+```{r}
+
+```
+
+## Exercise 4.5
+
+Mankiw, Romer and Weil (1992) growth regressions.
+
+### (a) Create data frame
+
+```{r}
+
+```
+
+### (b) Load data
+
+```{r}
+
+```
+
+### (c) Summary statistics by sub-sample
+
+```{r}
+
+```
+
+### (d) Variable transformations
+
+```{r}
+
+```
+
+### (e) Reproduce TABLE I: Textbook Solow Model
+
+```{r}
+
+```
+
+### (f) Compare results with MRW
+
+```{r}
+
+```
+
+### (g) Test restriction: coefficient of ln(pop) = −ln(iy)
+
+```{r}
+
+```
+
+### (h) Reproduce TABLE II: Augmented Solow Model
+
+```{r}
+
+```
+
+### (i) Latest Penn World Table data (Advanced)
+
+```{r}
+
+```

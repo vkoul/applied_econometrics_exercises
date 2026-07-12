@@ -1,0 +1,103 @@
+# Multiple Regression — Questions
+
+## Essay-Type Question
+
+1. Download data for at least 30 stock prices and for the general stock-market index for the stock market of your choice. Using the logarithmic return formula, create the return series for each stock and the market index.
+
+2. Calculate summary statistics for all stocks and for the market, as well as the correlation matrix of these returns. Comment on your results by referring to mean returns, volatilities, coefficients of skewness and kurtosis, and correlation coefficients.
+
+3. For each stock, estimate the $\beta$ coefficient as it is suggested by the CAPM. Summarize and display your results in a table in the text. Comment on the significance of $\alpha$s and $\beta$s and on the values of $\beta$s and $R^2$s in terms of what is expected a priori from the theoretical form of the CAPM.
+
+4. From the results derived in 3, create the required series in order to estimate the SML of the CAPM. Test the relevant hypotheses. Are your results supportive of the CAPM model?
+
+5. Graph the average returns against the estimated $\beta$s (this is a graph of the SML) and comment on your graph with respect to CAPM findings.
+
+6. Estimate alternative versions with additional variables (such as squared terms of the obtained betas, and the standard deviation of the residuals). Comment on your results.
+
+7. Compare your findings with those of other empirical studies on this topic.
+
+8. Write an analytical report of all your analysis. This should include: (a) a short Introduction; (b) a short Literature Review; (c) a Data Set section; (d) an Empirical Results section; and (e) a Conclusions section. Discuss the validity of the CAPM, including references if you refer to any similar studies.
+
+## Exercise 4.1
+
+The file `health.xls` contains data for the following variables:
+
+- **birth_weight** = the weight of infants after birth; when low this can put an infant at risk of illness
+- **cig** = number of cigarettes the mother was smoking during pregnancy
+- **fam_inc** = the income of the family; the higher the family income the better the access to prenatal care for the family in general
+
+We would expect that the latter two variables affect birth_weight.
+
+(a) Run a regression that includes both variables and explain the signs of the coefficients.
+
+(b) Estimate a regression that includes only `fam_inc`, and comment on your results.
+
+(c) Estimate a regression that includes only `cig` and comment on your results.
+
+(d) Present all three regressions summarized in a table and comment on your results, especially by comparing the changes in the estimated effects and the $R^2$ of the three different models. What does the F-statistic suggest about the joint significance of the explanatory variables in the multiple regression case?
+
+(e) Test the hypothesis that the effect of `cig` is two times greater than the respective effect of `fam_inc`, using the Wald test.
+
+## Exercise 4.2
+
+Use the data from the file `wage.wf1` and estimate an equation that includes as determinants of the logarithm of the wage rate the variables `educ`, `exper` and `tenure`.
+
+(a) Comment on your results.
+
+(b) Conduct a test of whether another year of general workforce experience (captured by `exper`) has the same effect on log(wage) as another year of education (captured by `educ`). State clearly your null and alternative hypotheses and your restricted and unrestricted models. Use the Wald test to check for that hypothesis.
+
+(c) Conduct a redundant variable test for the explanatory variable `exper`. Comment on your results.
+
+(d) Estimate a model with `exper` and `educ` only and then conduct an omitted variable test for `tenure` in the model. Comment on your results.
+
+## Exercise 4.3
+
+Use the data in the file `money_uk.wf1` to estimate the parameters $\alpha$, $\beta$ and $\gamma$ in the equation below:
+
+$$\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t$$
+
+(a) Briefly outline the theory behind the aggregate demand for money. Relate your discussion to the specification of the equation given above. In particular, explain first the meaning of the dependent variable and then the interpretation of $\beta$ and $\gamma$.
+
+(b) Perform appropriate tests of significance on the estimated parameters to investigate each of the following propositions: (i) that the demand for money increases with the level of real income; (ii) the demand for money is income-elastic; and (iii) the demand for money is inversely related to the rate of interest.
+
+## Exercise 4.4
+
+The file `Cobb_Douglas_us.wf1` contains data for output ($Y$), labour ($L$) and stock of capital ($K$) for the United States. Estimate a Cobb–Douglas type regression equation and check for constant returns to scale using the Wald test.
+
+## Exercise 4.5
+
+The Excel dataset `MRW.xls` contains data on real GDP per capita and related variables from the Penn World Table for a sample of 121 countries. This dataset was used to estimate growth equations by N. G. Mankiw, D. Romer and D. N. Weil, "A contribution to the empirics of economic growth", *Quarterly Journal of Economics*, 1992.
+
+The dataset contains 11 variables:
+
+| Variable | Description |
+|----------|-------------|
+| number | a country identifier between 1 and 121 |
+| country | country name |
+| n | dummy = 1 if country is in the non-oil sample |
+| i | dummy = 1 if country is in the intermediate sample |
+| o | dummy = 1 if country is in the OECD sample |
+| rgdpw60 | real GDP per working age population in 1960 |
+| rgdpw85 | real GDP per working age population in 1985 |
+| gdpgrowth | average annual growth rate of real GDP per working age population (1960–1985) |
+| popgrowth | average annual growth rate of working age population (1960–1985) |
+| iy | real investment as share of real GDP, averaged 1960–85 |
+| school | % of working age population in secondary school |
+
+(a) Create a suitable data frame for cross-sectional data for 121 observations.
+
+(b) Load all the relevant data.
+
+(c) Calculate and report summary statistics for the full sample and the relevant sub-samples (non-oil, intermediate, OECD) for all variables. Briefly discuss your results.
+
+(d) Do the necessary variable transformations before proceeding with regression analysis.
+
+(e) Reproduce the results reported in TABLE I: *Estimation of the textbook Solow Model* on page 414 of the paper.
+
+(f) Report your results and check if they are different from MRW. Run the regressions for each sub-sample.
+
+(g) Check the restriction imposed by MRW (i.e., that the coefficient of $\ln(\text{pop}) = -\ln(\text{iy})$). Report the necessary results of this test.
+
+(h) Take all the necessary steps to reproduce and report results for TABLE II: *Estimation of the Augmented Solow Model*. Report your results.
+
+(i) *(Advanced)*: Gather the latest data from Penn World Tables and redo everything for the latest available data. Are your conclusions similar to what MRW concluded in their seminal paper? If not, why? What can this mean?
