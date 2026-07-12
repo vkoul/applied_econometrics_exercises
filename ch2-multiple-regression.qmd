@@ -1,0 +1,80 @@
+# Multiple Regression
+
+## Setup
+
+```{r}
+#| message: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+
+df <- read_csv("health.csv")
+```
+
+## Exploring the Data
+
+```{r}
+glimpse(df)
+summary(df)
+```
+
+```{r}
+ggplot(df, aes(x = faminc, y = bwght, color = cigs)) +
+  geom_point()
+```
+
+```{r}
+ggplot(df, aes(x = cigs, y = bwght, color = faminc)) +
+  geom_point()
+```
+
+## Model 1: Full Model
+
+```{r}
+mod1 <- lm(bwght ~ ., data = df)
+tidy(mod1)
+glance(mod1)
+```
+
+Family income has a statistically significant but very small positive impact on birth weight. Cigarettes smoked has a statistically significant negative impact on birth weight.
+
+## Model 2: Family Income Only
+
+```{r}
+mod2 <- lm(bwght ~ faminc, data = df)
+tidy(mod2)
+glance(mod2)
+```
+
+The significance of family income increases when it is the sole predictor, but the overall model fit decreases.
+
+## Model 3: Cigarettes Only
+
+```{r}
+mod3 <- lm(bwght ~ cigs, data = df)
+tidy(mod3)
+glance(mod3)
+```
+
+## Model Comparison
+
+```{r}
+models <- list(
+  "Model 1" = mod1,
+  "Model 2" = mod2,
+  "Model 3" = mod3
+)
+
+modelsummary(models)
+```
+
+```{r}
+model_comparison <- bind_rows(
+  glance(mod1) |> mutate(model = "Model 1"),
+  glance(mod2) |> mutate(model = "Model 2"),
+  glance(mod3) |> mutate(model = "Model 3")
+) |>
+  select(model, r.squared, adj.r.squared, sigma, AIC, BIC, p.value)
+
+model_comparison
+```

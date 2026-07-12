@@ -1,0 +1,16 @@
+project:
+  type: book
+
+book:
+  title: "Applied Econometrics Exercises in R"
+  author: "Varun Koul"
+  date: today
+  chapters:
+    - index.qmd
+    - ch2-multiple-regression.qmd
+
+format:
+  html:
+    theme: cosmo
+    code-fold: false
+    code-tools: true

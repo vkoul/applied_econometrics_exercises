@@ -1,0 +1,11 @@
+# Preface {.unnumbered}
+
+This book contains R solutions to exercises from an applied econometrics textbook. Each chapter corresponds to a textbook chapter and walks through the data exploration, model building, and interpretation of results.
+
+## Tools
+
+All exercises are solved using R with the tidyverse ecosystem, including:
+
+- `tidyverse` for data wrangling and visualization
+- `broom` for tidy model output
+- `modelsummary` for model comparison tables
