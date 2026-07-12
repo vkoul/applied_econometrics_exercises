@@ -1,0 +1,15 @@
+{
+  "hash": "1e93797268675db5ec383b8db9fee495",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Dummy Variables — Solutions\n\n## Setup\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\n```\n:::\n\n\n## Exercise 9.1\n\n**(a) Simple model: log(wage) on black**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Extended model with educ, exper, tenure**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Add IQ and KWW**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Add married, south, urban dummies**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) Predicted wage for specific individual**\n\n\n::: {.cell}\n\n:::\n\n\n**(f) Compare to non-Black, north, urban individual**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 9.2\n\n**(a) Estimate log(bwght) model**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Interpret coefficient of cigs (effect of one pack)**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) White vs non-White difference**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Male vs female difference**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) Add father's and mother's education**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 9.3\n\n**(a) Do males sleep more than females?**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Add more explanatory variables for sleep**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Do males earn higher wages?**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Add more explanatory variables for wages**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) Black ethnic minority analysis**\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

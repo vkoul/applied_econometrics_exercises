@@ -1,0 +1,57 @@
+# Misspecification — Exercises
+
+## Exercise 8.1
+
+The file `wages_01.wf1` contains data for monthly wage rates (measured in UK pounds) and IQ scores of a large number of City University graduates after five years of employment:
+
+(a) Find summary statistics for the above-mentioned variables and discuss them.
+
+(b) Estimate a functional form that will show how a one-point increase in the IQ score will change the respective wage rate by a constant amount measured in UK pounds. What is the change in the wage rate for a ten-point increase in the IQ score?
+
+(c) Estimate a functional form that will show how a one-point increase in the IQ score will have a percentage change effect on the wage rate. What is the percentage change in the wage rate for a ten-point increase in the IQ score?
+
+(d) Use the Box–Cox transformation to decide which of the two models is more appropriate.
+
+## Exercise 8.2
+
+The file `Costs.xlsx` contains data for real costs (cost) and real production (prod) for a car industry for the last 15 years.
+
+(a) Estimate the following regression model:
+
+$$C_t = \beta_0 + \beta_1 P_t + \beta_2 P_t^2 + \beta_3 P_t^3 + u_t$$
+
+and discuss the results.
+
+(b) Check the hypothesis that the cost function is of second degree only.
+
+(c) Check the hypothesis that the cost function is linear.
+
+(d) Obtain and plot the marginal cost function.
+
+## Exercise 8.3
+
+The file `CD.xlsx` contains data for the variables Production (Y), Labour (X1) and Capital (X2) of a hypothetical industry.
+
+(a) Estimate the following Cobb–Douglas production function: $Y_t = \beta_0 X_{1t}^{\beta_1} X_{2t}^{\beta_2}$
+
+(b) Check statistically whether $\beta_1 = 0$, $\beta_2 = 0$ as well as the overall significance of the model.
+
+(c) Check whether the hypothesis of constant returns to scale is valid.
+
+(d) Calculate the average productivity of labour (APL) and the marginal productivity of labour (MPL) for the values (Y, X1, X2).
+
+(e) Assume that in (a) a researcher wrongfully omitted the Capital (X2) variable. Perform the Ramsey RESET test to check if the model is correctly specified without this variable.
+
+## Exercise 8.4
+
+The file `OECD.xlsx` contains data for income per capita (inc_pc) and consumption per capita (cons_pc) for the 25 OECD country-members for the year 2020.
+
+(a) Estimate the relationship between consumption per capita and income per capita using a linear model. Interpret the results.
+
+(b) Estimate the relationship between consumption per capita and income per capita using a log-linear model. Interpret the results.
+
+(c) Estimate the relationship between consumption per capita and income per capita using a linear-log model. Interpret the results.
+
+(d) Estimate the relationship between consumption per capita and income per capita using a double-log model. Interpret the results.
+
+(e) Compare the models estimated in (a) linear, and (d) double-log. Which one is better and why?

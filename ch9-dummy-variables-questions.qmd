@@ -1,0 +1,118 @@
+# Dummy Variables — Exercises
+
+## Exercise 9.1
+
+The file `wage2.dum.xls` contains the following cross-sectional data:
+
+| Variable | Description |
+|----------|-------------|
+| wage | monthly earnings |
+| hours | average weekly hours |
+| IQ | IQ score |
+| KWW | knowledge of work score |
+| educ | years of education |
+| exper | years of work experience |
+| tenure | years with current employer |
+| age | age in years |
+| married | = 1 if married |
+| black | = 1 if Black |
+| south | = 1 if live in South |
+| urban | = 1 if live in SMSA |
+| sibs | number of siblings |
+| brthord | birth order |
+| meduc | mother's education |
+| feduc | father's education |
+
+(a) Use the data to estimate the following model:
+
+$$\log(\text{wage}) = \beta_0 + \beta_1 \text{black} + u$$
+
+Interpret the results and discuss whether or not a person belonging in the Black ethnic minority receives on average a lower/higher salary.
+
+(b) Now, extend the model to control for other characteristics by estimating the following version:
+
+$$\log(\text{wage}) = \beta_0 + \beta_1 \text{black} + \beta_2 \text{educ} + \beta_3 \text{exper} + \beta_4 \text{tenure} + u$$
+
+Discuss your results. Has the coefficient for the dummy variable "black" changed substantially or not? What does this mean?
+
+(c) Introduce in your model variables such as IQ and KWW. What happens now?
+
+(d) Include more dummies, like married, south and urban. Discuss the results.
+
+(e) Find the average wage of a person that has 10 years of education, 7 years of experience, 3 years of tenure, is married, belongs in the Black ethnic minority, lives in the south and in a non-urban region, has an IQ of 128 and a KWW score of 33.
+
+(f) Compare the salary of the person above to a similar person who is non-Black and lives in an area in the north and urban. What do you conclude?
+
+## Exercise 9.2
+
+The file `BWGHT_DUM.xls` contains the following variables for 1,388 US mothers:
+
+| Variable | Description |
+|----------|-------------|
+| faminc | 1988 family income, $1000s |
+| cigtax | cigarette tax in home state, 1988 |
+| cigprice | cigarette price in home state, 1988 |
+| bwght | birth weight, ounces |
+| fatheduc | father's years of education |
+| motheduc | mother's years of education |
+| parity | birth order of children |
+| male | = 1 if male child |
+| white | = 1 if White |
+| cigs | cigarettes smoked per day while pregnant |
+| lbwght | log of birthweight |
+| bwghtlbs | birth weight, pounds |
+| packs | packs smoked per day while pregnant |
+| lfaminc | log(family income) |
+
+(a) Use the data to estimate the following regression:
+
+$$\log(\text{bwght}) = \beta_0 + \beta_1 \text{cigs} + \beta_2 \log(\text{faminc}) + \beta_3 \text{parity} + \beta_4 \text{male} + \beta_5 \text{white} + u$$
+
+and discuss your results.
+
+(b) Interpret the coefficient of cigs. In particular, what is the effect on birth weight from smoking a pack of cigarettes a day? (Note: a pack contains 20 cigarettes.)
+
+(c) Holding the other factors in the equation fixed, on average how much more is a White child predicted to weigh than a non-White child? Is the difference statistically significant?
+
+(d) Holding the other factors in the equation fixed, on average how much more is a male child predicted to weigh than a female child? Is the difference statistically significant?
+
+(e) Re-estimate the model adding now the education levels of the father and the mother. What do you expect to find? Are the results consistent with your expectation?
+
+## Exercise 9.3
+
+The file `SLEEP_DUM.xls` contains the following variables:
+
+| Variable | Description |
+|----------|-------------|
+| age | in years |
+| black | = 1 if Black |
+| clerical | = 1 if clerical worker |
+| construc | = 1 if construction worker |
+| educ | years of schooling |
+| earns74 | total earnings, 1974 |
+| gdhlth | = 1 if in good or excellent health |
+| inlf | = 1 if in labour force |
+| lhrwage | log hourly wage |
+| male | = 1 if male |
+| marr | = 1 if married |
+| prot | = 1 if Protestant |
+| selfe | = 1 if self employed |
+| sleep | minutes of sleep at night, per week |
+| south | = 1 if lives in South |
+| spwrk75 | = 1 if spouse works |
+| totwrk | minutes worked per week |
+| union | = 1 if belong to union |
+| exper | age − educ − 6 |
+| yngkid | = 1 if children under 3 years old present |
+| yrsmarr | years married |
+| hrwage | hourly wage |
+
+(a) Estimate a model to check if males sleep more on average than females. What do you conclude?
+
+(b) Add more explanatory variables in the model (try to find variables that affect sleep patterns). Is the male effect estimated above still dominant?
+
+(c) Estimate a model to check if males obtain higher wages than females. What do you conclude?
+
+(d) Add more explanatory variables in the model (try to find variables that affect wage patterns). Is the male effect estimated above still dominant?
+
+(e) Do the same for workers that belong in the Black ethnic minority. What do your results suggest?

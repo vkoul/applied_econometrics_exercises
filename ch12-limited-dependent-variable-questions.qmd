@@ -1,0 +1,43 @@
+# Limited Dependent Variable — Exercises
+
+## Exercise 12.1
+
+The file `Binary_Loan` contains data for the following variables:
+
+| Variable | Description |
+|----------|-------------|
+| appinc | applicant income, $1000s |
+| married | = 1 if married |
+| dep | number of dependents |
+| emp | years employed in line of work |
+| yjob | years at this job |
+| self | = 1 if self employed |
+| pubrec | = 1 if filed bankruptcy |
+| hrat | housing expenses % total income |
+| obrat | other obligations % total income |
+| school | = 1 if > 12 years schooling |
+| black | = 1 if Black |
+| hispan | = 1 if Hispanic |
+| male | = 1 if male |
+| approve | = 1 if action == 1 or 2 |
+| mortperf | no late mortgage payments |
+| mortlat1 | one or two late payments |
+| mortlat2 | > 2 late payments |
+| loanprc | amount/price |
+| white | = 1 if White |
+
+(a) Estimate the effect of White on approve, using the Probit model.
+
+(b) Find the estimated probability of loan approval for both Whites and non-Whites.
+
+(c) Estimate the same relationship with the linear probability model and compare your results.
+
+(d) Re-estimate the model adding more determinants of loan-approval, such as: hrat, mortperf, mortlat1, mortlat2, married, dep, school and emp. What happens to the estimation of the White coefficient obtained in (a)? Is discrimination against non-Whites evident?
+
+## Exercise 12.2
+
+Use the file `Binary_Loan` to repeat Exercise 12.1 in order to check if there is discrimination between males and females or between married and non-married individuals using a simple model that includes one explanatory variable only. What are your conclusions? If you add more variables how are your results affected?
+
+## Exercise 12.3
+
+Use the file `Binary_Loan` to repeat Exercise 12.1 in order to check if there is discrimination for individuals that belong to the Black and Hispanic ethnic minorities in a simple model that includes one explanatory variable only. What are your conclusions? If you add additional determinants, does the discrimination disappear or not?

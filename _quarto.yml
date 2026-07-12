@@ -14,13 +14,25 @@ book:
     - part: "Questions"
       chapters:
         - ch4-multiple-regression-questions.qmd
+        - ch5-multicollinearity-questions.qmd
+        - ch6-heteroskedasticity-questions.qmd
+        - ch8-misspecification-questions.qmd
+        - ch9-dummy-variables-questions.qmd
+        - ch12-limited-dependent-variable-questions.qmd
     - part: "Solutions"
       chapters:
         - ch2-multiple-regression.qmd
         - ch4-multiple-regression-solutions.qmd
+        - ch5-multicollinearity-solutions.qmd
+        - ch6-heteroskedasticity-solutions.qmd
+        - ch8-misspecification-solutions.qmd
+        - ch9-dummy-variables-solutions.qmd
+        - ch12-limited-dependent-variable-solutions.qmd
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: lux
+      dark: superhero
     code-fold: false
     code-tools: true

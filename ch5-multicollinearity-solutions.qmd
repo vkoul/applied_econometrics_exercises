@@ -1,0 +1,136 @@
+# Multicollinearity — Solutions
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+library(car)
+```
+
+## Exercise 5.1
+
+**(a) Full model**
+
+```{r}
+
+```
+
+**(b) Correlation matrix**
+
+```{r}
+
+```
+
+**(c) Regression: IMP on GDP only**
+
+```{r}
+
+```
+
+**(d) Regression: IMP on CPI only**
+
+```{r}
+
+```
+
+**(e) Auxiliary regression: GDP on CPI**
+
+```{r}
+
+```
+
+**(f) Conclusions on multicollinearity**
+
+<!-- Write your discussion here -->
+
+## Exercise 5.2
+
+**(a) Repeat with quarterly data**
+
+```{r}
+
+```
+
+**(b) Do results change?**
+
+<!-- Write your discussion here -->
+
+## Exercise 5.3
+
+**(a) Model with additional variable R2**
+
+```{r}
+
+```
+
+**(b) Expectation of multicollinearity**
+
+<!-- Write your discussion here -->
+
+**(c) Correlation matrix**
+
+```{r}
+
+```
+
+**(d) Auxiliary regressions and VIF**
+
+```{r}
+
+```
+
+## Exercise 5.4
+
+**(a) Log-linear demand model for new cars**
+
+```{r}
+
+```
+
+**(b) Expectation of multicollinearity**
+
+<!-- Write your discussion here -->
+
+**(c) Detection of multicollinearity**
+
+```{r}
+
+```
+
+**(d) Revised model avoiding multicollinearity**
+
+```{r}
+
+```
+
+## Exercise 5.5
+
+**(a) Can we estimate the model?**
+
+```{r}
+
+```
+
+**(b) Reparameterisation**
+
+```{r}
+
+```
+
+## Exercise 5.6
+
+**(a) Regression of occup on all explanatory variables**
+
+```{r}
+
+```
+
+**(b) Detection of collinearity**
+
+```{r}
+
+```

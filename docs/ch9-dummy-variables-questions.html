@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Multiple Regression — Solutions – Applied Econometrics Exercises in R</title>
+<title>5&nbsp; Dummy Variables — Exercises – Applied Econometrics Exercises in R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch5-multicollinearity-solutions.html" rel="next">
-<link href="./ch2-multiple-regression.html" rel="prev">
+<link href="./ch12-limited-dependent-variable-questions.html" rel="next">
+<link href="./ch8-misspecification-questions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -315,7 +315,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch2-multiple-regression.html">Solutions</a></li><li class="breadcrumb-item"><a href="./ch4-multiple-regression-solutions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch4-multiple-regression-questions.html">Questions</a></li><li class="breadcrumb-item"><a href="./ch9-dummy-variables-questions.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dummy Variables — Exercises</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -384,7 +384,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch9-dummy-variables-questions.html" class="sidebar-item-text sidebar-link">
+  <a href="./ch9-dummy-variables-questions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dummy Variables — Exercises</span></span></a>
   </div>
 </li>
@@ -413,7 +413,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch4-multiple-regression-solutions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ch4-multiple-regression-solutions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></span></a>
   </div>
 </li>
@@ -459,12 +459,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="header-section-number">8.1</span> Setup</a></li>
-  <li><a href="#exercise-4.1" id="toc-exercise-4.1" class="nav-link" data-scroll-target="#exercise-4.1"><span class="header-section-number">8.2</span> Exercise 4.1</a></li>
-  <li><a href="#exercise-4.2" id="toc-exercise-4.2" class="nav-link" data-scroll-target="#exercise-4.2"><span class="header-section-number">8.3</span> Exercise 4.2</a></li>
-  <li><a href="#exercise-4.3" id="toc-exercise-4.3" class="nav-link" data-scroll-target="#exercise-4.3"><span class="header-section-number">8.4</span> Exercise 4.3</a></li>
-  <li><a href="#exercise-4.4" id="toc-exercise-4.4" class="nav-link" data-scroll-target="#exercise-4.4"><span class="header-section-number">8.5</span> Exercise 4.4</a></li>
-  <li><a href="#exercise-4.5" id="toc-exercise-4.5" class="nav-link" data-scroll-target="#exercise-4.5"><span class="header-section-number">8.6</span> Exercise 4.5</a></li>
+  <li><a href="#exercise-9.1" id="toc-exercise-9.1" class="nav-link active" data-scroll-target="#exercise-9.1"><span class="header-section-number">5.1</span> Exercise 9.1</a></li>
+  <li><a href="#exercise-9.2" id="toc-exercise-9.2" class="nav-link" data-scroll-target="#exercise-9.2"><span class="header-section-number">5.2</span> Exercise 9.2</a></li>
+  <li><a href="#exercise-9.3" id="toc-exercise-9.3" class="nav-link" data-scroll-target="#exercise-9.3"><span class="header-section-number">5.3</span> Exercise 9.3</a></li>
   </ul>
 </nav>
     </div>
@@ -472,9 +469,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch2-multiple-regression.html">Solutions</a></li><li class="breadcrumb-item"><a href="./ch4-multiple-regression-solutions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch4-multiple-regression-questions.html">Questions</a></li><li class="breadcrumb-item"><a href="./ch9-dummy-variables-questions.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dummy Variables — Exercises</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dummy Variables — Exercises</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -491,54 +488,289 @@ window.Quarto = {
 </header>
 
 
-<section id="setup" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">8.1</span> Setup</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<section id="exercise-9.1" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="exercise-9.1"><span class="header-section-number">5.1</span> Exercise 9.1</h2>
+<p>The file <code>wage2.dum.xls</code> contains the following cross-sectional data:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>wage</td>
+<td>monthly earnings</td>
+</tr>
+<tr class="even">
+<td>hours</td>
+<td>average weekly hours</td>
+</tr>
+<tr class="odd">
+<td>IQ</td>
+<td>IQ score</td>
+</tr>
+<tr class="even">
+<td>KWW</td>
+<td>knowledge of work score</td>
+</tr>
+<tr class="odd">
+<td>educ</td>
+<td>years of education</td>
+</tr>
+<tr class="even">
+<td>exper</td>
+<td>years of work experience</td>
+</tr>
+<tr class="odd">
+<td>tenure</td>
+<td>years with current employer</td>
+</tr>
+<tr class="even">
+<td>age</td>
+<td>age in years</td>
+</tr>
+<tr class="odd">
+<td>married</td>
+<td>= 1 if married</td>
+</tr>
+<tr class="even">
+<td>black</td>
+<td>= 1 if Black</td>
+</tr>
+<tr class="odd">
+<td>south</td>
+<td>= 1 if live in South</td>
+</tr>
+<tr class="even">
+<td>urban</td>
+<td>= 1 if live in SMSA</td>
+</tr>
+<tr class="odd">
+<td>sibs</td>
+<td>number of siblings</td>
+</tr>
+<tr class="even">
+<td>brthord</td>
+<td>birth order</td>
+</tr>
+<tr class="odd">
+<td>meduc</td>
+<td>mother’s education</td>
+</tr>
+<tr class="even">
+<td>feduc</td>
+<td>father’s education</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>Use the data to estimate the following model:</li>
+</ol>
+<p><span class="math display">\[\log(\text{wage}) = \beta_0 + \beta_1 \text{black} + u\]</span></p>
+<p>Interpret the results and discuss whether or not a person belonging in the Black ethnic minority receives on average a lower/higher salary.</p>
+<ol start="2" type="a">
+<li>Now, extend the model to control for other characteristics by estimating the following version:</li>
+</ol>
+<p><span class="math display">\[\log(\text{wage}) = \beta_0 + \beta_1 \text{black} + \beta_2 \text{educ} + \beta_3 \text{exper} + \beta_4 \text{tenure} + u\]</span></p>
+<p>Discuss your results. Has the coefficient for the dummy variable “black” changed substantially or not? What does this mean?</p>
+<ol start="3" type="a">
+<li><p>Introduce in your model variables such as IQ and KWW. What happens now?</p></li>
+<li><p>Include more dummies, like married, south and urban. Discuss the results.</p></li>
+<li><p>Find the average wage of a person that has 10 years of education, 7 years of experience, 3 years of tenure, is married, belongs in the Black ethnic minority, lives in the south and in a non-urban region, has an IQ of 128 and a KWW score of 33.</p></li>
+<li><p>Compare the salary of the person above to a similar person who is non-Black and lives in an area in the north and urban. What do you conclude?</p></li>
+</ol>
 </section>
-<section id="exercise-4.1" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="exercise-4.1"><span class="header-section-number">8.2</span> Exercise 4.1</h2>
-<p>The file <code>health.xls</code> contains data for birth_weight, cig, and fam_inc.</p>
-<p><strong>(a) Regression with both variables</strong></p>
-<p><strong>(b) Regression with fam_inc only</strong></p>
-<p><strong>(c) Regression with cig only</strong></p>
-<p><strong>(d) Model comparison table</strong></p>
-<p><strong>(e) Wald test: effect of cig is two times greater than fam_inc</strong></p>
+<section id="exercise-9.2" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="exercise-9.2"><span class="header-section-number">5.2</span> Exercise 9.2</h2>
+<p>The file <code>BWGHT_DUM.xls</code> contains the following variables for 1,388 US mothers:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>faminc</td>
+<td>1988 family income, $1000s</td>
+</tr>
+<tr class="even">
+<td>cigtax</td>
+<td>cigarette tax in home state, 1988</td>
+</tr>
+<tr class="odd">
+<td>cigprice</td>
+<td>cigarette price in home state, 1988</td>
+</tr>
+<tr class="even">
+<td>bwght</td>
+<td>birth weight, ounces</td>
+</tr>
+<tr class="odd">
+<td>fatheduc</td>
+<td>father’s years of education</td>
+</tr>
+<tr class="even">
+<td>motheduc</td>
+<td>mother’s years of education</td>
+</tr>
+<tr class="odd">
+<td>parity</td>
+<td>birth order of children</td>
+</tr>
+<tr class="even">
+<td>male</td>
+<td>= 1 if male child</td>
+</tr>
+<tr class="odd">
+<td>white</td>
+<td>= 1 if White</td>
+</tr>
+<tr class="even">
+<td>cigs</td>
+<td>cigarettes smoked per day while pregnant</td>
+</tr>
+<tr class="odd">
+<td>lbwght</td>
+<td>log of birthweight</td>
+</tr>
+<tr class="even">
+<td>bwghtlbs</td>
+<td>birth weight, pounds</td>
+</tr>
+<tr class="odd">
+<td>packs</td>
+<td>packs smoked per day while pregnant</td>
+</tr>
+<tr class="even">
+<td>lfaminc</td>
+<td>log(family income)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>Use the data to estimate the following regression:</li>
+</ol>
+<p><span class="math display">\[\log(\text{bwght}) = \beta_0 + \beta_1 \text{cigs} + \beta_2 \log(\text{faminc}) + \beta_3 \text{parity} + \beta_4 \text{male} + \beta_5 \text{white} + u\]</span></p>
+<p>and discuss your results.</p>
+<ol start="2" type="a">
+<li><p>Interpret the coefficient of cigs. In particular, what is the effect on birth weight from smoking a pack of cigarettes a day? (Note: a pack contains 20 cigarettes.)</p></li>
+<li><p>Holding the other factors in the equation fixed, on average how much more is a White child predicted to weigh than a non-White child? Is the difference statistically significant?</p></li>
+<li><p>Holding the other factors in the equation fixed, on average how much more is a male child predicted to weigh than a female child? Is the difference statistically significant?</p></li>
+<li><p>Re-estimate the model adding now the education levels of the father and the mother. What do you expect to find? Are the results consistent with your expectation?</p></li>
+</ol>
 </section>
-<section id="exercise-4.2" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="exercise-4.2"><span class="header-section-number">8.3</span> Exercise 4.2</h2>
-<p>Determinants of log(wage): educ, exper, tenure.</p>
-<p><strong>(a) Full model and results</strong></p>
-<p><strong>(b) Wald test: exper same effect as educ</strong></p>
-<p><strong>(c) Redundant variable test for exper</strong></p>
-<p><strong>(d) Omitted variable test for tenure</strong></p>
-</section>
-<section id="exercise-4.3" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exercise-4.3"><span class="header-section-number">8.4</span> Exercise 4.3</h2>
-<p>Aggregate demand for money: <span class="math inline">\(\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t\)</span></p>
-<p><strong>(a) Theory and interpretation</strong></p>
-<!-- Write your discussion here -->
-<p><strong>(b) Tests of significance</strong></p>
-</section>
-<section id="exercise-4.4" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="exercise-4.4"><span class="header-section-number">8.5</span> Exercise 4.4</h2>
-<p>Cobb–Douglas production function and test for constant returns to scale.</p>
-</section>
-<section id="exercise-4.5" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="exercise-4.5"><span class="header-section-number">8.6</span> Exercise 4.5</h2>
-<p>Mankiw, Romer and Weil (1992) growth regressions.</p>
-<p><strong>(a) Create data frame</strong></p>
-<p><strong>(b) Load data</strong></p>
-<p><strong>(c) Summary statistics by sub-sample</strong></p>
-<p><strong>(d) Variable transformations</strong></p>
-<p><strong>(e) Reproduce TABLE I: Textbook Solow Model</strong></p>
-<p><strong>(f) Compare results with MRW</strong></p>
-<p><strong>(g) Test restriction: coefficient of ln(pop) = −ln(iy)</strong></p>
-<p><strong>(h) Reproduce TABLE II: Augmented Solow Model</strong></p>
-<p><strong>(i) Latest Penn World Table data (Advanced)</strong></p>
+<section id="exercise-9.3" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="exercise-9.3"><span class="header-section-number">5.3</span> Exercise 9.3</h2>
+<p>The file <code>SLEEP_DUM.xls</code> contains the following variables:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>age</td>
+<td>in years</td>
+</tr>
+<tr class="even">
+<td>black</td>
+<td>= 1 if Black</td>
+</tr>
+<tr class="odd">
+<td>clerical</td>
+<td>= 1 if clerical worker</td>
+</tr>
+<tr class="even">
+<td>construc</td>
+<td>= 1 if construction worker</td>
+</tr>
+<tr class="odd">
+<td>educ</td>
+<td>years of schooling</td>
+</tr>
+<tr class="even">
+<td>earns74</td>
+<td>total earnings, 1974</td>
+</tr>
+<tr class="odd">
+<td>gdhlth</td>
+<td>= 1 if in good or excellent health</td>
+</tr>
+<tr class="even">
+<td>inlf</td>
+<td>= 1 if in labour force</td>
+</tr>
+<tr class="odd">
+<td>lhrwage</td>
+<td>log hourly wage</td>
+</tr>
+<tr class="even">
+<td>male</td>
+<td>= 1 if male</td>
+</tr>
+<tr class="odd">
+<td>marr</td>
+<td>= 1 if married</td>
+</tr>
+<tr class="even">
+<td>prot</td>
+<td>= 1 if Protestant</td>
+</tr>
+<tr class="odd">
+<td>selfe</td>
+<td>= 1 if self employed</td>
+</tr>
+<tr class="even">
+<td>sleep</td>
+<td>minutes of sleep at night, per week</td>
+</tr>
+<tr class="odd">
+<td>south</td>
+<td>= 1 if lives in South</td>
+</tr>
+<tr class="even">
+<td>spwrk75</td>
+<td>= 1 if spouse works</td>
+</tr>
+<tr class="odd">
+<td>totwrk</td>
+<td>minutes worked per week</td>
+</tr>
+<tr class="even">
+<td>union</td>
+<td>= 1 if belong to union</td>
+</tr>
+<tr class="odd">
+<td>exper</td>
+<td>age − educ − 6</td>
+</tr>
+<tr class="even">
+<td>yngkid</td>
+<td>= 1 if children under 3 years old present</td>
+</tr>
+<tr class="odd">
+<td>yrsmarr</td>
+<td>years married</td>
+</tr>
+<tr class="even">
+<td>hrwage</td>
+<td>hourly wage</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Estimate a model to check if males sleep more on average than females. What do you conclude?</p></li>
+<li><p>Add more explanatory variables in the model (try to find variables that affect sleep patterns). Is the male effect estimated above still dominant?</p></li>
+<li><p>Estimate a model to check if males obtain higher wages than females. What do you conclude?</p></li>
+<li><p>Add more explanatory variables in the model (try to find variables that affect wage patterns). Is the male effect estimated above still dominant?</p></li>
+<li><p>Do the same for workers that belong in the Black ethnic minority. What do your results suggest?</p></li>
+</ol>
 
 
 <!-- -->
@@ -1012,150 +1244,134 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch2-multiple-regression.html" class="pagination-link" aria-label="Multiple Regression">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Multiple Regression</span></span>
+      <a href="./ch8-misspecification-questions.html" class="pagination-link" aria-label="Misspecification — Exercises">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Misspecification — Exercises</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch5-multicollinearity-solutions.html" class="pagination-link" aria-label="Multicollinearity — Solutions">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Multicollinearity — Solutions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch12-limited-dependent-variable-questions.html" class="pagination-link" aria-label="Limited Dependent Variable — Exercises">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limited Dependent Variable — Exercises</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Multiple Regression — Solutions</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.1</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`health.xls`</span> contains data for birth_weight, cig, and fam_inc.</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>**(a) Regression with both variables**</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>**(b) Regression with fam_inc only**</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>**(c) Regression with cig only**</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>**(d) Model comparison table**</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>**(e) Wald test: effect of cig is two times greater than fam_inc**</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.2</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Determinants of log(wage): educ, exper, tenure.</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>**(a) Full model and results**</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>**(b) Wald test: exper same effect as educ**</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>**(c) Redundant variable test for exper**</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>**(d) Omitted variable test for tenure**</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.3</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>Aggregate demand for money: $\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t$</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>**(a) Theory and interpretation**</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Write your discussion here --&gt;</span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>**(b) Tests of significance**</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.4</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>Cobb–Douglas production function and test for constant returns to scale.</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.5</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>Mankiw, Romer and Weil (1992) growth regressions.</span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>**(a) Create data frame**</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>**(b) Load data**</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>**(c) Summary statistics by sub-sample**</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>**(d) Variable transformations**</span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>**(e) Reproduce TABLE I: Textbook Solow Model**</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>**(f) Compare results with MRW**</span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>**(g) Test restriction: coefficient of ln(pop) = −ln(iy)**</span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>**(h) Reproduce TABLE II: Augmented Solow Model**</span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>**(i) Latest Penn World Table data (Advanced)**</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Dummy Variables — Exercises</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 9.1</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`wage2.dum.xls`</span> contains the following cross-sectional data:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|-------------|</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> wage <span class="pp">|</span> monthly earnings <span class="pp">|</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> hours <span class="pp">|</span> average weekly hours <span class="pp">|</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> IQ <span class="pp">|</span> IQ score <span class="pp">|</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> KWW <span class="pp">|</span> knowledge of work score <span class="pp">|</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> educ <span class="pp">|</span> years of education <span class="pp">|</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> exper <span class="pp">|</span> years of work experience <span class="pp">|</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> tenure <span class="pp">|</span> years with current employer <span class="pp">|</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> age <span class="pp">|</span> age in years <span class="pp">|</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> married <span class="pp">|</span> = 1 if married <span class="pp">|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> black <span class="pp">|</span> = 1 if Black <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> south <span class="pp">|</span> = 1 if live in South <span class="pp">|</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> urban <span class="pp">|</span> = 1 if live in SMSA <span class="pp">|</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> sibs <span class="pp">|</span> number of siblings <span class="pp">|</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> brthord <span class="pp">|</span> birth order <span class="pp">|</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> meduc <span class="pp">|</span> mother's education <span class="pp">|</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> feduc <span class="pp">|</span> father's education <span class="pp">|</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>(a) Use the data to estimate the following model:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>$$\log(\text{wage}) = \beta_0 + \beta_1 \text{black} + u$$</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Interpret the results and discuss whether or not a person belonging in the Black ethnic minority receives on average a lower/higher salary.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>(b) Now, extend the model to control for other characteristics by estimating the following version:</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>$$\log(\text{wage}) = \beta_0 + \beta_1 \text{black} + \beta_2 \text{educ} + \beta_3 \text{exper} + \beta_4 \text{tenure} + u$$</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Discuss your results. Has the coefficient for the dummy variable "black" changed substantially or not? What does this mean?</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>(c) Introduce in your model variables such as IQ and KWW. What happens now?</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>(d) Include more dummies, like married, south and urban. Discuss the results.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>(e) Find the average wage of a person that has 10 years of education, 7 years of experience, 3 years of tenure, is married, belongs in the Black ethnic minority, lives in the south and in a non-urban region, has an IQ of 128 and a KWW score of 33.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>(f) Compare the salary of the person above to a similar person who is non-Black and lives in an area in the north and urban. What do you conclude?</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 9.2</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`BWGHT_DUM.xls`</span> contains the following variables for 1,388 US mothers:</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|-------------|</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> faminc <span class="pp">|</span> 1988 family income, $1000s <span class="pp">|</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cigtax <span class="pp">|</span> cigarette tax in home state, 1988 <span class="pp">|</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cigprice <span class="pp">|</span> cigarette price in home state, 1988 <span class="pp">|</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bwght <span class="pp">|</span> birth weight, ounces <span class="pp">|</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> fatheduc <span class="pp">|</span> father's years of education <span class="pp">|</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> motheduc <span class="pp">|</span> mother's years of education <span class="pp">|</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> parity <span class="pp">|</span> birth order of children <span class="pp">|</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> male <span class="pp">|</span> = 1 if male child <span class="pp">|</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> white <span class="pp">|</span> = 1 if White <span class="pp">|</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cigs <span class="pp">|</span> cigarettes smoked per day while pregnant <span class="pp">|</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> lbwght <span class="pp">|</span> log of birthweight <span class="pp">|</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bwghtlbs <span class="pp">|</span> birth weight, pounds <span class="pp">|</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> packs <span class="pp">|</span> packs smoked per day while pregnant <span class="pp">|</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> lfaminc <span class="pp">|</span> log(family income) <span class="pp">|</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>(a) Use the data to estimate the following regression:</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>$$\log(\text{bwght}) = \beta_0 + \beta_1 \text{cigs} + \beta_2 \log(\text{faminc}) + \beta_3 \text{parity} + \beta_4 \text{male} + \beta_5 \text{white} + u$$</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>and discuss your results.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>(b) Interpret the coefficient of cigs. In particular, what is the effect on birth weight from smoking a pack of cigarettes a day? (Note: a pack contains 20 cigarettes.)</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>(c) Holding the other factors in the equation fixed, on average how much more is a White child predicted to weigh than a non-White child? Is the difference statistically significant?</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>(d) Holding the other factors in the equation fixed, on average how much more is a male child predicted to weigh than a female child? Is the difference statistically significant?</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>(e) Re-estimate the model adding now the education levels of the father and the mother. What do you expect to find? Are the results consistent with your expectation?</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 9.3</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`SLEEP_DUM.xls`</span> contains the following variables:</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|-------------|</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> age <span class="pp">|</span> in years <span class="pp">|</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> black <span class="pp">|</span> = 1 if Black <span class="pp">|</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> clerical <span class="pp">|</span> = 1 if clerical worker <span class="pp">|</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> construc <span class="pp">|</span> = 1 if construction worker <span class="pp">|</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> educ <span class="pp">|</span> years of schooling <span class="pp">|</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> earns74 <span class="pp">|</span> total earnings, 1974 <span class="pp">|</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> gdhlth <span class="pp">|</span> = 1 if in good or excellent health <span class="pp">|</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> inlf <span class="pp">|</span> = 1 if in labour force <span class="pp">|</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> lhrwage <span class="pp">|</span> log hourly wage <span class="pp">|</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> male <span class="pp">|</span> = 1 if male <span class="pp">|</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> marr <span class="pp">|</span> = 1 if married <span class="pp">|</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> prot <span class="pp">|</span> = 1 if Protestant <span class="pp">|</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> selfe <span class="pp">|</span> = 1 if self employed <span class="pp">|</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> sleep <span class="pp">|</span> minutes of sleep at night, per week <span class="pp">|</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> south <span class="pp">|</span> = 1 if lives in South <span class="pp">|</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> spwrk75 <span class="pp">|</span> = 1 if spouse works <span class="pp">|</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> totwrk <span class="pp">|</span> minutes worked per week <span class="pp">|</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> union <span class="pp">|</span> = 1 if belong to union <span class="pp">|</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> exper <span class="pp">|</span> age − educ − 6 <span class="pp">|</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> yngkid <span class="pp">|</span> = 1 if children under 3 years old present <span class="pp">|</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> yrsmarr <span class="pp">|</span> years married <span class="pp">|</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> hrwage <span class="pp">|</span> hourly wage <span class="pp">|</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>(a) Estimate a model to check if males sleep more on average than females. What do you conclude?</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>(b) Add more explanatory variables in the model (try to find variables that affect sleep patterns). Is the male effect estimated above still dominant?</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>(c) Estimate a model to check if males obtain higher wages than females. What do you conclude?</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>(d) Add more explanatory variables in the model (try to find variables that affect wage patterns). Is the male effect estimated above still dominant?</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>(e) Do the same for workers that belong in the Black ethnic minority. What do your results suggest?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

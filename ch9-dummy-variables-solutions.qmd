@@ -1,0 +1,113 @@
+# Dummy Variables — Solutions
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+```
+
+## Exercise 9.1
+
+**(a) Simple model: log(wage) on black**
+
+```{r}
+
+```
+
+**(b) Extended model with educ, exper, tenure**
+
+```{r}
+
+```
+
+**(c) Add IQ and KWW**
+
+```{r}
+
+```
+
+**(d) Add married, south, urban dummies**
+
+```{r}
+
+```
+
+**(e) Predicted wage for specific individual**
+
+```{r}
+
+```
+
+**(f) Compare to non-Black, north, urban individual**
+
+```{r}
+
+```
+
+## Exercise 9.2
+
+**(a) Estimate log(bwght) model**
+
+```{r}
+
+```
+
+**(b) Interpret coefficient of cigs (effect of one pack)**
+
+```{r}
+
+```
+
+**(c) White vs non-White difference**
+
+```{r}
+
+```
+
+**(d) Male vs female difference**
+
+```{r}
+
+```
+
+**(e) Add father's and mother's education**
+
+```{r}
+
+```
+
+## Exercise 9.3
+
+**(a) Do males sleep more than females?**
+
+```{r}
+
+```
+
+**(b) Add more explanatory variables for sleep**
+
+```{r}
+
+```
+
+**(c) Do males earn higher wages?**
+
+```{r}
+
+```
+
+**(d) Add more explanatory variables for wages**
+
+```{r}
+
+```
+
+**(e) Black ethnic minority analysis**
+
+```{r}
+
+```

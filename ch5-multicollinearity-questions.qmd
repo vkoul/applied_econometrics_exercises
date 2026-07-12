@@ -1,0 +1,104 @@
+# Multicollinearity — Exercises
+
+## Exercise 5.1
+
+The file `imports_uk_y.wf1` contains yearly data (1972–1997) for real imports (IMP), real gross domestic product (GDP) and the relative consumer price index (CPI) of domestic to foreign prices for the US economy. Use these data to estimate the following model:
+
+$$\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{GDP})_t + \beta_3 \ln(\text{CPI})_t + u_t$$
+
+Check whether there is multicollinearity in the data. Calculate the correlation matrix of the variables and comment regarding the possibility of multicollinearity. Also, run the following additional regressions:
+
+$$\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{GDP})_t + u_t$$
+
+$$\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{CPI})_t + u_t$$
+
+$$\ln(\text{GDP})_t = \beta_1 + \beta_2 \ln(\text{CPI})_t + u_t$$
+
+What can you conclude about the nature of multicollinearity from these results?
+
+## Exercise 5.2
+
+The file `imports_uk.wf1` contains quarterly observations of the variables mentioned in Exercise 5.1. Repeat Exercise 5.1 using the quarterly (higher frequency) data. Do your results change?
+
+## Exercise 5.3
+
+Use the data in the file `money_uk02.wf1` to estimate the parameters $\alpha$, $\beta$ and $\gamma$ in the equation below:
+
+$$\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_{1t} + u_t$$
+
+where $R_{1t}$ is the three-month treasury bill rate. For the rest of the variables the usual notation applies.
+
+(a) Use as an additional variable in the above equation $R_{2t}$, which is the dollar interest rate.
+
+(b) Do you expect to find multicollinearity? Why?
+
+(c) Calculate the correlation matrix of all the variables. Which correlation coefficient is the largest?
+
+(d) Calculate auxiliary regressions and conclude whether the degree of multicollinearity in (a) is serious or not.
+
+## Exercise 5.4
+
+The file `cars.wf1` contains annual data from 1971–1986 (16 observations) for new cars sales in the US. The variables are defined as follows:
+
+| Variable | Description |
+|----------|-------------|
+| cars_sold | new passenger cars sold (thousands) |
+| cpi_cars | new cars, consumer price index, 1967 = 100 |
+| cpi_all | consumer price index, all items, all urban consumers, 1967 = 100 |
+| disp | real personal disposable income (billions of dollars) |
+| int_rate | interest rate (percentage) |
+| lab_force | employed civilian labor force (thousands) |
+
+(a) Estimate a log-linear model that examines a demand function for new cars, including all explanatory variables as regressors. Discuss your results.
+
+(b) In the model estimated above, do you expect to face multicollinearity? Discuss why.
+
+(c) Check if there is indeed multicollinearity among the regressors. How will you do that? What are your conclusions?
+
+(d) Based on your answer above, now develop a more suitable model that avoids the problems of multicollinearity.
+
+## Exercise 5.5
+
+Consider the following data:
+
+| Y | X1 | X2 |
+|---|----|----|
+| −12 | 12 | 21 |
+| −8 | 13 | 23 |
+| −4 | 14 | 25 |
+| −3 | 15 | 27 |
+| 1 | 16 | 29 |
+| 2 | 15 | 27 |
+| 4 | 17 | 31 |
+| 8 | 18 | 33 |
+| 18 | 21 | 39 |
+| 13 | 20 | 37 |
+
+(a) Can you obtain estimations for the coefficients of the following linear model:
+
+$$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + u$$
+
+using the data given above?
+
+(b) If your response to (a) was no, then how can you reparameterise the model in order to obtain satisfactory estimates of the coefficients?
+
+## Exercise 5.6
+
+The file `manhours.xls` contains the following variables:
+
+| Variable | Description |
+|----------|-------------|
+| manhours | monthly manhours needed to operate an establishment |
+| occup | average daily occupancy |
+| checkins | monthly average number of check-ins |
+| service | weekly hours of service desk operation |
+| comusearea | common use area (in square feet) |
+| no_wings | number of building wings |
+| berthing | operational berthing capacity |
+| no_rooms | number of rooms |
+
+The data describes the manpower needs for operating a US Navy bachelor officers' quarters. It contains cross-sectional observations for 25 establishments.
+
+(a) Estimate a regression model that explains average daily occupancy (`occup`) from all available explanatory variables. Do the results suggest multicollinearity?
+
+(b) Are some of the explanatory variables collinear? How is this detected?

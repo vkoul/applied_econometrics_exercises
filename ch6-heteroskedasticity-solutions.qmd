@@ -1,0 +1,149 @@
+# Heteroskedasticity — Solutions
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+library(lmtest)
+library(sandwich)
+```
+
+## Exercise 6.1
+
+**(a) Estimate the model**
+
+```{r}
+
+```
+
+**(b) White test**
+
+```{r}
+
+```
+
+**(c) Goldfeld–Quandt test**
+
+```{r}
+
+```
+
+**(d) GLS with Var(u) = σ²·sqfeet**
+
+```{r}
+
+```
+
+**(e) GLS with Var(u) = σ²·sqfeet²**
+
+```{r}
+
+```
+
+**(f) Re-test for heteroskedasticity after correction**
+
+```{r}
+
+```
+
+## Exercise 6.2
+
+**(a) Estimate effect of size on profit/sales ratio**
+
+```{r}
+
+```
+
+**(b) Tests for heteroskedasticity**
+
+```{r}
+
+```
+
+**(c) White's corrected standard errors**
+
+```{r}
+
+```
+
+**(d) Confidence intervals comparison**
+
+```{r}
+
+```
+
+## Exercise 6.3
+
+**(a) Estimate budget model**
+
+```{r}
+
+```
+
+**(b) Heteroskedasticity tests**
+
+```{r}
+
+```
+
+## Exercise 6.4
+
+**(a) Check for heteroskedasticity**
+
+```{r}
+
+```
+
+**(b) Variance comparison: men vs women**
+
+```{r}
+
+```
+
+**(c) Re-estimate correcting for heteroskedasticity**
+
+```{r}
+
+```
+
+## Exercise 6.5
+
+**(a) Check for heteroskedasticity**
+
+```{r}
+
+```
+
+**(b) Re-estimate with log(price) and re-test**
+
+```{r}
+
+```
+
+**(c) Discussion on transformation and heteroskedasticity**
+
+<!-- Write your discussion here -->
+
+## Exercise 6.6
+
+**(a) Estimate Y = a + bX + u**
+
+```{r}
+
+```
+
+**(b) Check for heteroskedasticity**
+
+```{r}
+
+```
+
+**(c) Re-estimate with transformed variables**
+
+```{r}
+
+```

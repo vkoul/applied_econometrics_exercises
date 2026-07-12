@@ -1,0 +1,15 @@
+{
+  "hash": "5ffc77f20e47813f048f452feb0fd8af",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Misspecification — Solutions\n\n## Setup\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(lmtest)\n```\n:::\n\n\n## Exercise 8.1\n\n**(a) Summary statistics**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Linear model: wage = f(IQ)**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Log-linear model: log(wage) = f(IQ)**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Box–Cox transformation**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 8.2\n\n**(a) Estimate cubic cost function**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Test: cost function is second degree only**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Test: cost function is linear**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Plot marginal cost function**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 8.3\n\n**(a) Estimate Cobb–Douglas production function**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Test significance of β1, β2 and overall model**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Test constant returns to scale**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Calculate APL and MPL**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) Ramsey RESET test (omitting X2)**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 8.4\n\n**(a) Linear model**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Log-linear model**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Linear-log model**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Double-log model**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) Compare linear vs double-log**\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -4,6 +4,7 @@
 
 ```{r}
 #| message: false
+#| warning: false
 library(tidyverse)
 library(broom)
 library(modelsummary)

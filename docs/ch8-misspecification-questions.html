@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Multiple Regression — Solutions – Applied Econometrics Exercises in R</title>
+<title>4&nbsp; Misspecification — Exercises – Applied Econometrics Exercises in R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch5-multicollinearity-solutions.html" rel="next">
-<link href="./ch2-multiple-regression.html" rel="prev">
+<link href="./ch9-dummy-variables-questions.html" rel="next">
+<link href="./ch6-heteroskedasticity-questions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -315,7 +315,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch2-multiple-regression.html">Solutions</a></li><li class="breadcrumb-item"><a href="./ch4-multiple-regression-solutions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch4-multiple-regression-questions.html">Questions</a></li><li class="breadcrumb-item"><a href="./ch8-misspecification-questions.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Misspecification — Exercises</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -378,7 +378,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch8-misspecification-questions.html" class="sidebar-item-text sidebar-link">
+  <a href="./ch8-misspecification-questions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Misspecification — Exercises</span></span></a>
   </div>
 </li>
@@ -413,7 +413,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch4-multiple-regression-solutions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ch4-multiple-regression-solutions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></span></a>
   </div>
 </li>
@@ -459,12 +459,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="header-section-number">8.1</span> Setup</a></li>
-  <li><a href="#exercise-4.1" id="toc-exercise-4.1" class="nav-link" data-scroll-target="#exercise-4.1"><span class="header-section-number">8.2</span> Exercise 4.1</a></li>
-  <li><a href="#exercise-4.2" id="toc-exercise-4.2" class="nav-link" data-scroll-target="#exercise-4.2"><span class="header-section-number">8.3</span> Exercise 4.2</a></li>
-  <li><a href="#exercise-4.3" id="toc-exercise-4.3" class="nav-link" data-scroll-target="#exercise-4.3"><span class="header-section-number">8.4</span> Exercise 4.3</a></li>
-  <li><a href="#exercise-4.4" id="toc-exercise-4.4" class="nav-link" data-scroll-target="#exercise-4.4"><span class="header-section-number">8.5</span> Exercise 4.4</a></li>
-  <li><a href="#exercise-4.5" id="toc-exercise-4.5" class="nav-link" data-scroll-target="#exercise-4.5"><span class="header-section-number">8.6</span> Exercise 4.5</a></li>
+  <li><a href="#exercise-8.1" id="toc-exercise-8.1" class="nav-link active" data-scroll-target="#exercise-8.1"><span class="header-section-number">4.1</span> Exercise 8.1</a></li>
+  <li><a href="#exercise-8.2" id="toc-exercise-8.2" class="nav-link" data-scroll-target="#exercise-8.2"><span class="header-section-number">4.2</span> Exercise 8.2</a></li>
+  <li><a href="#exercise-8.3" id="toc-exercise-8.3" class="nav-link" data-scroll-target="#exercise-8.3"><span class="header-section-number">4.3</span> Exercise 8.3</a></li>
+  <li><a href="#exercise-8.4" id="toc-exercise-8.4" class="nav-link" data-scroll-target="#exercise-8.4"><span class="header-section-number">4.4</span> Exercise 8.4</a></li>
   </ul>
 </nav>
     </div>
@@ -472,9 +470,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch2-multiple-regression.html">Solutions</a></li><li class="breadcrumb-item"><a href="./ch4-multiple-regression-solutions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch4-multiple-regression-questions.html">Questions</a></li><li class="breadcrumb-item"><a href="./ch8-misspecification-questions.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Misspecification — Exercises</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Misspecification — Exercises</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -491,54 +489,51 @@ window.Quarto = {
 </header>
 
 
-<section id="setup" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">8.1</span> Setup</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<section id="exercise-8.1" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="exercise-8.1"><span class="header-section-number">4.1</span> Exercise 8.1</h2>
+<p>The file <code>wages_01.wf1</code> contains data for monthly wage rates (measured in UK pounds) and IQ scores of a large number of City University graduates after five years of employment:</p>
+<ol type="a">
+<li><p>Find summary statistics for the above-mentioned variables and discuss them.</p></li>
+<li><p>Estimate a functional form that will show how a one-point increase in the IQ score will change the respective wage rate by a constant amount measured in UK pounds. What is the change in the wage rate for a ten-point increase in the IQ score?</p></li>
+<li><p>Estimate a functional form that will show how a one-point increase in the IQ score will have a percentage change effect on the wage rate. What is the percentage change in the wage rate for a ten-point increase in the IQ score?</p></li>
+<li><p>Use the Box–Cox transformation to decide which of the two models is more appropriate.</p></li>
+</ol>
 </section>
-<section id="exercise-4.1" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="exercise-4.1"><span class="header-section-number">8.2</span> Exercise 4.1</h2>
-<p>The file <code>health.xls</code> contains data for birth_weight, cig, and fam_inc.</p>
-<p><strong>(a) Regression with both variables</strong></p>
-<p><strong>(b) Regression with fam_inc only</strong></p>
-<p><strong>(c) Regression with cig only</strong></p>
-<p><strong>(d) Model comparison table</strong></p>
-<p><strong>(e) Wald test: effect of cig is two times greater than fam_inc</strong></p>
+<section id="exercise-8.2" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="exercise-8.2"><span class="header-section-number">4.2</span> Exercise 8.2</h2>
+<p>The file <code>Costs.xlsx</code> contains data for real costs (cost) and real production (prod) for a car industry for the last 15 years.</p>
+<ol type="a">
+<li>Estimate the following regression model:</li>
+</ol>
+<p><span class="math display">\[C_t = \beta_0 + \beta_1 P_t + \beta_2 P_t^2 + \beta_3 P_t^3 + u_t\]</span></p>
+<p>and discuss the results.</p>
+<ol start="2" type="a">
+<li><p>Check the hypothesis that the cost function is of second degree only.</p></li>
+<li><p>Check the hypothesis that the cost function is linear.</p></li>
+<li><p>Obtain and plot the marginal cost function.</p></li>
+</ol>
 </section>
-<section id="exercise-4.2" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="exercise-4.2"><span class="header-section-number">8.3</span> Exercise 4.2</h2>
-<p>Determinants of log(wage): educ, exper, tenure.</p>
-<p><strong>(a) Full model and results</strong></p>
-<p><strong>(b) Wald test: exper same effect as educ</strong></p>
-<p><strong>(c) Redundant variable test for exper</strong></p>
-<p><strong>(d) Omitted variable test for tenure</strong></p>
+<section id="exercise-8.3" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="exercise-8.3"><span class="header-section-number">4.3</span> Exercise 8.3</h2>
+<p>The file <code>CD.xlsx</code> contains data for the variables Production (Y), Labour (X1) and Capital (X2) of a hypothetical industry.</p>
+<ol type="a">
+<li><p>Estimate the following Cobb–Douglas production function: <span class="math inline">\(Y_t = \beta_0 X_{1t}^{\beta_1} X_{2t}^{\beta_2}\)</span></p></li>
+<li><p>Check statistically whether <span class="math inline">\(\beta_1 = 0\)</span>, <span class="math inline">\(\beta_2 = 0\)</span> as well as the overall significance of the model.</p></li>
+<li><p>Check whether the hypothesis of constant returns to scale is valid.</p></li>
+<li><p>Calculate the average productivity of labour (APL) and the marginal productivity of labour (MPL) for the values (Y, X1, X2).</p></li>
+<li><p>Assume that in (a) a researcher wrongfully omitted the Capital (X2) variable. Perform the Ramsey RESET test to check if the model is correctly specified without this variable.</p></li>
+</ol>
 </section>
-<section id="exercise-4.3" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exercise-4.3"><span class="header-section-number">8.4</span> Exercise 4.3</h2>
-<p>Aggregate demand for money: <span class="math inline">\(\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t\)</span></p>
-<p><strong>(a) Theory and interpretation</strong></p>
-<!-- Write your discussion here -->
-<p><strong>(b) Tests of significance</strong></p>
-</section>
-<section id="exercise-4.4" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="exercise-4.4"><span class="header-section-number">8.5</span> Exercise 4.4</h2>
-<p>Cobb–Douglas production function and test for constant returns to scale.</p>
-</section>
-<section id="exercise-4.5" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="exercise-4.5"><span class="header-section-number">8.6</span> Exercise 4.5</h2>
-<p>Mankiw, Romer and Weil (1992) growth regressions.</p>
-<p><strong>(a) Create data frame</strong></p>
-<p><strong>(b) Load data</strong></p>
-<p><strong>(c) Summary statistics by sub-sample</strong></p>
-<p><strong>(d) Variable transformations</strong></p>
-<p><strong>(e) Reproduce TABLE I: Textbook Solow Model</strong></p>
-<p><strong>(f) Compare results with MRW</strong></p>
-<p><strong>(g) Test restriction: coefficient of ln(pop) = −ln(iy)</strong></p>
-<p><strong>(h) Reproduce TABLE II: Augmented Solow Model</strong></p>
-<p><strong>(i) Latest Penn World Table data (Advanced)</strong></p>
+<section id="exercise-8.4" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="exercise-8.4"><span class="header-section-number">4.4</span> Exercise 8.4</h2>
+<p>The file <code>OECD.xlsx</code> contains data for income per capita (inc_pc) and consumption per capita (cons_pc) for the 25 OECD country-members for the year 2020.</p>
+<ol type="a">
+<li><p>Estimate the relationship between consumption per capita and income per capita using a linear model. Interpret the results.</p></li>
+<li><p>Estimate the relationship between consumption per capita and income per capita using a log-linear model. Interpret the results.</p></li>
+<li><p>Estimate the relationship between consumption per capita and income per capita using a linear-log model. Interpret the results.</p></li>
+<li><p>Estimate the relationship between consumption per capita and income per capita using a double-log model. Interpret the results.</p></li>
+<li><p>Compare the models estimated in (a) linear, and (d) double-log. Which one is better and why?</p></li>
+</ol>
 
 
 <!-- -->
@@ -1012,150 +1007,73 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch2-multiple-regression.html" class="pagination-link" aria-label="Multiple Regression">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Multiple Regression</span></span>
+      <a href="./ch6-heteroskedasticity-questions.html" class="pagination-link" aria-label="Heteroskedasticity — Exercises">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Exercises</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch5-multicollinearity-solutions.html" class="pagination-link" aria-label="Multicollinearity — Solutions">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Multicollinearity — Solutions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch9-dummy-variables-questions.html" class="pagination-link" aria-label="Dummy Variables — Exercises">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dummy Variables — Exercises</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Multiple Regression — Solutions</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.1</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`health.xls`</span> contains data for birth_weight, cig, and fam_inc.</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>**(a) Regression with both variables**</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>**(b) Regression with fam_inc only**</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>**(c) Regression with cig only**</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>**(d) Model comparison table**</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>**(e) Wald test: effect of cig is two times greater than fam_inc**</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.2</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Determinants of log(wage): educ, exper, tenure.</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>**(a) Full model and results**</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>**(b) Wald test: exper same effect as educ**</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>**(c) Redundant variable test for exper**</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>**(d) Omitted variable test for tenure**</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.3</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>Aggregate demand for money: $\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t$</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>**(a) Theory and interpretation**</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Write your discussion here --&gt;</span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>**(b) Tests of significance**</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.4</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>Cobb–Douglas production function and test for constant returns to scale.</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.5</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>Mankiw, Romer and Weil (1992) growth regressions.</span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>**(a) Create data frame**</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>**(b) Load data**</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>**(c) Summary statistics by sub-sample**</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>**(d) Variable transformations**</span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>**(e) Reproduce TABLE I: Textbook Solow Model**</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>**(f) Compare results with MRW**</span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>**(g) Test restriction: coefficient of ln(pop) = −ln(iy)**</span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>**(h) Reproduce TABLE II: Augmented Solow Model**</span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>**(i) Latest Penn World Table data (Advanced)**</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Misspecification — Exercises</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 8.1</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`wages_01.wf1`</span> contains data for monthly wage rates (measured in UK pounds) and IQ scores of a large number of City University graduates after five years of employment:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>(a) Find summary statistics for the above-mentioned variables and discuss them.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>(b) Estimate a functional form that will show how a one-point increase in the IQ score will change the respective wage rate by a constant amount measured in UK pounds. What is the change in the wage rate for a ten-point increase in the IQ score?</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>(c) Estimate a functional form that will show how a one-point increase in the IQ score will have a percentage change effect on the wage rate. What is the percentage change in the wage rate for a ten-point increase in the IQ score?</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>(d) Use the Box–Cox transformation to decide which of the two models is more appropriate.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 8.2</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`Costs.xlsx`</span> contains data for real costs (cost) and real production (prod) for a car industry for the last 15 years.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>(a) Estimate the following regression model:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>$$C_t = \beta_0 + \beta_1 P_t + \beta_2 P_t^2 + \beta_3 P_t^3 + u_t$$</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>and discuss the results.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>(b) Check the hypothesis that the cost function is of second degree only.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>(c) Check the hypothesis that the cost function is linear.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>(d) Obtain and plot the marginal cost function.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 8.3</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`CD.xlsx`</span> contains data for the variables Production (Y), Labour (X1) and Capital (X2) of a hypothetical industry.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>(a) Estimate the following Cobb–Douglas production function: $Y_t = \beta_0 X_{1t}^{\beta_1} X_{2t}^{\beta_2}$</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>(b) Check statistically whether $\beta_1 = 0$, $\beta_2 = 0$ as well as the overall significance of the model.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>(c) Check whether the hypothesis of constant returns to scale is valid.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>(d) Calculate the average productivity of labour (APL) and the marginal productivity of labour (MPL) for the values (Y, X1, X2).</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>(e) Assume that in (a) a researcher wrongfully omitted the Capital (X2) variable. Perform the Ramsey RESET test to check if the model is correctly specified without this variable.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 8.4</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`OECD.xlsx`</span> contains data for income per capita (inc_pc) and consumption per capita (cons_pc) for the 25 OECD country-members for the year 2020.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>(a) Estimate the relationship between consumption per capita and income per capita using a linear model. Interpret the results.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>(b) Estimate the relationship between consumption per capita and income per capita using a log-linear model. Interpret the results.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>(c) Estimate the relationship between consumption per capita and income per capita using a linear-log model. Interpret the results.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>(d) Estimate the relationship between consumption per capita and income per capita using a double-log model. Interpret the results.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>(e) Compare the models estimated in (a) linear, and (d) double-log. Which one is better and why?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

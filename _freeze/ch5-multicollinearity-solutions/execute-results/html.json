@@ -1,0 +1,15 @@
+{
+  "hash": "41d382f0f45f29d8f8389b846a7f49a5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Multicollinearity — Solutions\n\n## Setup\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(car)\n```\n:::\n\n\n## Exercise 5.1\n\n**(a) Full model**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Correlation matrix**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Regression: IMP on GDP only**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Regression: IMP on CPI only**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) Auxiliary regression: GDP on CPI**\n\n\n::: {.cell}\n\n:::\n\n\n**(f) Conclusions on multicollinearity**\n\n<!-- Write your discussion here -->\n\n## Exercise 5.2\n\n**(a) Repeat with quarterly data**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Do results change?**\n\n<!-- Write your discussion here -->\n\n## Exercise 5.3\n\n**(a) Model with additional variable R2**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Expectation of multicollinearity**\n\n<!-- Write your discussion here -->\n\n**(c) Correlation matrix**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Auxiliary regressions and VIF**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 5.4\n\n**(a) Log-linear demand model for new cars**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Expectation of multicollinearity**\n\n<!-- Write your discussion here -->\n\n**(c) Detection of multicollinearity**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Revised model avoiding multicollinearity**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 5.5\n\n**(a) Can we estimate the model?**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Reparameterisation**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 5.6\n\n**(a) Regression of occup on all explanatory variables**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Detection of collinearity**\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

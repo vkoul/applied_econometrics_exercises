@@ -1,0 +1,67 @@
+# Heteroskedasticity — Exercises
+
+## Exercise 6.1
+
+Use the data in the file `houseprice.wf1` to estimate a model of:
+
+$$\text{price}_i = \beta_1 + \beta_2 \text{sqfeet}_i + u_i$$
+
+Check for heteroskedasticity using the White and the Goldfeld–Quandt tests. Obtain GLS estimates for the following assumptions: (a) $\text{Var}(u_i) = \sigma^2 \text{sqfeet}_i$ and (b) $\text{Var}(u_i) = \sigma^2 \text{sqfeet}_i^2$. Comment on the sensitivity of the estimates and their standard errors to the heteroskedastic specification. For each of the two cases, use both the White and the Goldfeld–Quandt tests to see whether heteroskedasticity has been eliminated.
+
+## Exercise 6.2
+
+Use the data in `Greek_SME.wf1` to estimate the effect of size (proxied by number of employees) on the profit/sales ratio. Check whether the residuals in this equation are heteroskedastic by applying all the tests for detection of heteroskedasticity (both formal and informal) described in this chapter. If there is heteroskedasticity, obtain the White's corrected standard error estimates and construct confidence intervals to find the differences between the simple OLS and the White's estimates.
+
+## Exercise 6.3
+
+Use the data in `police.wf1` to estimate the equation that relates the actual value of the current budget (Y) with the expected value of the budget (X). Check for heteroskedasticity in this regression equation with all the known tests described in this chapter.
+
+## Exercise 6.4
+
+The file `sleep.xls` contains data for 706 individuals concerning sleeping habits and possible determinants of sleeping time. Estimate the following regression equation:
+
+$$\text{sleep} = b_0 + b_1 \text{totwrk} + b_2 \text{educ} + b_3 \text{age} + b_4 \text{yngkid} + b_5 \text{male} + u$$
+
+(a) Check whether there is evidence of heteroskedasticity.
+
+(b) Is the estimated variance of $u$ higher for men than women?
+
+(c) Re-estimate the model, correcting for heteroskedasticity. Compare the results obtained from this method with the simple OLS estimation results that were initially obtained.
+
+## Exercise 6.5
+
+Use the data in the file `houseprice.xls` to estimate the following equation:
+
+$$\text{price} = b_0 + b_1 \text{lotsize} + b_2 \text{sqrft} + b_3 \text{bdrms} + u$$
+
+(a) Check whether there is evidence of heteroskedasticity.
+
+(b) Re-estimate the equation but this time instead of price use log(price) as the dependent variable. Check for heteroskedasticity again. Is there any change in your conclusion in (a)?
+
+(c) What does this example suggest about heteroskedasticity and the transformation used for the dependent variable?
+
+## Exercise 6.6
+
+A mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index "MoF: Means of Funds" is constructed for every country and is given in the table below. Also, the data classify all countries according to their total capitalisation (see variable "size"). The data are also provided in the file `Mutual_Funds.xlsx`.
+
+| Country | MoF (Y) | Size (X) | Y/σ | X/σ |
+|---------|---------|----------|-----|-----|
+| Austria | 0.1866 | 9 | 3.0112 | 145.2236 |
+| Belgium | 11.077 | 7 | 0.8403 | 0.531 |
+| Denmark | 487.92307 | 12 | 0.3352 | 0.008245 |
+| France | 7.4615 | 3 | 0.5405 | 0.217 |
+| Germany | 22.92307 | 2 | 0.3141 | 0.0274 |
+| Greece | 1.3846 | 8 | 0.3066 | 1.7716 |
+| Ireland | 424.0769 | 10 | 0.7914 | 0.0187 |
+| Italy | 103.92308 | 5 | 0.5946 | 0.028607 |
+| Luxemburg | 62.07692 | 13 | 0.35903 | 0.07518 |
+| Portugal | 401.1538 | 11 | 0.5163 | 0.01416 |
+| Spain | 84.3846 | 6 | 0.5581 | 0.03968 |
+| Switzerland | 250.6153 | 4 | 0.2911 | 0.004647 |
+| United Kingdom | 0.1866 | 1 | 0.884 | 0.00109 |
+
+(a) Estimate the regression model: $Y = a + bX + u$ and explain the results.
+
+(b) Check for heteroskedasticity in the model using both the graphical and formal approaches.
+
+(c) Since there is heteroskedasticity in the model, the investor decided to re-estimate the model transforming Y and X by dividing both of them with the standard deviation of the MoF variable for each country. The variables are given in the table above. Re-estimate the model and discuss the results. Is heteroskedasticity resolved?

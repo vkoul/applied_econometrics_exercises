@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Multiple Regression — Solutions – Applied Econometrics Exercises in R</title>
+<title>2&nbsp; Multicollinearity — Exercises – Applied Econometrics Exercises in R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch5-multicollinearity-solutions.html" rel="next">
-<link href="./ch2-multiple-regression.html" rel="prev">
+<link href="./ch6-heteroskedasticity-questions.html" rel="next">
+<link href="./ch4-multiple-regression-questions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -315,7 +315,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch2-multiple-regression.html">Solutions</a></li><li class="breadcrumb-item"><a href="./ch4-multiple-regression-solutions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch4-multiple-regression-questions.html">Questions</a></li><li class="breadcrumb-item"><a href="./ch5-multicollinearity-questions.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Multicollinearity — Exercises</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -366,7 +366,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch5-multicollinearity-questions.html" class="sidebar-item-text sidebar-link">
+  <a href="./ch5-multicollinearity-questions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Multicollinearity — Exercises</span></span></a>
   </div>
 </li>
@@ -413,7 +413,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch4-multiple-regression-solutions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ch4-multiple-regression-solutions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></span></a>
   </div>
 </li>
@@ -459,12 +459,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="header-section-number">8.1</span> Setup</a></li>
-  <li><a href="#exercise-4.1" id="toc-exercise-4.1" class="nav-link" data-scroll-target="#exercise-4.1"><span class="header-section-number">8.2</span> Exercise 4.1</a></li>
-  <li><a href="#exercise-4.2" id="toc-exercise-4.2" class="nav-link" data-scroll-target="#exercise-4.2"><span class="header-section-number">8.3</span> Exercise 4.2</a></li>
-  <li><a href="#exercise-4.3" id="toc-exercise-4.3" class="nav-link" data-scroll-target="#exercise-4.3"><span class="header-section-number">8.4</span> Exercise 4.3</a></li>
-  <li><a href="#exercise-4.4" id="toc-exercise-4.4" class="nav-link" data-scroll-target="#exercise-4.4"><span class="header-section-number">8.5</span> Exercise 4.4</a></li>
-  <li><a href="#exercise-4.5" id="toc-exercise-4.5" class="nav-link" data-scroll-target="#exercise-4.5"><span class="header-section-number">8.6</span> Exercise 4.5</a></li>
+  <li><a href="#exercise-5.1" id="toc-exercise-5.1" class="nav-link active" data-scroll-target="#exercise-5.1"><span class="header-section-number">2.1</span> Exercise 5.1</a></li>
+  <li><a href="#exercise-5.2" id="toc-exercise-5.2" class="nav-link" data-scroll-target="#exercise-5.2"><span class="header-section-number">2.2</span> Exercise 5.2</a></li>
+  <li><a href="#exercise-5.3" id="toc-exercise-5.3" class="nav-link" data-scroll-target="#exercise-5.3"><span class="header-section-number">2.3</span> Exercise 5.3</a></li>
+  <li><a href="#exercise-5.4" id="toc-exercise-5.4" class="nav-link" data-scroll-target="#exercise-5.4"><span class="header-section-number">2.4</span> Exercise 5.4</a></li>
+  <li><a href="#exercise-5.5" id="toc-exercise-5.5" class="nav-link" data-scroll-target="#exercise-5.5"><span class="header-section-number">2.5</span> Exercise 5.5</a></li>
+  <li><a href="#exercise-5.6" id="toc-exercise-5.6" class="nav-link" data-scroll-target="#exercise-5.6"><span class="header-section-number">2.6</span> Exercise 5.6</a></li>
   </ul>
 </nav>
     </div>
@@ -472,9 +472,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch2-multiple-regression.html">Solutions</a></li><li class="breadcrumb-item"><a href="./ch4-multiple-regression-solutions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch4-multiple-regression-questions.html">Questions</a></li><li class="breadcrumb-item"><a href="./ch5-multicollinearity-questions.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Multicollinearity — Exercises</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Multicollinearity — Exercises</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -491,54 +491,203 @@ window.Quarto = {
 </header>
 
 
-<section id="setup" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">8.1</span> Setup</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<section id="exercise-5.1" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercise-5.1"><span class="header-section-number">2.1</span> Exercise 5.1</h2>
+<p>The file <code>imports_uk_y.wf1</code> contains yearly data (1972–1997) for real imports (IMP), real gross domestic product (GDP) and the relative consumer price index (CPI) of domestic to foreign prices for the US economy. Use these data to estimate the following model:</p>
+<p><span class="math display">\[\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{GDP})_t + \beta_3 \ln(\text{CPI})_t + u_t\]</span></p>
+<p>Check whether there is multicollinearity in the data. Calculate the correlation matrix of the variables and comment regarding the possibility of multicollinearity. Also, run the following additional regressions:</p>
+<p><span class="math display">\[\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{GDP})_t + u_t\]</span></p>
+<p><span class="math display">\[\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{CPI})_t + u_t\]</span></p>
+<p><span class="math display">\[\ln(\text{GDP})_t = \beta_1 + \beta_2 \ln(\text{CPI})_t + u_t\]</span></p>
+<p>What can you conclude about the nature of multicollinearity from these results?</p>
 </section>
-<section id="exercise-4.1" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="exercise-4.1"><span class="header-section-number">8.2</span> Exercise 4.1</h2>
-<p>The file <code>health.xls</code> contains data for birth_weight, cig, and fam_inc.</p>
-<p><strong>(a) Regression with both variables</strong></p>
-<p><strong>(b) Regression with fam_inc only</strong></p>
-<p><strong>(c) Regression with cig only</strong></p>
-<p><strong>(d) Model comparison table</strong></p>
-<p><strong>(e) Wald test: effect of cig is two times greater than fam_inc</strong></p>
+<section id="exercise-5.2" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercise-5.2"><span class="header-section-number">2.2</span> Exercise 5.2</h2>
+<p>The file <code>imports_uk.wf1</code> contains quarterly observations of the variables mentioned in Exercise 5.1. Repeat Exercise 5.1 using the quarterly (higher frequency) data. Do your results change?</p>
 </section>
-<section id="exercise-4.2" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="exercise-4.2"><span class="header-section-number">8.3</span> Exercise 4.2</h2>
-<p>Determinants of log(wage): educ, exper, tenure.</p>
-<p><strong>(a) Full model and results</strong></p>
-<p><strong>(b) Wald test: exper same effect as educ</strong></p>
-<p><strong>(c) Redundant variable test for exper</strong></p>
-<p><strong>(d) Omitted variable test for tenure</strong></p>
+<section id="exercise-5.3" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercise-5.3"><span class="header-section-number">2.3</span> Exercise 5.3</h2>
+<p>Use the data in the file <code>money_uk02.wf1</code> to estimate the parameters <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span> in the equation below:</p>
+<p><span class="math display">\[\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_{1t} + u_t\]</span></p>
+<p>where <span class="math inline">\(R_{1t}\)</span> is the three-month treasury bill rate. For the rest of the variables the usual notation applies.</p>
+<ol type="a">
+<li><p>Use as an additional variable in the above equation <span class="math inline">\(R_{2t}\)</span>, which is the dollar interest rate.</p></li>
+<li><p>Do you expect to find multicollinearity? Why?</p></li>
+<li><p>Calculate the correlation matrix of all the variables. Which correlation coefficient is the largest?</p></li>
+<li><p>Calculate auxiliary regressions and conclude whether the degree of multicollinearity in (a) is serious or not.</p></li>
+</ol>
 </section>
-<section id="exercise-4.3" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exercise-4.3"><span class="header-section-number">8.4</span> Exercise 4.3</h2>
-<p>Aggregate demand for money: <span class="math inline">\(\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t\)</span></p>
-<p><strong>(a) Theory and interpretation</strong></p>
-<!-- Write your discussion here -->
-<p><strong>(b) Tests of significance</strong></p>
+<section id="exercise-5.4" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercise-5.4"><span class="header-section-number">2.4</span> Exercise 5.4</h2>
+<p>The file <code>cars.wf1</code> contains annual data from 1971–1986 (16 observations) for new cars sales in the US. The variables are defined as follows:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>cars_sold</td>
+<td>new passenger cars sold (thousands)</td>
+</tr>
+<tr class="even">
+<td>cpi_cars</td>
+<td>new cars, consumer price index, 1967 = 100</td>
+</tr>
+<tr class="odd">
+<td>cpi_all</td>
+<td>consumer price index, all items, all urban consumers, 1967 = 100</td>
+</tr>
+<tr class="even">
+<td>disp</td>
+<td>real personal disposable income (billions of dollars)</td>
+</tr>
+<tr class="odd">
+<td>int_rate</td>
+<td>interest rate (percentage)</td>
+</tr>
+<tr class="even">
+<td>lab_force</td>
+<td>employed civilian labor force (thousands)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Estimate a log-linear model that examines a demand function for new cars, including all explanatory variables as regressors. Discuss your results.</p></li>
+<li><p>In the model estimated above, do you expect to face multicollinearity? Discuss why.</p></li>
+<li><p>Check if there is indeed multicollinearity among the regressors. How will you do that? What are your conclusions?</p></li>
+<li><p>Based on your answer above, now develop a more suitable model that avoids the problems of multicollinearity.</p></li>
+</ol>
 </section>
-<section id="exercise-4.4" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="exercise-4.4"><span class="header-section-number">8.5</span> Exercise 4.4</h2>
-<p>Cobb–Douglas production function and test for constant returns to scale.</p>
+<section id="exercise-5.5" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercise-5.5"><span class="header-section-number">2.5</span> Exercise 5.5</h2>
+<p>Consider the following data:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Y</th>
+<th>X1</th>
+<th>X2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>−12</td>
+<td>12</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>−8</td>
+<td>13</td>
+<td>23</td>
+</tr>
+<tr class="odd">
+<td>−4</td>
+<td>14</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>−3</td>
+<td>15</td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>16</td>
+<td>29</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>15</td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>17</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>18</td>
+<td>33</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>21</td>
+<td>39</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>20</td>
+<td>37</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>Can you obtain estimations for the coefficients of the following linear model:</li>
+</ol>
+<p><span class="math display">\[Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + u\]</span></p>
+<p>using the data given above?</p>
+<ol start="2" type="a">
+<li>If your response to (a) was no, then how can you reparameterise the model in order to obtain satisfactory estimates of the coefficients?</li>
+</ol>
 </section>
-<section id="exercise-4.5" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="exercise-4.5"><span class="header-section-number">8.6</span> Exercise 4.5</h2>
-<p>Mankiw, Romer and Weil (1992) growth regressions.</p>
-<p><strong>(a) Create data frame</strong></p>
-<p><strong>(b) Load data</strong></p>
-<p><strong>(c) Summary statistics by sub-sample</strong></p>
-<p><strong>(d) Variable transformations</strong></p>
-<p><strong>(e) Reproduce TABLE I: Textbook Solow Model</strong></p>
-<p><strong>(f) Compare results with MRW</strong></p>
-<p><strong>(g) Test restriction: coefficient of ln(pop) = −ln(iy)</strong></p>
-<p><strong>(h) Reproduce TABLE II: Augmented Solow Model</strong></p>
-<p><strong>(i) Latest Penn World Table data (Advanced)</strong></p>
+<section id="exercise-5.6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercise-5.6"><span class="header-section-number">2.6</span> Exercise 5.6</h2>
+<p>The file <code>manhours.xls</code> contains the following variables:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>manhours</td>
+<td>monthly manhours needed to operate an establishment</td>
+</tr>
+<tr class="even">
+<td>occup</td>
+<td>average daily occupancy</td>
+</tr>
+<tr class="odd">
+<td>checkins</td>
+<td>monthly average number of check-ins</td>
+</tr>
+<tr class="even">
+<td>service</td>
+<td>weekly hours of service desk operation</td>
+</tr>
+<tr class="odd">
+<td>comusearea</td>
+<td>common use area (in square feet)</td>
+</tr>
+<tr class="even">
+<td>no_wings</td>
+<td>number of building wings</td>
+</tr>
+<tr class="odd">
+<td>berthing</td>
+<td>operational berthing capacity</td>
+</tr>
+<tr class="even">
+<td>no_rooms</td>
+<td>number of rooms</td>
+</tr>
+</tbody>
+</table>
+<p>The data describes the manpower needs for operating a US Navy bachelor officers’ quarters. It contains cross-sectional observations for 25 establishments.</p>
+<ol type="a">
+<li><p>Estimate a regression model that explains average daily occupancy (<code>occup</code>) from all available explanatory variables. Do the results suggest multicollinearity?</p></li>
+<li><p>Are some of the explanatory variables collinear? How is this detected?</p></li>
+</ol>
 
 
 <!-- -->
@@ -1012,150 +1161,120 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch2-multiple-regression.html" class="pagination-link" aria-label="Multiple Regression">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Multiple Regression</span></span>
+      <a href="./ch4-multiple-regression-questions.html" class="pagination-link" aria-label="Multiple Regression — Questions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Multiple Regression — Questions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch5-multicollinearity-solutions.html" class="pagination-link" aria-label="Multicollinearity — Solutions">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Multicollinearity — Solutions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch6-heteroskedasticity-questions.html" class="pagination-link" aria-label="Heteroskedasticity — Exercises">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Exercises</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Multiple Regression — Solutions</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.1</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`health.xls`</span> contains data for birth_weight, cig, and fam_inc.</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>**(a) Regression with both variables**</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>**(b) Regression with fam_inc only**</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>**(c) Regression with cig only**</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>**(d) Model comparison table**</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>**(e) Wald test: effect of cig is two times greater than fam_inc**</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.2</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Determinants of log(wage): educ, exper, tenure.</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>**(a) Full model and results**</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>**(b) Wald test: exper same effect as educ**</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>**(c) Redundant variable test for exper**</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>**(d) Omitted variable test for tenure**</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.3</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>Aggregate demand for money: $\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t$</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>**(a) Theory and interpretation**</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Write your discussion here --&gt;</span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>**(b) Tests of significance**</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.4</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>Cobb–Douglas production function and test for constant returns to scale.</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 4.5</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>Mankiw, Romer and Weil (1992) growth regressions.</span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>**(a) Create data frame**</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>**(b) Load data**</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>**(c) Summary statistics by sub-sample**</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>**(d) Variable transformations**</span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>**(e) Reproduce TABLE I: Textbook Solow Model**</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>**(f) Compare results with MRW**</span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>**(g) Test restriction: coefficient of ln(pop) = −ln(iy)**</span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>**(h) Reproduce TABLE II: Augmented Solow Model**</span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>**(i) Latest Penn World Table data (Advanced)**</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Multicollinearity — Exercises</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 5.1</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`imports_uk_y.wf1`</span> contains yearly data (1972–1997) for real imports (IMP), real gross domestic product (GDP) and the relative consumer price index (CPI) of domestic to foreign prices for the US economy. Use these data to estimate the following model:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>$$\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{GDP})_t + \beta_3 \ln(\text{CPI})_t + u_t$$</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Check whether there is multicollinearity in the data. Calculate the correlation matrix of the variables and comment regarding the possibility of multicollinearity. Also, run the following additional regressions:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>$$\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{GDP})_t + u_t$$</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>$$\ln(\text{IMP})_t = \beta_1 + \beta_2 \ln(\text{CPI})_t + u_t$$</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>$$\ln(\text{GDP})_t = \beta_1 + \beta_2 \ln(\text{CPI})_t + u_t$$</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>What can you conclude about the nature of multicollinearity from these results?</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 5.2</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`imports_uk.wf1`</span> contains quarterly observations of the variables mentioned in Exercise 5.1. Repeat Exercise 5.1 using the quarterly (higher frequency) data. Do your results change?</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 5.3</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Use the data in the file <span class="in">`money_uk02.wf1`</span> to estimate the parameters $\alpha$, $\beta$ and $\gamma$ in the equation below:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>$$\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_{1t} + u_t$$</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>where $R_{1t}$ is the three-month treasury bill rate. For the rest of the variables the usual notation applies.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>(a) Use as an additional variable in the above equation $R_{2t}$, which is the dollar interest rate.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>(b) Do you expect to find multicollinearity? Why?</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>(c) Calculate the correlation matrix of all the variables. Which correlation coefficient is the largest?</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>(d) Calculate auxiliary regressions and conclude whether the degree of multicollinearity in (a) is serious or not.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 5.4</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`cars.wf1`</span> contains annual data from 1971–1986 (16 observations) for new cars sales in the US. The variables are defined as follows:</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|-------------|</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cars_sold <span class="pp">|</span> new passenger cars sold (thousands) <span class="pp">|</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cpi_cars <span class="pp">|</span> new cars, consumer price index, 1967 = 100 <span class="pp">|</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cpi_all <span class="pp">|</span> consumer price index, all items, all urban consumers, 1967 = 100 <span class="pp">|</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> disp <span class="pp">|</span> real personal disposable income (billions of dollars) <span class="pp">|</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> int_rate <span class="pp">|</span> interest rate (percentage) <span class="pp">|</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> lab_force <span class="pp">|</span> employed civilian labor force (thousands) <span class="pp">|</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>(a) Estimate a log-linear model that examines a demand function for new cars, including all explanatory variables as regressors. Discuss your results.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>(b) In the model estimated above, do you expect to face multicollinearity? Discuss why.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>(c) Check if there is indeed multicollinearity among the regressors. How will you do that? What are your conclusions?</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>(d) Based on your answer above, now develop a more suitable model that avoids the problems of multicollinearity.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 5.5</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Consider the following data:</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Y <span class="pp">|</span> X1 <span class="pp">|</span> X2 <span class="pp">|</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|----|----|</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> −12 <span class="pp">|</span> 12 <span class="pp">|</span> 21 <span class="pp">|</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> −8 <span class="pp">|</span> 13 <span class="pp">|</span> 23 <span class="pp">|</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> −4 <span class="pp">|</span> 14 <span class="pp">|</span> 25 <span class="pp">|</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> −3 <span class="pp">|</span> 15 <span class="pp">|</span> 27 <span class="pp">|</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 <span class="pp">|</span> 16 <span class="pp">|</span> 29 <span class="pp">|</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> 15 <span class="pp">|</span> 27 <span class="pp">|</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 <span class="pp">|</span> 17 <span class="pp">|</span> 31 <span class="pp">|</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 8 <span class="pp">|</span> 18 <span class="pp">|</span> 33 <span class="pp">|</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 18 <span class="pp">|</span> 21 <span class="pp">|</span> 39 <span class="pp">|</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 13 <span class="pp">|</span> 20 <span class="pp">|</span> 37 <span class="pp">|</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>(a) Can you obtain estimations for the coefficients of the following linear model:</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>$$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + u$$</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>using the data given above?</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>(b) If your response to (a) was no, then how can you reparameterise the model in order to obtain satisfactory estimates of the coefficients?</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 5.6</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`manhours.xls`</span> contains the following variables:</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|-------------|</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> manhours <span class="pp">|</span> monthly manhours needed to operate an establishment <span class="pp">|</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> occup <span class="pp">|</span> average daily occupancy <span class="pp">|</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> checkins <span class="pp">|</span> monthly average number of check-ins <span class="pp">|</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> service <span class="pp">|</span> weekly hours of service desk operation <span class="pp">|</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> comusearea <span class="pp">|</span> common use area (in square feet) <span class="pp">|</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> no_wings <span class="pp">|</span> number of building wings <span class="pp">|</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> berthing <span class="pp">|</span> operational berthing capacity <span class="pp">|</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> no_rooms <span class="pp">|</span> number of rooms <span class="pp">|</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>The data describes the manpower needs for operating a US Navy bachelor officers' quarters. It contains cross-sectional observations for 25 establishments.</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>(a) Estimate a regression model that explains average daily occupancy (<span class="in">`occup`</span>) from all available explanatory variables. Do the results suggest multicollinearity?</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>(b) Are some of the explanatory variables collinear? How is this detected?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -4,6 +4,7 @@
 
 ```{r}
 #| message: false
+#| warning: false
 library(tidyverse)
 library(broom)
 library(modelsummary)
@@ -13,31 +14,31 @@ library(modelsummary)
 
 The file `health.xls` contains data for birth_weight, cig, and fam_inc.
 
-### (a) Regression with both variables
+**(a) Regression with both variables**
 
 ```{r}
 
 ```
 
-### (b) Regression with fam_inc only
+**(b) Regression with fam_inc only**
 
 ```{r}
 
 ```
 
-### (c) Regression with cig only
+**(c) Regression with cig only**
 
 ```{r}
 
 ```
 
-### (d) Model comparison table
+**(d) Model comparison table**
 
 ```{r}
 
 ```
 
-### (e) Wald test: effect of cig is two times greater than fam_inc
+**(e) Wald test: effect of cig is two times greater than fam_inc**
 
 ```{r}
 
@@ -47,25 +48,25 @@ The file `health.xls` contains data for birth_weight, cig, and fam_inc.
 
 Determinants of log(wage): educ, exper, tenure.
 
-### (a) Full model and results
+**(a) Full model and results**
 
 ```{r}
 
 ```
 
-### (b) Wald test: exper same effect as educ
+**(b) Wald test: exper same effect as educ**
 
 ```{r}
 
 ```
 
-### (c) Redundant variable test for exper
+**(c) Redundant variable test for exper**
 
 ```{r}
 
 ```
 
-### (d) Omitted variable test for tenure
+**(d) Omitted variable test for tenure**
 
 ```{r}
 
@@ -75,11 +76,11 @@ Determinants of log(wage): educ, exper, tenure.
 
 Aggregate demand for money: $\ln(M/P)_t = \alpha + \beta \ln(Y_t) + \gamma R_t + u_t$
 
-### (a) Theory and interpretation
+**(a) Theory and interpretation**
 
 <!-- Write your discussion here -->
 
-### (b) Tests of significance
+**(b) Tests of significance**
 
 ```{r}
 
@@ -97,55 +98,55 @@ Cobb–Douglas production function and test for constant returns to scale.
 
 Mankiw, Romer and Weil (1992) growth regressions.
 
-### (a) Create data frame
+**(a) Create data frame**
 
 ```{r}
 
 ```
 
-### (b) Load data
+**(b) Load data**
 
 ```{r}
 
 ```
 
-### (c) Summary statistics by sub-sample
+**(c) Summary statistics by sub-sample**
 
 ```{r}
 
 ```
 
-### (d) Variable transformations
+**(d) Variable transformations**
 
 ```{r}
 
 ```
 
-### (e) Reproduce TABLE I: Textbook Solow Model
+**(e) Reproduce TABLE I: Textbook Solow Model**
 
 ```{r}
 
 ```
 
-### (f) Compare results with MRW
+**(f) Compare results with MRW**
 
 ```{r}
 
 ```
 
-### (g) Test restriction: coefficient of ln(pop) = −ln(iy)
+**(g) Test restriction: coefficient of ln(pop) = −ln(iy)**
 
 ```{r}
 
 ```
 
-### (h) Reproduce TABLE II: Augmented Solow Model
+**(h) Reproduce TABLE II: Augmented Solow Model**
 
 ```{r}
 
 ```
 
-### (i) Latest Penn World Table data (Advanced)
+**(i) Latest Penn World Table data (Advanced)**
 
 ```{r}
 

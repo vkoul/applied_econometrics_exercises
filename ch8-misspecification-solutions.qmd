@@ -1,0 +1,128 @@
+# Misspecification — Solutions
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+library(lmtest)
+```
+
+## Exercise 8.1
+
+**(a) Summary statistics**
+
+```{r}
+
+```
+
+**(b) Linear model: wage = f(IQ)**
+
+```{r}
+
+```
+
+**(c) Log-linear model: log(wage) = f(IQ)**
+
+```{r}
+
+```
+
+**(d) Box–Cox transformation**
+
+```{r}
+
+```
+
+## Exercise 8.2
+
+**(a) Estimate cubic cost function**
+
+```{r}
+
+```
+
+**(b) Test: cost function is second degree only**
+
+```{r}
+
+```
+
+**(c) Test: cost function is linear**
+
+```{r}
+
+```
+
+**(d) Plot marginal cost function**
+
+```{r}
+
+```
+
+## Exercise 8.3
+
+**(a) Estimate Cobb–Douglas production function**
+
+```{r}
+
+```
+
+**(b) Test significance of β1, β2 and overall model**
+
+```{r}
+
+```
+
+**(c) Test constant returns to scale**
+
+```{r}
+
+```
+
+**(d) Calculate APL and MPL**
+
+```{r}
+
+```
+
+**(e) Ramsey RESET test (omitting X2)**
+
+```{r}
+
+```
+
+## Exercise 8.4
+
+**(a) Linear model**
+
+```{r}
+
+```
+
+**(b) Log-linear model**
+
+```{r}
+
+```
+
+**(c) Linear-log model**
+
+```{r}
+
+```
+
+**(d) Double-log model**
+
+```{r}
+
+```
+
+**(e) Compare linear vs double-log**
+
+```{r}
+
+```

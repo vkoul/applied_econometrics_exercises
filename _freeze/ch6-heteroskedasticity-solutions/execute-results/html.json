@@ -1,0 +1,15 @@
+{
+  "hash": "4a8c7d6ae8d2ba64b6ec4e7ed44fac45",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Heteroskedasticity — Solutions\n\n## Setup\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(lmtest)\nlibrary(sandwich)\n```\n:::\n\n\n## Exercise 6.1\n\n**(a) Estimate the model**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) White test**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Goldfeld–Quandt test**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) GLS with Var(u) = σ²·sqfeet**\n\n\n::: {.cell}\n\n:::\n\n\n**(e) GLS with Var(u) = σ²·sqfeet²**\n\n\n::: {.cell}\n\n:::\n\n\n**(f) Re-test for heteroskedasticity after correction**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 6.2\n\n**(a) Estimate effect of size on profit/sales ratio**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Tests for heteroskedasticity**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) White's corrected standard errors**\n\n\n::: {.cell}\n\n:::\n\n\n**(d) Confidence intervals comparison**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 6.3\n\n**(a) Estimate budget model**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Heteroskedasticity tests**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 6.4\n\n**(a) Check for heteroskedasticity**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Variance comparison: men vs women**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Re-estimate correcting for heteroskedasticity**\n\n\n::: {.cell}\n\n:::\n\n\n## Exercise 6.5\n\n**(a) Check for heteroskedasticity**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Re-estimate with log(price) and re-test**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Discussion on transformation and heteroskedasticity**\n\n<!-- Write your discussion here -->\n\n## Exercise 6.6\n\n**(a) Estimate Y = a + bX + u**\n\n\n::: {.cell}\n\n:::\n\n\n**(b) Check for heteroskedasticity**\n\n\n::: {.cell}\n\n:::\n\n\n**(c) Re-estimate with transformed variables**\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

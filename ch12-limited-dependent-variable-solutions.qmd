@@ -1,0 +1,72 @@
+# Limited Dependent Variable — Solutions
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(broom)
+library(modelsummary)
+library(margins)
+```
+
+## Exercise 12.1
+
+**(a) Probit model: effect of White on approve**
+
+```{r}
+
+```
+
+**(b) Estimated probability for Whites and non-Whites**
+
+```{r}
+
+```
+
+**(c) Linear probability model comparison**
+
+```{r}
+
+```
+
+**(d) Extended model with additional determinants**
+
+```{r}
+
+```
+
+## Exercise 12.2
+
+**(a) Discrimination: male vs female**
+
+```{r}
+
+```
+
+**(b) Discrimination: married vs non-married**
+
+```{r}
+
+```
+
+**(c) Extended model with additional variables**
+
+```{r}
+
+```
+
+## Exercise 12.3
+
+**(a) Discrimination: Black and Hispanic minorities**
+
+```{r}
+
+```
+
+**(b) Extended model with additional determinants**
+
+```{r}
+
+```
