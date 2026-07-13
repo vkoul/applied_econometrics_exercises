@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Heteroskedasticity — Exercises – Applied Econometrics Exercises in R</title>
+<title>4&nbsp; Multicollinearity — Key Ideas – Applied Econometrics Exercises in R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch6-heteroskedasticity-solutions.html" rel="next">
-<link href="./ch6-heteroskedasticity-key-ideas.html" rel="prev">
+<link href="./ch5-multicollinearity-questions.html" rel="next">
+<link href="./ch4-multiple-regression-solutions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -112,35 +112,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -315,7 +286,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch6-heteroskedasticity-key-ideas.html">Chapter 6: Heteroskedasticity</a></li><li class="breadcrumb-item"><a href="./ch6-heteroskedasticity-questions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Exercises</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch5-multicollinearity-key-ideas.html">Chapter 5: Multicollinearity</a></li><li class="breadcrumb-item"><a href="./ch5-multicollinearity-key-ideas.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multicollinearity — Key Ideas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -389,7 +360,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch5-multicollinearity-key-ideas.html" class="sidebar-item-text sidebar-link">
+  <a href="./ch5-multicollinearity-key-ideas.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multicollinearity — Key Ideas</span></span></a>
   </div>
 </li>
@@ -424,7 +395,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch6-heteroskedasticity-questions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ch6-heteroskedasticity-questions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Exercises</span></span></a>
   </div>
 </li>
@@ -533,12 +504,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercise-6.1" id="toc-exercise-6.1" class="nav-link active" data-scroll-target="#exercise-6.1"><span class="header-section-number">8.1</span> Exercise 6.1</a></li>
-  <li><a href="#exercise-6.2" id="toc-exercise-6.2" class="nav-link" data-scroll-target="#exercise-6.2"><span class="header-section-number">8.2</span> Exercise 6.2</a></li>
-  <li><a href="#exercise-6.3" id="toc-exercise-6.3" class="nav-link" data-scroll-target="#exercise-6.3"><span class="header-section-number">8.3</span> Exercise 6.3</a></li>
-  <li><a href="#exercise-6.4" id="toc-exercise-6.4" class="nav-link" data-scroll-target="#exercise-6.4"><span class="header-section-number">8.4</span> Exercise 6.4</a></li>
-  <li><a href="#exercise-6.5" id="toc-exercise-6.5" class="nav-link" data-scroll-target="#exercise-6.5"><span class="header-section-number">8.5</span> Exercise 6.5</a></li>
-  <li><a href="#exercise-6.6" id="toc-exercise-6.6" class="nav-link" data-scroll-target="#exercise-6.6"><span class="header-section-number">8.6</span> Exercise 6.6</a></li>
+  <li><a href="#what-is-multicollinearity" id="toc-what-is-multicollinearity" class="nav-link active" data-scroll-target="#what-is-multicollinearity"><span class="header-section-number">4.1</span> What is multicollinearity?</a></li>
+  <li><a href="#why-is-it-a-problem" id="toc-why-is-it-a-problem" class="nav-link" data-scroll-target="#why-is-it-a-problem"><span class="header-section-number">4.2</span> Why is it a problem?</a></li>
+  <li><a href="#how-to-detect-it" id="toc-how-to-detect-it" class="nav-link" data-scroll-target="#how-to-detect-it"><span class="header-section-number">4.3</span> How to detect it</a></li>
+  <li><a href="#what-to-do-about-it" id="toc-what-to-do-about-it" class="nav-link" data-scroll-target="#what-to-do-about-it"><span class="header-section-number">4.4</span> What to do about it</a></li>
+  <li><a href="#intuition-for-the-exercises" id="toc-intuition-for-the-exercises" class="nav-link" data-scroll-target="#intuition-for-the-exercises"><span class="header-section-number">4.5</span> Intuition for the exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -546,9 +516,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch6-heteroskedasticity-key-ideas.html">Chapter 6: Heteroskedasticity</a></li><li class="breadcrumb-item"><a href="./ch6-heteroskedasticity-questions.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Exercises</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch5-multicollinearity-key-ideas.html">Chapter 5: Multicollinearity</a></li><li class="breadcrumb-item"><a href="./ch5-multicollinearity-key-ideas.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multicollinearity — Key Ideas</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Exercises</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multicollinearity — Key Ideas</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -565,167 +535,42 @@ window.Quarto = {
 </header>
 
 
-<section id="exercise-6.1" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="exercise-6.1"><span class="header-section-number">8.1</span> Exercise 6.1</h2>
-<p>Use the data in the file <code>houseprice.wf1</code> to estimate a model of:</p>
-<p><span class="math display">\[\text{price}_i = \beta_1 + \beta_2 \text{sqfeet}_i + u_i\]</span></p>
-<p>Check for heteroskedasticity using the White and the Goldfeld–Quandt tests. Obtain GLS estimates for the following assumptions: (a) <span class="math inline">\(\text{Var}(u_i) = \sigma^2 \text{sqfeet}_i\)</span> and (b) <span class="math inline">\(\text{Var}(u_i) = \sigma^2 \text{sqfeet}_i^2\)</span>. Comment on the sensitivity of the estimates and their standard errors to the heteroskedastic specification. For each of the two cases, use both the White and the Goldfeld–Quandt tests to see whether heteroskedasticity has been eliminated.</p>
+<section id="what-is-multicollinearity" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="what-is-multicollinearity"><span class="header-section-number">4.1</span> What is multicollinearity?</h2>
+<p>Multicollinearity means your explanatory variables are highly correlated with each other. Imagine trying to figure out whether it’s heat or humidity making you uncomfortable — when both always move together, it’s hard to separate their individual effects.</p>
 </section>
-<section id="exercise-6.2" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="exercise-6.2"><span class="header-section-number">8.2</span> Exercise 6.2</h2>
-<p>Use the data in <code>Greek_SME.wf1</code> to estimate the effect of size (proxied by number of employees) on the profit/sales ratio. Check whether the residuals in this equation are heteroskedastic by applying all the tests for detection of heteroskedasticity (both formal and informal) described in this chapter. If there is heteroskedasticity, obtain the White’s corrected standard error estimates and construct confidence intervals to find the differences between the simple OLS and the White’s estimates.</p>
+<section id="why-is-it-a-problem" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="why-is-it-a-problem"><span class="header-section-number">4.2</span> Why is it a problem?</h2>
+<p>OLS still works — your estimates are still unbiased. But:</p>
+<ul>
+<li><strong>Standard errors blow up</strong> — you can’t precisely estimate individual coefficients</li>
+<li><strong>t-statistics shrink</strong> — variables appear insignificant even when they matter</li>
+<li><strong>Coefficients become unstable</strong> — small changes in data cause big swings in estimates</li>
+<li><strong>Signs may flip</strong> — a variable you expect to be positive shows up negative</li>
+</ul>
+<p>The model as a whole (F-test, R²) can still look great. The damage is to <em>individual</em> coefficient estimates.</p>
 </section>
-<section id="exercise-6.3" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="exercise-6.3"><span class="header-section-number">8.3</span> Exercise 6.3</h2>
-<p>Use the data in <code>police.wf1</code> to estimate the equation that relates the actual value of the current budget (Y) with the expected value of the budget (X). Check for heteroskedasticity in this regression equation with all the known tests described in this chapter.</p>
+<section id="how-to-detect-it" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="how-to-detect-it"><span class="header-section-number">4.3</span> How to detect it</h2>
+<ul>
+<li><strong>Correlation matrix</strong> — high pairwise correlations (above 0.8) are a red flag</li>
+<li><strong>VIF (Variance Inflation Factor)</strong> — measures how much a coefficient’s variance is inflated. VIF &gt; 10 signals a serious problem</li>
+<li><strong>Auxiliary regressions</strong> — regress each X on all other Xs. High R² means that X is well-explained by the others (it’s redundant)</li>
+<li><strong>Symptom check</strong> — high R² but few significant t-stats? Classic multicollinearity sign</li>
+</ul>
 </section>
-<section id="exercise-6.4" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exercise-6.4"><span class="header-section-number">8.4</span> Exercise 6.4</h2>
-<p>The file <code>sleep.xls</code> contains data for 706 individuals concerning sleeping habits and possible determinants of sleeping time. Estimate the following regression equation:</p>
-<p><span class="math display">\[\text{sleep} = b_0 + b_1 \text{totwrk} + b_2 \text{educ} + b_3 \text{age} + b_4 \text{yngkid} + b_5 \text{male} + u\]</span></p>
-<ol type="a">
-<li><p>Check whether there is evidence of heteroskedasticity.</p></li>
-<li><p>Is the estimated variance of <span class="math inline">\(u\)</span> higher for men than women?</p></li>
-<li><p>Re-estimate the model, correcting for heteroskedasticity. Compare the results obtained from this method with the simple OLS estimation results that were initially obtained.</p></li>
-</ol>
+<section id="what-to-do-about-it" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="what-to-do-about-it"><span class="header-section-number">4.4</span> What to do about it</h2>
+<ul>
+<li>Drop one of the collinear variables (if theory permits)</li>
+<li>Combine variables (e.g., use a ratio or index)</li>
+<li>Get more data (sometimes helps, often doesn’t)</li>
+<li>Accept it — if you only care about prediction, not individual coefficients, multicollinearity isn’t really a problem</li>
+</ul>
 </section>
-<section id="exercise-6.5" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="exercise-6.5"><span class="header-section-number">8.5</span> Exercise 6.5</h2>
-<p>Use the data in the file <code>houseprice.xls</code> to estimate the following equation:</p>
-<p><span class="math display">\[\text{price} = b_0 + b_1 \text{lotsize} + b_2 \text{sqrft} + b_3 \text{bdrms} + u\]</span></p>
-<ol type="a">
-<li><p>Check whether there is evidence of heteroskedasticity.</p></li>
-<li><p>Re-estimate the equation but this time instead of price use log(price) as the dependent variable. Check for heteroskedasticity again. Is there any change in your conclusion in (a)?</p></li>
-<li><p>What does this example suggest about heteroskedasticity and the transformation used for the dependent variable?</p></li>
-</ol>
-</section>
-<section id="exercise-6.6" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="exercise-6.6"><span class="header-section-number">8.6</span> Exercise 6.6</h2>
-<p>A mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index “MoF: Means of Funds” is constructed for every country. The data classify all countries according to their total capitalisation (see variable “size”). The data are also provided in the file <code>Mutual_Funds.xlsx</code>.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Data">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Data
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Country</th>
-<th>MoF (Y)</th>
-<th>Size (X)</th>
-<th>Y/σ</th>
-<th>X/σ</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Austria</td>
-<td>0.1866</td>
-<td>9</td>
-<td>3.0112</td>
-<td>145.2236</td>
-</tr>
-<tr class="even">
-<td>Belgium</td>
-<td>11.077</td>
-<td>7</td>
-<td>0.8403</td>
-<td>0.531</td>
-</tr>
-<tr class="odd">
-<td>Denmark</td>
-<td>487.92307</td>
-<td>12</td>
-<td>0.3352</td>
-<td>0.008245</td>
-</tr>
-<tr class="even">
-<td>France</td>
-<td>7.4615</td>
-<td>3</td>
-<td>0.5405</td>
-<td>0.217</td>
-</tr>
-<tr class="odd">
-<td>Germany</td>
-<td>22.92307</td>
-<td>2</td>
-<td>0.3141</td>
-<td>0.0274</td>
-</tr>
-<tr class="even">
-<td>Greece</td>
-<td>1.3846</td>
-<td>8</td>
-<td>0.3066</td>
-<td>1.7716</td>
-</tr>
-<tr class="odd">
-<td>Ireland</td>
-<td>424.0769</td>
-<td>10</td>
-<td>0.7914</td>
-<td>0.0187</td>
-</tr>
-<tr class="even">
-<td>Italy</td>
-<td>103.92308</td>
-<td>5</td>
-<td>0.5946</td>
-<td>0.028607</td>
-</tr>
-<tr class="odd">
-<td>Luxemburg</td>
-<td>62.07692</td>
-<td>13</td>
-<td>0.35903</td>
-<td>0.07518</td>
-</tr>
-<tr class="even">
-<td>Portugal</td>
-<td>401.1538</td>
-<td>11</td>
-<td>0.5163</td>
-<td>0.01416</td>
-</tr>
-<tr class="odd">
-<td>Spain</td>
-<td>84.3846</td>
-<td>6</td>
-<td>0.5581</td>
-<td>0.03968</td>
-</tr>
-<tr class="even">
-<td>Switzerland</td>
-<td>250.6153</td>
-<td>4</td>
-<td>0.2911</td>
-<td>0.004647</td>
-</tr>
-<tr class="odd">
-<td>United Kingdom</td>
-<td>0.1866</td>
-<td>1</td>
-<td>0.884</td>
-<td>0.00109</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<ol type="a">
-<li><p>Estimate the regression model: <span class="math inline">\(Y = a + bX + u\)</span> and explain the results.</p></li>
-<li><p>Check for heteroskedasticity in the model using both the graphical and formal approaches.</p></li>
-<li><p>Since there is heteroskedasticity in the model, the investor decided to re-estimate the model transforming Y and X by dividing both of them with the standard deviation of the MoF variable for each country. The variables are given in the table above. Re-estimate the model and discuss the results. Is heteroskedasticity resolved?</p></li>
-</ol>
+<section id="intuition-for-the-exercises" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="intuition-for-the-exercises"><span class="header-section-number">4.5</span> Intuition for the exercises</h2>
+<p>In Exercise 5.1, you have GDP and CPI as explanatory variables for imports. Both tend to grow over time — they’re correlated. You’ll see that running separate regressions gives different results than running them together. The auxiliary regression (GDP on CPI) tells you how much of the “blame” goes to multicollinearity vs.&nbsp;genuine insignificance.</p>
 
 
 <!-- -->
@@ -1199,85 +1044,50 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch6-heteroskedasticity-key-ideas.html" class="pagination-link" aria-label="Heteroskedasticity — Key Ideas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Key Ideas</span></span>
+      <a href="./ch4-multiple-regression-solutions.html" class="pagination-link" aria-label="Multiple Regression — Solutions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multiple Regression — Solutions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch6-heteroskedasticity-solutions.html" class="pagination-link" aria-label="Heteroskedasticity — Solutions">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Heteroskedasticity — Solutions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch5-multicollinearity-questions.html" class="pagination-link" aria-label="Multicollinearity — Exercises">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Multicollinearity — Exercises</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Heteroskedasticity — Exercises</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Multicollinearity — Key Ideas</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 6.1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is multicollinearity?</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Use the data in the file <span class="in">`houseprice.wf1`</span> to estimate a model of:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Multicollinearity means your explanatory variables are highly correlated with each other. Imagine trying to figure out whether it's heat or humidity making you uncomfortable — when both always move together, it's hard to separate their individual effects.</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>$$\text{price}_i = \beta_1 + \beta_2 \text{sqfeet}_i + u_i$$</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why is it a problem?</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Check for heteroskedasticity using the White and the Goldfeld–Quandt tests. Obtain GLS estimates for the following assumptions: (a) $\text{Var}(u_i) = \sigma^2 \text{sqfeet}_i$ and (b) $\text{Var}(u_i) = \sigma^2 \text{sqfeet}_i^2$. Comment on the sensitivity of the estimates and their standard errors to the heteroskedastic specification. For each of the two cases, use both the White and the Goldfeld–Quandt tests to see whether heteroskedasticity has been eliminated.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>OLS still works — your estimates are still unbiased. But:</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 6.2</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Use the data in <span class="in">`Greek_SME.wf1`</span> to estimate the effect of size (proxied by number of employees) on the profit/sales ratio. Check whether the residuals in this equation are heteroskedastic by applying all the tests for detection of heteroskedasticity (both formal and informal) described in this chapter. If there is heteroskedasticity, obtain the White's corrected standard error estimates and construct confidence intervals to find the differences between the simple OLS and the White's estimates.</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 6.3</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Use the data in <span class="in">`police.wf1`</span> to estimate the equation that relates the actual value of the current budget (Y) with the expected value of the budget (X). Check for heteroskedasticity in this regression equation with all the known tests described in this chapter.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 6.4</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>The file <span class="in">`sleep.xls`</span> contains data for 706 individuals concerning sleeping habits and possible determinants of sleeping time. Estimate the following regression equation:</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>$$\text{sleep} = b_0 + b_1 \text{totwrk} + b_2 \text{educ} + b_3 \text{age} + b_4 \text{yngkid} + b_5 \text{male} + u$$</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Standard errors blow up** — you can't precisely estimate individual coefficients</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**t-statistics shrink** — variables appear insignificant even when they matter</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Coefficients become unstable** — small changes in data cause big swings in estimates</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Signs may flip** — a variable you expect to be positive shows up negative</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>The model as a whole (F-test, R²) can still look great. The damage is to *individual* coefficient estimates.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to detect it</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Correlation matrix** — high pairwise correlations (above 0.8) are a red flag</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**VIF (Variance Inflation Factor)** — measures how much a coefficient's variance is inflated. VIF &gt; 10 signals a serious problem</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Auxiliary regressions** — regress each X on all other Xs. High R² means that X is well-explained by the others (it's redundant)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Symptom check** — high R² but few significant t-stats? Classic multicollinearity sign</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>(a) Check whether there is evidence of heteroskedasticity.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## What to do about it</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>(b) Is the estimated variance of $u$ higher for men than women?</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>(c) Re-estimate the model, correcting for heteroskedasticity. Compare the results obtained from this method with the simple OLS estimation results that were initially obtained.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 6.5</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Use the data in the file <span class="in">`houseprice.xls`</span> to estimate the following equation:</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>$$\text{price} = b_0 + b_1 \text{lotsize} + b_2 \text{sqrft} + b_3 \text{bdrms} + u$$</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>(a) Check whether there is evidence of heteroskedasticity.</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>(b) Re-estimate the equation but this time instead of price use log(price) as the dependent variable. Check for heteroskedasticity again. Is there any change in your conclusion in (a)?</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>(c) What does this example suggest about heteroskedasticity and the transformation used for the dependent variable?</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 6.6</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>A mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index "MoF: Means of Funds" is constructed for every country. The data classify all countries according to their total capitalisation (see variable "size"). The data are also provided in the file <span class="in">`Mutual_Funds.xlsx`</span>.</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true" title="Data"}</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Country <span class="pp">|</span> MoF (Y) <span class="pp">|</span> Size (X) <span class="pp">|</span> Y/σ <span class="pp">|</span> X/σ <span class="pp">|</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|---------|----------|-----|-----|</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Austria <span class="pp">|</span> 0.1866 <span class="pp">|</span> 9 <span class="pp">|</span> 3.0112 <span class="pp">|</span> 145.2236 <span class="pp">|</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Belgium <span class="pp">|</span> 11.077 <span class="pp">|</span> 7 <span class="pp">|</span> 0.8403 <span class="pp">|</span> 0.531 <span class="pp">|</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Denmark <span class="pp">|</span> 487.92307 <span class="pp">|</span> 12 <span class="pp">|</span> 0.3352 <span class="pp">|</span> 0.008245 <span class="pp">|</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> France <span class="pp">|</span> 7.4615 <span class="pp">|</span> 3 <span class="pp">|</span> 0.5405 <span class="pp">|</span> 0.217 <span class="pp">|</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Germany <span class="pp">|</span> 22.92307 <span class="pp">|</span> 2 <span class="pp">|</span> 0.3141 <span class="pp">|</span> 0.0274 <span class="pp">|</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Greece <span class="pp">|</span> 1.3846 <span class="pp">|</span> 8 <span class="pp">|</span> 0.3066 <span class="pp">|</span> 1.7716 <span class="pp">|</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Ireland <span class="pp">|</span> 424.0769 <span class="pp">|</span> 10 <span class="pp">|</span> 0.7914 <span class="pp">|</span> 0.0187 <span class="pp">|</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Italy <span class="pp">|</span> 103.92308 <span class="pp">|</span> 5 <span class="pp">|</span> 0.5946 <span class="pp">|</span> 0.028607 <span class="pp">|</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Luxemburg <span class="pp">|</span> 62.07692 <span class="pp">|</span> 13 <span class="pp">|</span> 0.35903 <span class="pp">|</span> 0.07518 <span class="pp">|</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Portugal <span class="pp">|</span> 401.1538 <span class="pp">|</span> 11 <span class="pp">|</span> 0.5163 <span class="pp">|</span> 0.01416 <span class="pp">|</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Spain <span class="pp">|</span> 84.3846 <span class="pp">|</span> 6 <span class="pp">|</span> 0.5581 <span class="pp">|</span> 0.03968 <span class="pp">|</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Switzerland <span class="pp">|</span> 250.6153 <span class="pp">|</span> 4 <span class="pp">|</span> 0.2911 <span class="pp">|</span> 0.004647 <span class="pp">|</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> United Kingdom <span class="pp">|</span> 0.1866 <span class="pp">|</span> 1 <span class="pp">|</span> 0.884 <span class="pp">|</span> 0.00109 <span class="pp">|</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>(a) Estimate the regression model: $Y = a + bX + u$ and explain the results.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>(b) Check for heteroskedasticity in the model using both the graphical and formal approaches.</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>(c) Since there is heteroskedasticity in the model, the investor decided to re-estimate the model transforming Y and X by dividing both of them with the standard deviation of the MoF variable for each country. The variables are given in the table above. Re-estimate the model and discuss the results. Is heteroskedasticity resolved?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Drop one of the collinear variables (if theory permits)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Combine variables (e.g., use a ratio or index)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Get more data (sometimes helps, often doesn't)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Accept it — if you only care about prediction, not individual coefficients, multicollinearity isn't really a problem</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intuition for the exercises</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>In Exercise 5.1, you have GDP and CPI as explanatory variables for imports. Both tend to grow over time — they're correlated. You'll see that running separate regressions gives different results than running them together. The auxiliary regression (GDP on CPI) tells you how much of the "blame" goes to multicollinearity vs. genuine insignificance.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

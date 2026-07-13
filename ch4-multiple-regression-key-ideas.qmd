@@ -1,0 +1,27 @@
+# Multiple Regression — Key Ideas
+
+## What is multiple regression?
+
+Simple regression uses one variable to explain another. Multiple regression uses *several* variables at once. The model looks like:
+
+$$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_k X_k + u$$
+
+Each $\beta$ tells you the effect of that variable *holding everything else constant*. This is the key insight — you're isolating individual effects.
+
+## Why does it matter?
+
+In the real world, outcomes depend on many things simultaneously. Birth weight depends on both smoking and family income. If you only look at one factor, you might confuse its effect with the effect of something else (omitted variable bias).
+
+## Key concepts for the exercises
+
+**R² and Adjusted R²** — R² tells you what fraction of variation in Y your model explains. But adding *any* variable increases R², even useless ones. Adjusted R² penalises you for adding variables that don't help — use it to compare models with different numbers of variables.
+
+**F-test (joint significance)** — Tests whether *all* your explanatory variables together are significant. A significant F-test means your model as a whole explains something, even if individual variables might not be.
+
+**Wald test** — Tests specific hypotheses about coefficients. For example: "Is the effect of smoking exactly twice the effect of income?" You're testing a *restriction* on the coefficients.
+
+**Adding/removing variables** — When you add or drop a variable, the other coefficients change. This happens because variables are correlated with each other. Watch how coefficients shift across your models — it tells you about the relationships between your explanatory variables.
+
+## Intuition for Exercise 4.1
+
+You have birth weight, cigarettes smoked, and family income. The question is: does each variable have an independent effect? When you run all three models (both variables, income only, cigarettes only), you'll see how the estimates change. If a coefficient stays stable across specifications, that variable's effect is robust. If it swings around, it's picking up the effect of whatever you left out.

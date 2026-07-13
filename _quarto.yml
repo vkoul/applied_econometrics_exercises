@@ -11,22 +11,35 @@ book:
   date: today
   chapters:
     - index.qmd
-    - part: "Questions"
+    - part: "Chapter 4: Multiple Regression"
       chapters:
+        - ch4-multiple-regression-key-ideas.qmd
         - ch4-multiple-regression-questions.qmd
-        - ch5-multicollinearity-questions.qmd
-        - ch6-heteroskedasticity-questions.qmd
-        - ch8-misspecification-questions.qmd
-        - ch9-dummy-variables-questions.qmd
-        - ch12-limited-dependent-variable-questions.qmd
-    - part: "Solutions"
-      chapters:
-        - ch2-multiple-regression.qmd
         - ch4-multiple-regression-solutions.qmd
+    - part: "Chapter 5: Multicollinearity"
+      chapters:
+        - ch5-multicollinearity-key-ideas.qmd
+        - ch5-multicollinearity-questions.qmd
         - ch5-multicollinearity-solutions.qmd
+    - part: "Chapter 6: Heteroskedasticity"
+      chapters:
+        - ch6-heteroskedasticity-key-ideas.qmd
+        - ch6-heteroskedasticity-questions.qmd
         - ch6-heteroskedasticity-solutions.qmd
+    - part: "Chapter 8: Misspecification"
+      chapters:
+        - ch8-misspecification-key-ideas.qmd
+        - ch8-misspecification-questions.qmd
         - ch8-misspecification-solutions.qmd
+    - part: "Chapter 9: Dummy Variables"
+      chapters:
+        - ch9-dummy-variables-key-ideas.qmd
+        - ch9-dummy-variables-questions.qmd
         - ch9-dummy-variables-solutions.qmd
+    - part: "Chapter 12: Limited Dependent Variable"
+      chapters:
+        - ch12-limited-dependent-variable-key-ideas.qmd
+        - ch12-limited-dependent-variable-questions.qmd
         - ch12-limited-dependent-variable-solutions.qmd
 
 format:

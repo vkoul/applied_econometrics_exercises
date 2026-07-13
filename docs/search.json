@@ -20,784 +20,1059 @@
     ]
   },
   {
+    "objectID": "ch4-multiple-regression-key-ideas.html",
+    "href": "ch4-multiple-regression-key-ideas.html",
+    "title": "1  Multiple Regression — Key Ideas",
+    "section": "",
+    "text": "1.1 What is multiple regression?\nSimple regression uses one variable to explain another. Multiple regression uses several variables at once. The model looks like:\n\\[Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\ldots + \\beta_k X_k + u\\]\nEach \\(\\beta\\) tells you the effect of that variable holding everything else constant. This is the key insight — you’re isolating individual effects.",
+    "crumbs": [
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-key-ideas.html#why-does-it-matter",
+    "href": "ch4-multiple-regression-key-ideas.html#why-does-it-matter",
+    "title": "1  Multiple Regression — Key Ideas",
+    "section": "1.2 Why does it matter?",
+    "text": "1.2 Why does it matter?\nIn the real world, outcomes depend on many things simultaneously. Birth weight depends on both smoking and family income. If you only look at one factor, you might confuse its effect with the effect of something else (omitted variable bias).",
+    "crumbs": [
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-key-ideas.html#key-concepts-for-the-exercises",
+    "href": "ch4-multiple-regression-key-ideas.html#key-concepts-for-the-exercises",
+    "title": "1  Multiple Regression — Key Ideas",
+    "section": "1.3 Key concepts for the exercises",
+    "text": "1.3 Key concepts for the exercises\nR² and Adjusted R² — R² tells you what fraction of variation in Y your model explains. But adding any variable increases R², even useless ones. Adjusted R² penalises you for adding variables that don’t help — use it to compare models with different numbers of variables.\nF-test (joint significance) — Tests whether all your explanatory variables together are significant. A significant F-test means your model as a whole explains something, even if individual variables might not be.\nWald test — Tests specific hypotheses about coefficients. For example: “Is the effect of smoking exactly twice the effect of income?” You’re testing a restriction on the coefficients.\nAdding/removing variables — When you add or drop a variable, the other coefficients change. This happens because variables are correlated with each other. Watch how coefficients shift across your models — it tells you about the relationships between your explanatory variables.",
+    "crumbs": [
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch4-multiple-regression-key-ideas.html#intuition-for-exercise-4.1",
+    "href": "ch4-multiple-regression-key-ideas.html#intuition-for-exercise-4.1",
+    "title": "1  Multiple Regression — Key Ideas",
+    "section": "1.4 Intuition for Exercise 4.1",
+    "text": "1.4 Intuition for Exercise 4.1\nYou have birth weight, cigarettes smoked, and family income. The question is: does each variable have an independent effect? When you run all three models (both variables, income only, cigarettes only), you’ll see how the estimates change. If a coefficient stays stable across specifications, that variable’s effect is robust. If it swings around, it’s picking up the effect of whatever you left out.",
+    "crumbs": [
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Key Ideas</span>"
+    ]
+  },
+  {
     "objectID": "ch4-multiple-regression-questions.html",
     "href": "ch4-multiple-regression-questions.html",
-    "title": "1  Multiple Regression — Questions",
+    "title": "2  Multiple Regression — Questions",
     "section": "",
-    "text": "1.1 Essay-Type Question",
+    "text": "2.1 Essay-Type Question",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-questions.html#essay-type-question",
     "href": "ch4-multiple-regression-questions.html#essay-type-question",
-    "title": "1  Multiple Regression — Questions",
+    "title": "2  Multiple Regression — Questions",
     "section": "",
     "text": "Download data for at least 30 stock prices and for the general stock-market index for the stock market of your choice. Using the logarithmic return formula, create the return series for each stock and the market index.\nCalculate summary statistics for all stocks and for the market, as well as the correlation matrix of these returns. Comment on your results by referring to mean returns, volatilities, coefficients of skewness and kurtosis, and correlation coefficients.\nFor each stock, estimate the \\(\\beta\\) coefficient as it is suggested by the CAPM. Summarize and display your results in a table in the text. Comment on the significance of \\(\\alpha\\)s and \\(\\beta\\)s and on the values of \\(\\beta\\)s and \\(R^2\\)s in terms of what is expected a priori from the theoretical form of the CAPM.\nFrom the results derived in 3, create the required series in order to estimate the SML of the CAPM. Test the relevant hypotheses. Are your results supportive of the CAPM model?\nGraph the average returns against the estimated \\(\\beta\\)s (this is a graph of the SML) and comment on your graph with respect to CAPM findings.\nEstimate alternative versions with additional variables (such as squared terms of the obtained betas, and the standard deviation of the residuals). Comment on your results.\nCompare your findings with those of other empirical studies on this topic.\nWrite an analytical report of all your analysis. This should include: (a) a short Introduction; (b) a short Literature Review; (c) a Data Set section; (d) an Empirical Results section; and (e) a Conclusions section. Discuss the validity of the CAPM, including references if you refer to any similar studies.",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-questions.html#exercise-4.1",
     "href": "ch4-multiple-regression-questions.html#exercise-4.1",
-    "title": "1  Multiple Regression — Questions",
-    "section": "1.2 Exercise 4.1",
-    "text": "1.2 Exercise 4.1\nThe file health.xls contains data for the following variables:\n\nbirth_weight = the weight of infants after birth; when low this can put an infant at risk of illness\ncig = number of cigarettes the mother was smoking during pregnancy\nfam_inc = the income of the family; the higher the family income the better the access to prenatal care for the family in general\n\nWe would expect that the latter two variables affect birth_weight.\n\nRun a regression that includes both variables and explain the signs of the coefficients.\nEstimate a regression that includes only fam_inc, and comment on your results.\nEstimate a regression that includes only cig and comment on your results.\nPresent all three regressions summarized in a table and comment on your results, especially by comparing the changes in the estimated effects and the \\(R^2\\) of the three different models. What does the F-statistic suggest about the joint significance of the explanatory variables in the multiple regression case?\nTest the hypothesis that the effect of cig is two times greater than the respective effect of fam_inc, using the Wald test.",
+    "title": "2  Multiple Regression — Questions",
+    "section": "2.2 Exercise 4.1",
+    "text": "2.2 Exercise 4.1\nThe file health.xls contains data for the following variables:\n\nbirth_weight = the weight of infants after birth; when low this can put an infant at risk of illness\ncig = number of cigarettes the mother was smoking during pregnancy\nfam_inc = the income of the family; the higher the family income the better the access to prenatal care for the family in general\n\nWe would expect that the latter two variables affect birth_weight.\n\nRun a regression that includes both variables and explain the signs of the coefficients.\nEstimate a regression that includes only fam_inc, and comment on your results.\nEstimate a regression that includes only cig and comment on your results.\nPresent all three regressions summarized in a table and comment on your results, especially by comparing the changes in the estimated effects and the \\(R^2\\) of the three different models. What does the F-statistic suggest about the joint significance of the explanatory variables in the multiple regression case?\nTest the hypothesis that the effect of cig is two times greater than the respective effect of fam_inc, using the Wald test.",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-questions.html#exercise-4.2",
     "href": "ch4-multiple-regression-questions.html#exercise-4.2",
-    "title": "1  Multiple Regression — Questions",
-    "section": "1.3 Exercise 4.2",
-    "text": "1.3 Exercise 4.2\nUse the data from the file wage.wf1 and estimate an equation that includes as determinants of the logarithm of the wage rate the variables educ, exper and tenure.\n\nComment on your results.\nConduct a test of whether another year of general workforce experience (captured by exper) has the same effect on log(wage) as another year of education (captured by educ). State clearly your null and alternative hypotheses and your restricted and unrestricted models. Use the Wald test to check for that hypothesis.\nConduct a redundant variable test for the explanatory variable exper. Comment on your results.\nEstimate a model with exper and educ only and then conduct an omitted variable test for tenure in the model. Comment on your results.",
+    "title": "2  Multiple Regression — Questions",
+    "section": "2.3 Exercise 4.2",
+    "text": "2.3 Exercise 4.2\nUse the data from the file wage.wf1 and estimate an equation that includes as determinants of the logarithm of the wage rate the variables educ, exper and tenure.\n\nComment on your results.\nConduct a test of whether another year of general workforce experience (captured by exper) has the same effect on log(wage) as another year of education (captured by educ). State clearly your null and alternative hypotheses and your restricted and unrestricted models. Use the Wald test to check for that hypothesis.\nConduct a redundant variable test for the explanatory variable exper. Comment on your results.\nEstimate a model with exper and educ only and then conduct an omitted variable test for tenure in the model. Comment on your results.",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-questions.html#exercise-4.3",
     "href": "ch4-multiple-regression-questions.html#exercise-4.3",
-    "title": "1  Multiple Regression — Questions",
-    "section": "1.4 Exercise 4.3",
-    "text": "1.4 Exercise 4.3\nUse the data in the file money_uk.wf1 to estimate the parameters \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) in the equation below:\n\\[\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t\\]\n\nBriefly outline the theory behind the aggregate demand for money. Relate your discussion to the specification of the equation given above. In particular, explain first the meaning of the dependent variable and then the interpretation of \\(\\beta\\) and \\(\\gamma\\).\nPerform appropriate tests of significance on the estimated parameters to investigate each of the following propositions: (i) that the demand for money increases with the level of real income; (ii) the demand for money is income-elastic; and (iii) the demand for money is inversely related to the rate of interest.",
+    "title": "2  Multiple Regression — Questions",
+    "section": "2.4 Exercise 4.3",
+    "text": "2.4 Exercise 4.3\nUse the data in the file money_uk.wf1 to estimate the parameters \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) in the equation below:\n\\[\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t\\]\n\nBriefly outline the theory behind the aggregate demand for money. Relate your discussion to the specification of the equation given above. In particular, explain first the meaning of the dependent variable and then the interpretation of \\(\\beta\\) and \\(\\gamma\\).\nPerform appropriate tests of significance on the estimated parameters to investigate each of the following propositions: (i) that the demand for money increases with the level of real income; (ii) the demand for money is income-elastic; and (iii) the demand for money is inversely related to the rate of interest.",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-questions.html#exercise-4.4",
     "href": "ch4-multiple-regression-questions.html#exercise-4.4",
-    "title": "1  Multiple Regression — Questions",
-    "section": "1.5 Exercise 4.4",
-    "text": "1.5 Exercise 4.4\nThe file Cobb_Douglas_us.wf1 contains data for output (\\(Y\\)), labour (\\(L\\)) and stock of capital (\\(K\\)) for the United States. Estimate a Cobb–Douglas type regression equation and check for constant returns to scale using the Wald test.",
+    "title": "2  Multiple Regression — Questions",
+    "section": "2.5 Exercise 4.4",
+    "text": "2.5 Exercise 4.4\nThe file Cobb_Douglas_us.wf1 contains data for output (\\(Y\\)), labour (\\(L\\)) and stock of capital (\\(K\\)) for the United States. Estimate a Cobb–Douglas type regression equation and check for constant returns to scale using the Wald test.",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-questions.html#exercise-4.5",
     "href": "ch4-multiple-regression-questions.html#exercise-4.5",
-    "title": "1  Multiple Regression — Questions",
-    "section": "1.6 Exercise 4.5",
-    "text": "1.6 Exercise 4.5\nThe Excel dataset MRW.xls contains data on real GDP per capita and related variables from the Penn World Table for a sample of 121 countries. This dataset was used to estimate growth equations by N. G. Mankiw, D. Romer and D. N. Weil, “A contribution to the empirics of economic growth”, Quarterly Journal of Economics, 1992.\nThe dataset contains 11 variables:\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nnumber\na country identifier between 1 and 121\n\n\ncountry\ncountry name\n\n\nn\ndummy = 1 if country is in the non-oil sample\n\n\ni\ndummy = 1 if country is in the intermediate sample\n\n\no\ndummy = 1 if country is in the OECD sample\n\n\nrgdpw60\nreal GDP per working age population in 1960\n\n\nrgdpw85\nreal GDP per working age population in 1985\n\n\ngdpgrowth\naverage annual growth rate of real GDP per working age population (1960–1985)\n\n\npopgrowth\naverage annual growth rate of working age population (1960–1985)\n\n\niy\nreal investment as share of real GDP, averaged 1960–85\n\n\nschool\n% of working age population in secondary school\n\n\n\n\nCreate a suitable data frame for cross-sectional data for 121 observations.\nLoad all the relevant data.\nCalculate and report summary statistics for the full sample and the relevant sub-samples (non-oil, intermediate, OECD) for all variables. Briefly discuss your results.\nDo the necessary variable transformations before proceeding with regression analysis.\nReproduce the results reported in TABLE I: Estimation of the textbook Solow Model on page 414 of the paper.\nReport your results and check if they are different from MRW. Run the regressions for each sub-sample.\nCheck the restriction imposed by MRW (i.e., that the coefficient of \\(\\ln(\\text{pop}) = -\\ln(\\text{iy})\\)). Report the necessary results of this test.\nTake all the necessary steps to reproduce and report results for TABLE II: Estimation of the Augmented Solow Model. Report your results.\n(Advanced): Gather the latest data from Penn World Tables and redo everything for the latest available data. Are your conclusions similar to what MRW concluded in their seminal paper? If not, why? What can this mean?",
+    "title": "2  Multiple Regression — Questions",
+    "section": "2.6 Exercise 4.5",
+    "text": "2.6 Exercise 4.5\nThe Excel dataset MRW.xls contains data on real GDP per capita and related variables from the Penn World Table for a sample of 121 countries. This dataset was used to estimate growth equations by N. G. Mankiw, D. Romer and D. N. Weil, “A contribution to the empirics of economic growth”, Quarterly Journal of Economics, 1992.\n\n\n\n\n\n\nNoteData Description\n\n\n\n\n\nThe dataset contains 11 variables:\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nnumber\na country identifier between 1 and 121\n\n\ncountry\ncountry name\n\n\nn\ndummy = 1 if country is in the non-oil sample\n\n\ni\ndummy = 1 if country is in the intermediate sample\n\n\no\ndummy = 1 if country is in the OECD sample\n\n\nrgdpw60\nreal GDP per working age population in 1960\n\n\nrgdpw85\nreal GDP per working age population in 1985\n\n\ngdpgrowth\naverage annual growth rate of real GDP per working age population (1960–1985)\n\n\npopgrowth\naverage annual growth rate of working age population (1960–1985)\n\n\niy\nreal investment as share of real GDP, averaged 1960–85\n\n\nschool\n% of working age population in secondary school\n\n\n\n\n\n\n\nCreate a suitable data frame for cross-sectional data for 121 observations.\nLoad all the relevant data.\nCalculate and report summary statistics for the full sample and the relevant sub-samples (non-oil, intermediate, OECD) for all variables. Briefly discuss your results.\nDo the necessary variable transformations before proceeding with regression analysis.\nReproduce the results reported in TABLE I: Estimation of the textbook Solow Model on page 414 of the paper.\nReport your results and check if they are different from MRW. Run the regressions for each sub-sample.\nCheck the restriction imposed by MRW (i.e., that the coefficient of \\(\\ln(\\text{pop}) = -\\ln(\\text{iy})\\)). Report the necessary results of this test.\nTake all the necessary steps to reproduce and report results for TABLE II: Estimation of the Augmented Solow Model. Report your results.\n(Advanced): Gather the latest data from Penn World Tables and redo everything for the latest available data. Are your conclusions similar to what MRW concluded in their seminal paper? If not, why? What can this mean?",
     "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
-    ]
-  },
-  {
-    "objectID": "ch5-multicollinearity-questions.html",
-    "href": "ch5-multicollinearity-questions.html",
-    "title": "2  Multicollinearity — Exercises",
-    "section": "",
-    "text": "2.1 Exercise 5.1\nThe file imports_uk_y.wf1 contains yearly data (1972–1997) for real imports (IMP), real gross domestic product (GDP) and the relative consumer price index (CPI) of domestic to foreign prices for the US economy. Use these data to estimate the following model:\n\\[\\ln(\\text{IMP})_t = \\beta_1 + \\beta_2 \\ln(\\text{GDP})_t + \\beta_3 \\ln(\\text{CPI})_t + u_t\\]\nCheck whether there is multicollinearity in the data. Calculate the correlation matrix of the variables and comment regarding the possibility of multicollinearity. Also, run the following additional regressions:\n\\[\\ln(\\text{IMP})_t = \\beta_1 + \\beta_2 \\ln(\\text{GDP})_t + u_t\\]\n\\[\\ln(\\text{IMP})_t = \\beta_1 + \\beta_2 \\ln(\\text{CPI})_t + u_t\\]\n\\[\\ln(\\text{GDP})_t = \\beta_1 + \\beta_2 \\ln(\\text{CPI})_t + u_t\\]\nWhat can you conclude about the nature of multicollinearity from these results?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch5-multicollinearity-questions.html#exercise-5.2",
-    "href": "ch5-multicollinearity-questions.html#exercise-5.2",
-    "title": "2  Multicollinearity — Exercises",
-    "section": "2.2 Exercise 5.2",
-    "text": "2.2 Exercise 5.2\nThe file imports_uk.wf1 contains quarterly observations of the variables mentioned in Exercise 5.1. Repeat Exercise 5.1 using the quarterly (higher frequency) data. Do your results change?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch5-multicollinearity-questions.html#exercise-5.3",
-    "href": "ch5-multicollinearity-questions.html#exercise-5.3",
-    "title": "2  Multicollinearity — Exercises",
-    "section": "2.3 Exercise 5.3",
-    "text": "2.3 Exercise 5.3\nUse the data in the file money_uk02.wf1 to estimate the parameters \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) in the equation below:\n\\[\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_{1t} + u_t\\]\nwhere \\(R_{1t}\\) is the three-month treasury bill rate. For the rest of the variables the usual notation applies.\n\nUse as an additional variable in the above equation \\(R_{2t}\\), which is the dollar interest rate.\nDo you expect to find multicollinearity? Why?\nCalculate the correlation matrix of all the variables. Which correlation coefficient is the largest?\nCalculate auxiliary regressions and conclude whether the degree of multicollinearity in (a) is serious or not.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch5-multicollinearity-questions.html#exercise-5.4",
-    "href": "ch5-multicollinearity-questions.html#exercise-5.4",
-    "title": "2  Multicollinearity — Exercises",
-    "section": "2.4 Exercise 5.4",
-    "text": "2.4 Exercise 5.4\nThe file cars.wf1 contains annual data from 1971–1986 (16 observations) for new cars sales in the US. The variables are defined as follows:\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\ncars_sold\nnew passenger cars sold (thousands)\n\n\ncpi_cars\nnew cars, consumer price index, 1967 = 100\n\n\ncpi_all\nconsumer price index, all items, all urban consumers, 1967 = 100\n\n\ndisp\nreal personal disposable income (billions of dollars)\n\n\nint_rate\ninterest rate (percentage)\n\n\nlab_force\nemployed civilian labor force (thousands)\n\n\n\n\nEstimate a log-linear model that examines a demand function for new cars, including all explanatory variables as regressors. Discuss your results.\nIn the model estimated above, do you expect to face multicollinearity? Discuss why.\nCheck if there is indeed multicollinearity among the regressors. How will you do that? What are your conclusions?\nBased on your answer above, now develop a more suitable model that avoids the problems of multicollinearity.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch5-multicollinearity-questions.html#exercise-5.5",
-    "href": "ch5-multicollinearity-questions.html#exercise-5.5",
-    "title": "2  Multicollinearity — Exercises",
-    "section": "2.5 Exercise 5.5",
-    "text": "2.5 Exercise 5.5\nConsider the following data:\n\n\n\nY\nX1\nX2\n\n\n\n\n−12\n12\n21\n\n\n−8\n13\n23\n\n\n−4\n14\n25\n\n\n−3\n15\n27\n\n\n1\n16\n29\n\n\n2\n15\n27\n\n\n4\n17\n31\n\n\n8\n18\n33\n\n\n18\n21\n39\n\n\n13\n20\n37\n\n\n\n\nCan you obtain estimations for the coefficients of the following linear model:\n\n\\[Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + u\\]\nusing the data given above?\n\nIf your response to (a) was no, then how can you reparameterise the model in order to obtain satisfactory estimates of the coefficients?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch5-multicollinearity-questions.html#exercise-5.6",
-    "href": "ch5-multicollinearity-questions.html#exercise-5.6",
-    "title": "2  Multicollinearity — Exercises",
-    "section": "2.6 Exercise 5.6",
-    "text": "2.6 Exercise 5.6\nThe file manhours.xls contains the following variables:\n\n\n\nVariable\nDescription\n\n\n\n\nmanhours\nmonthly manhours needed to operate an establishment\n\n\noccup\naverage daily occupancy\n\n\ncheckins\nmonthly average number of check-ins\n\n\nservice\nweekly hours of service desk operation\n\n\ncomusearea\ncommon use area (in square feet)\n\n\nno_wings\nnumber of building wings\n\n\nberthing\noperational berthing capacity\n\n\nno_rooms\nnumber of rooms\n\n\n\nThe data describes the manpower needs for operating a US Navy bachelor officers’ quarters. It contains cross-sectional observations for 25 establishments.\n\nEstimate a regression model that explains average daily occupancy (occup) from all available explanatory variables. Do the results suggest multicollinearity?\nAre some of the explanatory variables collinear? How is this detected?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch6-heteroskedasticity-questions.html",
-    "href": "ch6-heteroskedasticity-questions.html",
-    "title": "3  Heteroskedasticity — Exercises",
-    "section": "",
-    "text": "3.1 Exercise 6.1\nUse the data in the file houseprice.wf1 to estimate a model of:\n\\[\\text{price}_i = \\beta_1 + \\beta_2 \\text{sqfeet}_i + u_i\\]\nCheck for heteroskedasticity using the White and the Goldfeld–Quandt tests. Obtain GLS estimates for the following assumptions: (a) \\(\\text{Var}(u_i) = \\sigma^2 \\text{sqfeet}_i\\) and (b) \\(\\text{Var}(u_i) = \\sigma^2 \\text{sqfeet}_i^2\\). Comment on the sensitivity of the estimates and their standard errors to the heteroskedastic specification. For each of the two cases, use both the White and the Goldfeld–Quandt tests to see whether heteroskedasticity has been eliminated.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.2",
-    "href": "ch6-heteroskedasticity-questions.html#exercise-6.2",
-    "title": "3  Heteroskedasticity — Exercises",
-    "section": "3.2 Exercise 6.2",
-    "text": "3.2 Exercise 6.2\nUse the data in Greek_SME.wf1 to estimate the effect of size (proxied by number of employees) on the profit/sales ratio. Check whether the residuals in this equation are heteroskedastic by applying all the tests for detection of heteroskedasticity (both formal and informal) described in this chapter. If there is heteroskedasticity, obtain the White’s corrected standard error estimates and construct confidence intervals to find the differences between the simple OLS and the White’s estimates.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.3",
-    "href": "ch6-heteroskedasticity-questions.html#exercise-6.3",
-    "title": "3  Heteroskedasticity — Exercises",
-    "section": "3.3 Exercise 6.3",
-    "text": "3.3 Exercise 6.3\nUse the data in police.wf1 to estimate the equation that relates the actual value of the current budget (Y) with the expected value of the budget (X). Check for heteroskedasticity in this regression equation with all the known tests described in this chapter.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.4",
-    "href": "ch6-heteroskedasticity-questions.html#exercise-6.4",
-    "title": "3  Heteroskedasticity — Exercises",
-    "section": "3.4 Exercise 6.4",
-    "text": "3.4 Exercise 6.4\nThe file sleep.xls contains data for 706 individuals concerning sleeping habits and possible determinants of sleeping time. Estimate the following regression equation:\n\\[\\text{sleep} = b_0 + b_1 \\text{totwrk} + b_2 \\text{educ} + b_3 \\text{age} + b_4 \\text{yngkid} + b_5 \\text{male} + u\\]\n\nCheck whether there is evidence of heteroskedasticity.\nIs the estimated variance of \\(u\\) higher for men than women?\nRe-estimate the model, correcting for heteroskedasticity. Compare the results obtained from this method with the simple OLS estimation results that were initially obtained.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.5",
-    "href": "ch6-heteroskedasticity-questions.html#exercise-6.5",
-    "title": "3  Heteroskedasticity — Exercises",
-    "section": "3.5 Exercise 6.5",
-    "text": "3.5 Exercise 6.5\nUse the data in the file houseprice.xls to estimate the following equation:\n\\[\\text{price} = b_0 + b_1 \\text{lotsize} + b_2 \\text{sqrft} + b_3 \\text{bdrms} + u\\]\n\nCheck whether there is evidence of heteroskedasticity.\nRe-estimate the equation but this time instead of price use log(price) as the dependent variable. Check for heteroskedasticity again. Is there any change in your conclusion in (a)?\nWhat does this example suggest about heteroskedasticity and the transformation used for the dependent variable?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.6",
-    "href": "ch6-heteroskedasticity-questions.html#exercise-6.6",
-    "title": "3  Heteroskedasticity — Exercises",
-    "section": "3.6 Exercise 6.6",
-    "text": "3.6 Exercise 6.6\nA mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index “MoF: Means of Funds” is constructed for every country and is given in the table below. Also, the data classify all countries according to their total capitalisation (see variable “size”). The data are also provided in the file Mutual_Funds.xlsx.\n\n\n\nCountry\nMoF (Y)\nSize (X)\nY/σ\nX/σ\n\n\n\n\nAustria\n0.1866\n9\n3.0112\n145.2236\n\n\nBelgium\n11.077\n7\n0.8403\n0.531\n\n\nDenmark\n487.92307\n12\n0.3352\n0.008245\n\n\nFrance\n7.4615\n3\n0.5405\n0.217\n\n\nGermany\n22.92307\n2\n0.3141\n0.0274\n\n\nGreece\n1.3846\n8\n0.3066\n1.7716\n\n\nIreland\n424.0769\n10\n0.7914\n0.0187\n\n\nItaly\n103.92308\n5\n0.5946\n0.028607\n\n\nLuxemburg\n62.07692\n13\n0.35903\n0.07518\n\n\nPortugal\n401.1538\n11\n0.5163\n0.01416\n\n\nSpain\n84.3846\n6\n0.5581\n0.03968\n\n\nSwitzerland\n250.6153\n4\n0.2911\n0.004647\n\n\nUnited Kingdom\n0.1866\n1\n0.884\n0.00109\n\n\n\n\nEstimate the regression model: \\(Y = a + bX + u\\) and explain the results.\nCheck for heteroskedasticity in the model using both the graphical and formal approaches.\nSince there is heteroskedasticity in the model, the investor decided to re-estimate the model transforming Y and X by dividing both of them with the standard deviation of the MoF variable for each country. The variables are given in the table above. Re-estimate the model and discuss the results. Is heteroskedasticity resolved?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch8-misspecification-questions.html",
-    "href": "ch8-misspecification-questions.html",
-    "title": "4  Misspecification — Exercises",
-    "section": "",
-    "text": "4.1 Exercise 8.1\nThe file wages_01.wf1 contains data for monthly wage rates (measured in UK pounds) and IQ scores of a large number of City University graduates after five years of employment:",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch8-misspecification-questions.html#exercise-8.1",
-    "href": "ch8-misspecification-questions.html#exercise-8.1",
-    "title": "4  Misspecification — Exercises",
-    "section": "",
-    "text": "Find summary statistics for the above-mentioned variables and discuss them.\nEstimate a functional form that will show how a one-point increase in the IQ score will change the respective wage rate by a constant amount measured in UK pounds. What is the change in the wage rate for a ten-point increase in the IQ score?\nEstimate a functional form that will show how a one-point increase in the IQ score will have a percentage change effect on the wage rate. What is the percentage change in the wage rate for a ten-point increase in the IQ score?\nUse the Box–Cox transformation to decide which of the two models is more appropriate.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch8-misspecification-questions.html#exercise-8.2",
-    "href": "ch8-misspecification-questions.html#exercise-8.2",
-    "title": "4  Misspecification — Exercises",
-    "section": "4.2 Exercise 8.2",
-    "text": "4.2 Exercise 8.2\nThe file Costs.xlsx contains data for real costs (cost) and real production (prod) for a car industry for the last 15 years.\n\nEstimate the following regression model:\n\n\\[C_t = \\beta_0 + \\beta_1 P_t + \\beta_2 P_t^2 + \\beta_3 P_t^3 + u_t\\]\nand discuss the results.\n\nCheck the hypothesis that the cost function is of second degree only.\nCheck the hypothesis that the cost function is linear.\nObtain and plot the marginal cost function.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch8-misspecification-questions.html#exercise-8.3",
-    "href": "ch8-misspecification-questions.html#exercise-8.3",
-    "title": "4  Misspecification — Exercises",
-    "section": "4.3 Exercise 8.3",
-    "text": "4.3 Exercise 8.3\nThe file CD.xlsx contains data for the variables Production (Y), Labour (X1) and Capital (X2) of a hypothetical industry.\n\nEstimate the following Cobb–Douglas production function: \\(Y_t = \\beta_0 X_{1t}^{\\beta_1} X_{2t}^{\\beta_2}\\)\nCheck statistically whether \\(\\beta_1 = 0\\), \\(\\beta_2 = 0\\) as well as the overall significance of the model.\nCheck whether the hypothesis of constant returns to scale is valid.\nCalculate the average productivity of labour (APL) and the marginal productivity of labour (MPL) for the values (Y, X1, X2).\nAssume that in (a) a researcher wrongfully omitted the Capital (X2) variable. Perform the Ramsey RESET test to check if the model is correctly specified without this variable.",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch8-misspecification-questions.html#exercise-8.4",
-    "href": "ch8-misspecification-questions.html#exercise-8.4",
-    "title": "4  Misspecification — Exercises",
-    "section": "4.4 Exercise 8.4",
-    "text": "4.4 Exercise 8.4\nThe file OECD.xlsx contains data for income per capita (inc_pc) and consumption per capita (cons_pc) for the 25 OECD country-members for the year 2020.\n\nEstimate the relationship between consumption per capita and income per capita using a linear model. Interpret the results.\nEstimate the relationship between consumption per capita and income per capita using a log-linear model. Interpret the results.\nEstimate the relationship between consumption per capita and income per capita using a linear-log model. Interpret the results.\nEstimate the relationship between consumption per capita and income per capita using a double-log model. Interpret the results.\nCompare the models estimated in (a) linear, and (d) double-log. Which one is better and why?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch9-dummy-variables-questions.html",
-    "href": "ch9-dummy-variables-questions.html",
-    "title": "5  Dummy Variables — Exercises",
-    "section": "",
-    "text": "5.1 Exercise 9.1\nThe file wage2.dum.xls contains the following cross-sectional data:\n\\[\\log(\\text{wage}) = \\beta_0 + \\beta_1 \\text{black} + u\\]\nInterpret the results and discuss whether or not a person belonging in the Black ethnic minority receives on average a lower/higher salary.\n\\[\\log(\\text{wage}) = \\beta_0 + \\beta_1 \\text{black} + \\beta_2 \\text{educ} + \\beta_3 \\text{exper} + \\beta_4 \\text{tenure} + u\\]\nDiscuss your results. Has the coefficient for the dummy variable “black” changed substantially or not? What does this mean?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch9-dummy-variables-questions.html#exercise-9.1",
-    "href": "ch9-dummy-variables-questions.html#exercise-9.1",
-    "title": "5  Dummy Variables — Exercises",
-    "section": "",
-    "text": "Variable\nDescription\n\n\n\n\nwage\nmonthly earnings\n\n\nhours\naverage weekly hours\n\n\nIQ\nIQ score\n\n\nKWW\nknowledge of work score\n\n\neduc\nyears of education\n\n\nexper\nyears of work experience\n\n\ntenure\nyears with current employer\n\n\nage\nage in years\n\n\nmarried\n= 1 if married\n\n\nblack\n= 1 if Black\n\n\nsouth\n= 1 if live in South\n\n\nurban\n= 1 if live in SMSA\n\n\nsibs\nnumber of siblings\n\n\nbrthord\nbirth order\n\n\nmeduc\nmother’s education\n\n\nfeduc\nfather’s education\n\n\n\n\nUse the data to estimate the following model:\n\n\n\n\nNow, extend the model to control for other characteristics by estimating the following version:\n\n\n\n\nIntroduce in your model variables such as IQ and KWW. What happens now?\nInclude more dummies, like married, south and urban. Discuss the results.\nFind the average wage of a person that has 10 years of education, 7 years of experience, 3 years of tenure, is married, belongs in the Black ethnic minority, lives in the south and in a non-urban region, has an IQ of 128 and a KWW score of 33.\nCompare the salary of the person above to a similar person who is non-Black and lives in an area in the north and urban. What do you conclude?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch9-dummy-variables-questions.html#exercise-9.2",
-    "href": "ch9-dummy-variables-questions.html#exercise-9.2",
-    "title": "5  Dummy Variables — Exercises",
-    "section": "5.2 Exercise 9.2",
-    "text": "5.2 Exercise 9.2\nThe file BWGHT_DUM.xls contains the following variables for 1,388 US mothers:\n\n\n\nVariable\nDescription\n\n\n\n\nfaminc\n1988 family income, $1000s\n\n\ncigtax\ncigarette tax in home state, 1988\n\n\ncigprice\ncigarette price in home state, 1988\n\n\nbwght\nbirth weight, ounces\n\n\nfatheduc\nfather’s years of education\n\n\nmotheduc\nmother’s years of education\n\n\nparity\nbirth order of children\n\n\nmale\n= 1 if male child\n\n\nwhite\n= 1 if White\n\n\ncigs\ncigarettes smoked per day while pregnant\n\n\nlbwght\nlog of birthweight\n\n\nbwghtlbs\nbirth weight, pounds\n\n\npacks\npacks smoked per day while pregnant\n\n\nlfaminc\nlog(family income)\n\n\n\n\nUse the data to estimate the following regression:\n\n\\[\\log(\\text{bwght}) = \\beta_0 + \\beta_1 \\text{cigs} + \\beta_2 \\log(\\text{faminc}) + \\beta_3 \\text{parity} + \\beta_4 \\text{male} + \\beta_5 \\text{white} + u\\]\nand discuss your results.\n\nInterpret the coefficient of cigs. In particular, what is the effect on birth weight from smoking a pack of cigarettes a day? (Note: a pack contains 20 cigarettes.)\nHolding the other factors in the equation fixed, on average how much more is a White child predicted to weigh than a non-White child? Is the difference statistically significant?\nHolding the other factors in the equation fixed, on average how much more is a male child predicted to weigh than a female child? Is the difference statistically significant?\nRe-estimate the model adding now the education levels of the father and the mother. What do you expect to find? Are the results consistent with your expectation?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch9-dummy-variables-questions.html#exercise-9.3",
-    "href": "ch9-dummy-variables-questions.html#exercise-9.3",
-    "title": "5  Dummy Variables — Exercises",
-    "section": "5.3 Exercise 9.3",
-    "text": "5.3 Exercise 9.3\nThe file SLEEP_DUM.xls contains the following variables:\n\n\n\nVariable\nDescription\n\n\n\n\nage\nin years\n\n\nblack\n= 1 if Black\n\n\nclerical\n= 1 if clerical worker\n\n\nconstruc\n= 1 if construction worker\n\n\neduc\nyears of schooling\n\n\nearns74\ntotal earnings, 1974\n\n\ngdhlth\n= 1 if in good or excellent health\n\n\ninlf\n= 1 if in labour force\n\n\nlhrwage\nlog hourly wage\n\n\nmale\n= 1 if male\n\n\nmarr\n= 1 if married\n\n\nprot\n= 1 if Protestant\n\n\nselfe\n= 1 if self employed\n\n\nsleep\nminutes of sleep at night, per week\n\n\nsouth\n= 1 if lives in South\n\n\nspwrk75\n= 1 if spouse works\n\n\ntotwrk\nminutes worked per week\n\n\nunion\n= 1 if belong to union\n\n\nexper\nage − educ − 6\n\n\nyngkid\n= 1 if children under 3 years old present\n\n\nyrsmarr\nyears married\n\n\nhrwage\nhourly wage\n\n\n\n\nEstimate a model to check if males sleep more on average than females. What do you conclude?\nAdd more explanatory variables in the model (try to find variables that affect sleep patterns). Is the male effect estimated above still dominant?\nEstimate a model to check if males obtain higher wages than females. What do you conclude?\nAdd more explanatory variables in the model (try to find variables that affect wage patterns). Is the male effect estimated above still dominant?\nDo the same for workers that belong in the Black ethnic minority. What do your results suggest?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch12-limited-dependent-variable-questions.html",
-    "href": "ch12-limited-dependent-variable-questions.html",
-    "title": "6  Limited Dependent Variable — Exercises",
-    "section": "",
-    "text": "6.1 Exercise 12.1\nThe file Binary_Loan contains data for the following variables:",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch12-limited-dependent-variable-questions.html#exercise-12.1",
-    "href": "ch12-limited-dependent-variable-questions.html#exercise-12.1",
-    "title": "6  Limited Dependent Variable — Exercises",
-    "section": "",
-    "text": "Variable\nDescription\n\n\n\n\nappinc\napplicant income, $1000s\n\n\nmarried\n= 1 if married\n\n\ndep\nnumber of dependents\n\n\nemp\nyears employed in line of work\n\n\nyjob\nyears at this job\n\n\nself\n= 1 if self employed\n\n\npubrec\n= 1 if filed bankruptcy\n\n\nhrat\nhousing expenses % total income\n\n\nobrat\nother obligations % total income\n\n\nschool\n= 1 if &gt; 12 years schooling\n\n\nblack\n= 1 if Black\n\n\nhispan\n= 1 if Hispanic\n\n\nmale\n= 1 if male\n\n\napprove\n= 1 if action == 1 or 2\n\n\nmortperf\nno late mortgage payments\n\n\nmortlat1\none or two late payments\n\n\nmortlat2\n&gt; 2 late payments\n\n\nloanprc\namount/price\n\n\nwhite\n= 1 if White\n\n\n\n\nEstimate the effect of White on approve, using the Probit model.\nFind the estimated probability of loan approval for both Whites and non-Whites.\nEstimate the same relationship with the linear probability model and compare your results.\nRe-estimate the model adding more determinants of loan-approval, such as: hrat, mortperf, mortlat1, mortlat2, married, dep, school and emp. What happens to the estimation of the White coefficient obtained in (a)? Is discrimination against non-Whites evident?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch12-limited-dependent-variable-questions.html#exercise-12.2",
-    "href": "ch12-limited-dependent-variable-questions.html#exercise-12.2",
-    "title": "6  Limited Dependent Variable — Exercises",
-    "section": "6.2 Exercise 12.2",
-    "text": "6.2 Exercise 12.2\nUse the file Binary_Loan to repeat Exercise 12.1 in order to check if there is discrimination between males and females or between married and non-married individuals using a simple model that includes one explanatory variable only. What are your conclusions? If you add more variables how are your results affected?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch12-limited-dependent-variable-questions.html#exercise-12.3",
-    "href": "ch12-limited-dependent-variable-questions.html#exercise-12.3",
-    "title": "6  Limited Dependent Variable — Exercises",
-    "section": "6.3 Exercise 12.3",
-    "text": "6.3 Exercise 12.3\nUse the file Binary_Loan to repeat Exercise 12.1 in order to check if there is discrimination for individuals that belong to the Black and Hispanic ethnic minorities in a simple model that includes one explanatory variable only. What are your conclusions? If you add additional determinants, does the discrimination disappear or not?",
-    "crumbs": [
-      "Questions",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "ch2-multiple-regression.html",
-    "href": "ch2-multiple-regression.html",
-    "title": "7  Multiple Regression",
-    "section": "",
-    "text": "7.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\n\ndf &lt;- read_csv(\"health.csv\")",
-    "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Multiple Regression</span>"
-    ]
-  },
-  {
-    "objectID": "ch2-multiple-regression.html#exploring-the-data",
-    "href": "ch2-multiple-regression.html#exploring-the-data",
-    "title": "7  Multiple Regression",
-    "section": "7.2 Exploring the Data",
-    "text": "7.2 Exploring the Data\n\nglimpse(df)\n\nRows: 1,388\nColumns: 3\n$ faminc &lt;dbl&gt; 13.5, 7.5, 0.5, 15.5, 27.5, 7.5, 65.0, 27.5, 27.5, 37.5, 27.5, …\n$ bwght  &lt;dbl&gt; 109, 133, 129, 126, 134, 118, 140, 86, 121, 129, 101, 133, 61, …\n$ cigs   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n\nsummary(df)\n\n     faminc          bwght            cigs       \n Min.   : 0.50   Min.   : 23.0   Min.   : 0.000  \n 1st Qu.:14.50   1st Qu.:107.0   1st Qu.: 0.000  \n Median :27.50   Median :120.0   Median : 0.000  \n Mean   :29.03   Mean   :118.7   Mean   : 2.087  \n 3rd Qu.:37.50   3rd Qu.:132.0   3rd Qu.: 0.000  \n Max.   :65.00   Max.   :271.0   Max.   :50.000  \n\n\n\nggplot(df, aes(x = faminc, y = bwght, color = cigs)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(df, aes(x = cigs, y = bwght, color = faminc)) +\n  geom_point()",
-    "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Multiple Regression</span>"
-    ]
-  },
-  {
-    "objectID": "ch2-multiple-regression.html#model-1-full-model",
-    "href": "ch2-multiple-regression.html#model-1-full-model",
-    "title": "7  Multiple Regression",
-    "section": "7.3 Model 1: Full Model",
-    "text": "7.3 Model 1: Full Model\n\nmod1 &lt;- lm(bwght ~ ., data = df)\ntidy(mod1)\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic     p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1 (Intercept) 117.        1.05      112.   0          \n2 faminc        0.0928    0.0292      3.18 0.00151    \n3 cigs         -0.463     0.0916     -5.06 0.000000475\n\nglance(mod1)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df logLik    AIC    BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1    0.0298        0.0284  20.1      21.3 7.94e-10     2 -6130. 12269. 12290.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n\nFamily income has a statistically significant but very small positive impact on birth weight. Cigarettes smoked has a statistically significant negative impact on birth weight.",
-    "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Multiple Regression</span>"
-    ]
-  },
-  {
-    "objectID": "ch2-multiple-regression.html#model-2-family-income-only",
-    "href": "ch2-multiple-regression.html#model-2-family-income-only",
-    "title": "7  Multiple Regression",
-    "section": "7.4 Model 2: Family Income Only",
-    "text": "7.4 Model 2: Family Income Only\n\nmod2 &lt;- lm(bwght ~ faminc, data = df)\ntidy(mod2)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)  115.       1.00      115.   0        \n2 faminc         0.118    0.0290      4.08 0.0000476\n\nglance(mod2)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik    AIC    BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1    0.0119        0.0112  20.2      16.6 0.0000476     1 -6143. 12292. 12308.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n\nThe significance of family income increases when it is the sole predictor, but the overall model fit decreases.",
-    "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Multiple Regression</span>"
-    ]
-  },
-  {
-    "objectID": "ch2-multiple-regression.html#model-3-cigarettes-only",
-    "href": "ch2-multiple-regression.html#model-3-cigarettes-only",
-    "title": "7  Multiple Regression",
-    "section": "7.5 Model 3: Cigarettes Only",
-    "text": "7.5 Model 3: Cigarettes Only\n\nmod3 &lt;- lm(bwght ~ cigs, data = df)\ntidy(mod3)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic      p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)  120.       0.572     209.   0           \n2 cigs          -0.514    0.0905     -5.68 0.0000000166\n\nglance(mod3)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic     p.value    df logLik    AIC    BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1    0.0227        0.0220  20.1      32.2     1.66e-8     1 -6135. 12277. 12293.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;",
-    "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Multiple Regression</span>"
-    ]
-  },
-  {
-    "objectID": "ch2-multiple-regression.html#model-comparison",
-    "href": "ch2-multiple-regression.html#model-comparison",
-    "title": "7  Multiple Regression",
-    "section": "7.6 Model Comparison",
-    "text": "7.6 Model Comparison\n\nmodels &lt;- list(\n  \"Model 1\" = mod1,\n  \"Model 2\" = mod2,\n  \"Model 3\" = mod3\n)\n\nmodelsummary(models)\n\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n                Model 3\n              \n        \n        \n        \n                \n                  (Intercept)\n                  116.974\n                  115.265\n                  119.772\n                \n                \n                  \n                  (1.049)\n                  (1.002)\n                  (0.572)\n                \n                \n                  faminc\n                  0.093\n                  0.118\n                  \n                \n                \n                  \n                  (0.029)\n                  (0.029)\n                  \n                \n                \n                  cigs\n                  -0.463\n                  \n                  -0.514\n                \n                \n                  \n                  (0.092)\n                  \n                  (0.090)\n                \n                \n                  Num.Obs.\n                  1388\n                  1388\n                  1388\n                \n                \n                  R2\n                  0.030\n                  0.012\n                  0.023\n                \n                \n                  R2 Adj.\n                  0.028\n                  0.011\n                  0.022\n                \n                \n                  AIC\n                  12268.8\n                  12292.3\n                  12276.9\n                \n                \n                  BIC\n                  12289.8\n                  12308.0\n                  12292.6\n                \n                \n                  Log.Lik.\n                  -6130.414\n                  -6143.128\n                  -6135.457\n                \n                \n                  F\n                  21.274\n                  16.646\n                  32.235\n                \n                \n                  RMSE\n                  20.04\n                  20.23\n                  20.11\n                \n        \n      \n    \n\n\n\n\nmodel_comparison &lt;- bind_rows(\n  glance(mod1) |&gt; mutate(model = \"Model 1\"),\n  glance(mod2) |&gt; mutate(model = \"Model 2\"),\n  glance(mod3) |&gt; mutate(model = \"Model 3\")\n) |&gt;\n  select(model, r.squared, adj.r.squared, sigma, AIC, BIC, p.value)\n\nmodel_comparison\n\n# A tibble: 3 × 7\n  model   r.squared adj.r.squared sigma    AIC    BIC  p.value\n  &lt;chr&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1 Model 1    0.0298        0.0284  20.1 12269. 12290. 7.94e-10\n2 Model 2    0.0119        0.0112  20.2 12292. 12308. 4.76e- 5\n3 Model 3    0.0227        0.0220  20.1 12277. 12293. 1.66e- 8",
-    "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Multiple Regression</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiple Regression — Questions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-solutions.html",
     "href": "ch4-multiple-regression-solutions.html",
-    "title": "8  Multiple Regression — Solutions",
+    "title": "3  Multiple Regression — Solutions",
     "section": "",
-    "text": "8.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)",
+    "text": "3.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-solutions.html#exercise-4.1",
     "href": "ch4-multiple-regression-solutions.html#exercise-4.1",
-    "title": "8  Multiple Regression — Solutions",
-    "section": "8.2 Exercise 4.1",
-    "text": "8.2 Exercise 4.1\nThe file health.xls contains data for birth_weight, cig, and fam_inc.\n(a) Regression with both variables\n(b) Regression with fam_inc only\n(c) Regression with cig only\n(d) Model comparison table\n(e) Wald test: effect of cig is two times greater than fam_inc",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.2 Exercise 4.1",
+    "text": "3.2 Exercise 4.1\nThe file health.xls contains data for birth_weight, cig, and fam_inc.\n(a) Regression with both variables\n(b) Regression with fam_inc only\n(c) Regression with cig only\n(d) Model comparison table\n(e) Wald test: effect of cig is two times greater than fam_inc",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-solutions.html#exercise-4.2",
     "href": "ch4-multiple-regression-solutions.html#exercise-4.2",
-    "title": "8  Multiple Regression — Solutions",
-    "section": "8.3 Exercise 4.2",
-    "text": "8.3 Exercise 4.2\nDeterminants of log(wage): educ, exper, tenure.\n(a) Full model and results\n(b) Wald test: exper same effect as educ\n(c) Redundant variable test for exper\n(d) Omitted variable test for tenure",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.3 Exercise 4.2",
+    "text": "3.3 Exercise 4.2\nDeterminants of log(wage): educ, exper, tenure.\n(a) Full model and results\n(b) Wald test: exper same effect as educ\n(c) Redundant variable test for exper\n(d) Omitted variable test for tenure",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-solutions.html#exercise-4.3",
     "href": "ch4-multiple-regression-solutions.html#exercise-4.3",
-    "title": "8  Multiple Regression — Solutions",
-    "section": "8.4 Exercise 4.3",
-    "text": "8.4 Exercise 4.3\nAggregate demand for money: \\(\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t\\)\n(a) Theory and interpretation\n\n(b) Tests of significance",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.4 Exercise 4.3",
+    "text": "3.4 Exercise 4.3\nAggregate demand for money: \\(\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_t + u_t\\)\n(a) Theory and interpretation\n\n(b) Tests of significance",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-solutions.html#exercise-4.4",
     "href": "ch4-multiple-regression-solutions.html#exercise-4.4",
-    "title": "8  Multiple Regression — Solutions",
-    "section": "8.5 Exercise 4.4",
-    "text": "8.5 Exercise 4.4\nCobb–Douglas production function and test for constant returns to scale.",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.5 Exercise 4.4",
+    "text": "3.5 Exercise 4.4\nCobb–Douglas production function and test for constant returns to scale.",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
     ]
   },
   {
     "objectID": "ch4-multiple-regression-solutions.html#exercise-4.5",
     "href": "ch4-multiple-regression-solutions.html#exercise-4.5",
-    "title": "8  Multiple Regression — Solutions",
-    "section": "8.6 Exercise 4.5",
-    "text": "8.6 Exercise 4.5\nMankiw, Romer and Weil (1992) growth regressions.\n(a) Create data frame\n(b) Load data\n(c) Summary statistics by sub-sample\n(d) Variable transformations\n(e) Reproduce TABLE I: Textbook Solow Model\n(f) Compare results with MRW\n(g) Test restriction: coefficient of ln(pop) = −ln(iy)\n(h) Reproduce TABLE II: Augmented Solow Model\n(i) Latest Penn World Table data (Advanced)",
+    "title": "3  Multiple Regression — Solutions",
+    "section": "3.6 Exercise 4.5",
+    "text": "3.6 Exercise 4.5\nMankiw, Romer and Weil (1992) growth regressions.\n(a) Create data frame\n(b) Load data\n(c) Summary statistics by sub-sample\n(d) Variable transformations\n(e) Reproduce TABLE I: Textbook Solow Model\n(f) Compare results with MRW\n(g) Test restriction: coefficient of ln(pop) = −ln(iy)\n(h) Reproduce TABLE II: Augmented Solow Model\n(i) Latest Penn World Table data (Advanced)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+      "Chapter 4: Multiple Regression",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multiple Regression — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-key-ideas.html",
+    "href": "ch5-multicollinearity-key-ideas.html",
+    "title": "4  Multicollinearity — Key Ideas",
+    "section": "",
+    "text": "4.1 What is multicollinearity?\nMulticollinearity means your explanatory variables are highly correlated with each other. Imagine trying to figure out whether it’s heat or humidity making you uncomfortable — when both always move together, it’s hard to separate their individual effects.",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Multicollinearity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-key-ideas.html#why-is-it-a-problem",
+    "href": "ch5-multicollinearity-key-ideas.html#why-is-it-a-problem",
+    "title": "4  Multicollinearity — Key Ideas",
+    "section": "4.2 Why is it a problem?",
+    "text": "4.2 Why is it a problem?\nOLS still works — your estimates are still unbiased. But:\n\nStandard errors blow up — you can’t precisely estimate individual coefficients\nt-statistics shrink — variables appear insignificant even when they matter\nCoefficients become unstable — small changes in data cause big swings in estimates\nSigns may flip — a variable you expect to be positive shows up negative\n\nThe model as a whole (F-test, R²) can still look great. The damage is to individual coefficient estimates.",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Multicollinearity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-key-ideas.html#how-to-detect-it",
+    "href": "ch5-multicollinearity-key-ideas.html#how-to-detect-it",
+    "title": "4  Multicollinearity — Key Ideas",
+    "section": "4.3 How to detect it",
+    "text": "4.3 How to detect it\n\nCorrelation matrix — high pairwise correlations (above 0.8) are a red flag\nVIF (Variance Inflation Factor) — measures how much a coefficient’s variance is inflated. VIF &gt; 10 signals a serious problem\nAuxiliary regressions — regress each X on all other Xs. High R² means that X is well-explained by the others (it’s redundant)\nSymptom check — high R² but few significant t-stats? Classic multicollinearity sign",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Multicollinearity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-key-ideas.html#what-to-do-about-it",
+    "href": "ch5-multicollinearity-key-ideas.html#what-to-do-about-it",
+    "title": "4  Multicollinearity — Key Ideas",
+    "section": "4.4 What to do about it",
+    "text": "4.4 What to do about it\n\nDrop one of the collinear variables (if theory permits)\nCombine variables (e.g., use a ratio or index)\nGet more data (sometimes helps, often doesn’t)\nAccept it — if you only care about prediction, not individual coefficients, multicollinearity isn’t really a problem",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Multicollinearity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-key-ideas.html#intuition-for-the-exercises",
+    "href": "ch5-multicollinearity-key-ideas.html#intuition-for-the-exercises",
+    "title": "4  Multicollinearity — Key Ideas",
+    "section": "4.5 Intuition for the exercises",
+    "text": "4.5 Intuition for the exercises\nIn Exercise 5.1, you have GDP and CPI as explanatory variables for imports. Both tend to grow over time — they’re correlated. You’ll see that running separate regressions gives different results than running them together. The auxiliary regression (GDP on CPI) tells you how much of the “blame” goes to multicollinearity vs. genuine insignificance.",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Multicollinearity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-questions.html",
+    "href": "ch5-multicollinearity-questions.html",
+    "title": "5  Multicollinearity — Exercises",
+    "section": "",
+    "text": "5.1 Exercise 5.1\nThe file imports_uk_y.wf1 contains yearly data (1972–1997) for real imports (IMP), real gross domestic product (GDP) and the relative consumer price index (CPI) of domestic to foreign prices for the US economy. Use these data to estimate the following model:\n\\[\\ln(\\text{IMP})_t = \\beta_1 + \\beta_2 \\ln(\\text{GDP})_t + \\beta_3 \\ln(\\text{CPI})_t + u_t\\]\nCheck whether there is multicollinearity in the data. Calculate the correlation matrix of the variables and comment regarding the possibility of multicollinearity. Also, run the following additional regressions:\n\\[\\ln(\\text{IMP})_t = \\beta_1 + \\beta_2 \\ln(\\text{GDP})_t + u_t\\]\n\\[\\ln(\\text{IMP})_t = \\beta_1 + \\beta_2 \\ln(\\text{CPI})_t + u_t\\]\n\\[\\ln(\\text{GDP})_t = \\beta_1 + \\beta_2 \\ln(\\text{CPI})_t + u_t\\]\nWhat can you conclude about the nature of multicollinearity from these results?",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-questions.html#exercise-5.2",
+    "href": "ch5-multicollinearity-questions.html#exercise-5.2",
+    "title": "5  Multicollinearity — Exercises",
+    "section": "5.2 Exercise 5.2",
+    "text": "5.2 Exercise 5.2\nThe file imports_uk.wf1 contains quarterly observations of the variables mentioned in Exercise 5.1. Repeat Exercise 5.1 using the quarterly (higher frequency) data. Do your results change?",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-questions.html#exercise-5.3",
+    "href": "ch5-multicollinearity-questions.html#exercise-5.3",
+    "title": "5  Multicollinearity — Exercises",
+    "section": "5.3 Exercise 5.3",
+    "text": "5.3 Exercise 5.3\nUse the data in the file money_uk02.wf1 to estimate the parameters \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) in the equation below:\n\\[\\ln(M/P)_t = \\alpha + \\beta \\ln(Y_t) + \\gamma R_{1t} + u_t\\]\nwhere \\(R_{1t}\\) is the three-month treasury bill rate. For the rest of the variables the usual notation applies.\n\nUse as an additional variable in the above equation \\(R_{2t}\\), which is the dollar interest rate.\nDo you expect to find multicollinearity? Why?\nCalculate the correlation matrix of all the variables. Which correlation coefficient is the largest?\nCalculate auxiliary regressions and conclude whether the degree of multicollinearity in (a) is serious or not.",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-questions.html#exercise-5.4",
+    "href": "ch5-multicollinearity-questions.html#exercise-5.4",
+    "title": "5  Multicollinearity — Exercises",
+    "section": "5.4 Exercise 5.4",
+    "text": "5.4 Exercise 5.4\nThe file cars.wf1 contains annual data from 1971–1986 (16 observations) for new cars sales in the US.\n\n\n\n\n\n\nNoteData Description\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\ncars_sold\nnew passenger cars sold (thousands)\n\n\ncpi_cars\nnew cars, consumer price index, 1967 = 100\n\n\ncpi_all\nconsumer price index, all items, all urban consumers, 1967 = 100\n\n\ndisp\nreal personal disposable income (billions of dollars)\n\n\nint_rate\ninterest rate (percentage)\n\n\nlab_force\nemployed civilian labor force (thousands)\n\n\n\n\n\n\n\nEstimate a log-linear model that examines a demand function for new cars, including all explanatory variables as regressors. Discuss your results.\nIn the model estimated above, do you expect to face multicollinearity? Discuss why.\nCheck if there is indeed multicollinearity among the regressors. How will you do that? What are your conclusions?\nBased on your answer above, now develop a more suitable model that avoids the problems of multicollinearity.",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-questions.html#exercise-5.5",
+    "href": "ch5-multicollinearity-questions.html#exercise-5.5",
+    "title": "5  Multicollinearity — Exercises",
+    "section": "5.5 Exercise 5.5",
+    "text": "5.5 Exercise 5.5\nConsider the following data:\n\n\n\nY\nX1\nX2\n\n\n\n\n−12\n12\n21\n\n\n−8\n13\n23\n\n\n−4\n14\n25\n\n\n−3\n15\n27\n\n\n1\n16\n29\n\n\n2\n15\n27\n\n\n4\n17\n31\n\n\n8\n18\n33\n\n\n18\n21\n39\n\n\n13\n20\n37\n\n\n\n\nCan you obtain estimations for the coefficients of the following linear model:\n\n\\[Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + u\\]\nusing the data given above?\n\nIf your response to (a) was no, then how can you reparameterise the model in order to obtain satisfactory estimates of the coefficients?",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch5-multicollinearity-questions.html#exercise-5.6",
+    "href": "ch5-multicollinearity-questions.html#exercise-5.6",
+    "title": "5  Multicollinearity — Exercises",
+    "section": "5.6 Exercise 5.6",
+    "text": "5.6 Exercise 5.6\nThe file manhours.xls contains data describing the manpower needs for operating a US Navy bachelor officers’ quarters. It contains cross-sectional observations for 25 establishments.\n\n\n\n\n\n\nNoteData Description\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nmanhours\nmonthly manhours needed to operate an establishment\n\n\noccup\naverage daily occupancy\n\n\ncheckins\nmonthly average number of check-ins\n\n\nservice\nweekly hours of service desk operation\n\n\ncomusearea\ncommon use area (in square feet)\n\n\nno_wings\nnumber of building wings\n\n\nberthing\noperational berthing capacity\n\n\nno_rooms\nnumber of rooms\n\n\n\n\n\n\n\nEstimate a regression model that explains average daily occupancy (occup) from all available explanatory variables. Do the results suggest multicollinearity?\nAre some of the explanatory variables collinear? How is this detected?",
+    "crumbs": [
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Multicollinearity — Exercises</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html",
     "href": "ch5-multicollinearity-solutions.html",
-    "title": "9  Multicollinearity — Solutions",
+    "title": "6  Multicollinearity — Solutions",
     "section": "",
-    "text": "9.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(car)",
+    "text": "6.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(car)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html#exercise-5.1",
     "href": "ch5-multicollinearity-solutions.html#exercise-5.1",
-    "title": "9  Multicollinearity — Solutions",
-    "section": "9.2 Exercise 5.1",
-    "text": "9.2 Exercise 5.1\n(a) Full model\n(b) Correlation matrix\n(c) Regression: IMP on GDP only\n(d) Regression: IMP on CPI only\n(e) Auxiliary regression: GDP on CPI\n(f) Conclusions on multicollinearity",
+    "title": "6  Multicollinearity — Solutions",
+    "section": "6.2 Exercise 5.1",
+    "text": "6.2 Exercise 5.1\n(a) Full model\n(b) Correlation matrix\n(c) Regression: IMP on GDP only\n(d) Regression: IMP on CPI only\n(e) Auxiliary regression: GDP on CPI\n(f) Conclusions on multicollinearity",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html#exercise-5.2",
     "href": "ch5-multicollinearity-solutions.html#exercise-5.2",
-    "title": "9  Multicollinearity — Solutions",
-    "section": "9.3 Exercise 5.2",
-    "text": "9.3 Exercise 5.2\n(a) Repeat with quarterly data\n(b) Do results change?",
+    "title": "6  Multicollinearity — Solutions",
+    "section": "6.3 Exercise 5.2",
+    "text": "6.3 Exercise 5.2\n(a) Repeat with quarterly data\n(b) Do results change?",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html#exercise-5.3",
     "href": "ch5-multicollinearity-solutions.html#exercise-5.3",
-    "title": "9  Multicollinearity — Solutions",
-    "section": "9.4 Exercise 5.3",
-    "text": "9.4 Exercise 5.3\n(a) Model with additional variable R2\n(b) Expectation of multicollinearity\n\n(c) Correlation matrix\n(d) Auxiliary regressions and VIF",
+    "title": "6  Multicollinearity — Solutions",
+    "section": "6.4 Exercise 5.3",
+    "text": "6.4 Exercise 5.3\n(a) Model with additional variable R2\n(b) Expectation of multicollinearity\n\n(c) Correlation matrix\n(d) Auxiliary regressions and VIF",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html#exercise-5.4",
     "href": "ch5-multicollinearity-solutions.html#exercise-5.4",
-    "title": "9  Multicollinearity — Solutions",
-    "section": "9.5 Exercise 5.4",
-    "text": "9.5 Exercise 5.4\n(a) Log-linear demand model for new cars\n(b) Expectation of multicollinearity\n\n(c) Detection of multicollinearity\n(d) Revised model avoiding multicollinearity",
+    "title": "6  Multicollinearity — Solutions",
+    "section": "6.5 Exercise 5.4",
+    "text": "6.5 Exercise 5.4\n(a) Log-linear demand model for new cars\n(b) Expectation of multicollinearity\n\n(c) Detection of multicollinearity\n(d) Revised model avoiding multicollinearity",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html#exercise-5.5",
     "href": "ch5-multicollinearity-solutions.html#exercise-5.5",
-    "title": "9  Multicollinearity — Solutions",
-    "section": "9.6 Exercise 5.5",
-    "text": "9.6 Exercise 5.5\n(a) Can we estimate the model?\n(b) Reparameterisation",
+    "title": "6  Multicollinearity — Solutions",
+    "section": "6.6 Exercise 5.5",
+    "text": "6.6 Exercise 5.5\n(a) Can we estimate the model?\n(b) Reparameterisation",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch5-multicollinearity-solutions.html#exercise-5.6",
     "href": "ch5-multicollinearity-solutions.html#exercise-5.6",
-    "title": "9  Multicollinearity — Solutions",
-    "section": "9.7 Exercise 5.6",
-    "text": "9.7 Exercise 5.6\n(a) Regression of occup on all explanatory variables\n(b) Detection of collinearity",
+    "title": "6  Multicollinearity — Solutions",
+    "section": "6.7 Exercise 5.6",
+    "text": "6.7 Exercise 5.6\n(a) Regression of occup on all explanatory variables\n(b) Detection of collinearity",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+      "Chapter 5: Multicollinearity",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multicollinearity — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-key-ideas.html",
+    "href": "ch6-heteroskedasticity-key-ideas.html",
+    "title": "7  Heteroskedasticity — Key Ideas",
+    "section": "",
+    "text": "7.1 What is heteroskedasticity?\nIn a well-behaved regression, the “noise” (error term) has the same spread for all observations — that’s homoskedasticity. When the spread of errors changes systematically (e.g., richer people have more variable spending), that’s heteroskedasticity.\nThink of it this way: if you’re predicting house prices, your model might be off by $5,000 for cheap houses but off by $50,000 for expensive ones. The error variance grows with price.",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Heteroskedasticity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-key-ideas.html#why-is-it-a-problem",
+    "href": "ch6-heteroskedasticity-key-ideas.html#why-is-it-a-problem",
+    "title": "7  Heteroskedasticity — Key Ideas",
+    "section": "7.2 Why is it a problem?",
+    "text": "7.2 Why is it a problem?\n\nOLS estimates are still unbiased — the coefficients are still centred on the truth\nBut standard errors are wrong — your confidence intervals and t-tests can’t be trusted\nYou might think a variable is significant when it’s not (or vice versa)",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Heteroskedasticity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-key-ideas.html#how-to-detect-it",
+    "href": "ch6-heteroskedasticity-key-ideas.html#how-to-detect-it",
+    "title": "7  Heteroskedasticity — Key Ideas",
+    "section": "7.3 How to detect it",
+    "text": "7.3 How to detect it\nInformal:\n\nPlot residuals vs. fitted values — look for a “funnel” or “fan” shape\n\nFormal tests:\n\nWhite test — general test, doesn’t assume a specific form of heteroskedasticity\nBreusch-Pagan test — tests if error variance depends on the explanatory variables\nGoldfeld-Quandt test — splits data into two groups and compares variances",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Heteroskedasticity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-key-ideas.html#how-to-fix-it",
+    "href": "ch6-heteroskedasticity-key-ideas.html#how-to-fix-it",
+    "title": "7  Heteroskedasticity — Key Ideas",
+    "section": "7.4 How to fix it",
+    "text": "7.4 How to fix it\n\nRobust standard errors (White/HC) — keep OLS but correct the standard errors. Simplest fix and often sufficient\nWeighted Least Squares (WLS) — give less weight to observations with higher variance. Requires knowing (or guessing) the form of heteroskedasticity\nLog transformation — taking logs of the dependent variable often stabilises variance (because it compresses large values)",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Heteroskedasticity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-key-ideas.html#intuition-for-the-exercises",
+    "href": "ch6-heteroskedasticity-key-ideas.html#intuition-for-the-exercises",
+    "title": "7  Heteroskedasticity — Key Ideas",
+    "section": "7.5 Intuition for the exercises",
+    "text": "7.5 Intuition for the exercises\nIn Exercise 6.1, house prices have more variable errors for larger houses (more sqfeet = more variation in price). You’ll test for this, then try fixing it by “weighting down” the noisy observations. Exercise 6.5 shows that simply taking log(price) can eliminate heteroskedasticity — a practical trick used constantly in applied work.",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Heteroskedasticity — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-questions.html",
+    "href": "ch6-heteroskedasticity-questions.html",
+    "title": "8  Heteroskedasticity — Exercises",
+    "section": "",
+    "text": "8.1 Exercise 6.1\nUse the data in the file houseprice.wf1 to estimate a model of:\n\\[\\text{price}_i = \\beta_1 + \\beta_2 \\text{sqfeet}_i + u_i\\]\nCheck for heteroskedasticity using the White and the Goldfeld–Quandt tests. Obtain GLS estimates for the following assumptions: (a) \\(\\text{Var}(u_i) = \\sigma^2 \\text{sqfeet}_i\\) and (b) \\(\\text{Var}(u_i) = \\sigma^2 \\text{sqfeet}_i^2\\). Comment on the sensitivity of the estimates and their standard errors to the heteroskedastic specification. For each of the two cases, use both the White and the Goldfeld–Quandt tests to see whether heteroskedasticity has been eliminated.",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.2",
+    "href": "ch6-heteroskedasticity-questions.html#exercise-6.2",
+    "title": "8  Heteroskedasticity — Exercises",
+    "section": "8.2 Exercise 6.2",
+    "text": "8.2 Exercise 6.2\nUse the data in Greek_SME.wf1 to estimate the effect of size (proxied by number of employees) on the profit/sales ratio. Check whether the residuals in this equation are heteroskedastic by applying all the tests for detection of heteroskedasticity (both formal and informal) described in this chapter. If there is heteroskedasticity, obtain the White’s corrected standard error estimates and construct confidence intervals to find the differences between the simple OLS and the White’s estimates.",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.3",
+    "href": "ch6-heteroskedasticity-questions.html#exercise-6.3",
+    "title": "8  Heteroskedasticity — Exercises",
+    "section": "8.3 Exercise 6.3",
+    "text": "8.3 Exercise 6.3\nUse the data in police.wf1 to estimate the equation that relates the actual value of the current budget (Y) with the expected value of the budget (X). Check for heteroskedasticity in this regression equation with all the known tests described in this chapter.",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.4",
+    "href": "ch6-heteroskedasticity-questions.html#exercise-6.4",
+    "title": "8  Heteroskedasticity — Exercises",
+    "section": "8.4 Exercise 6.4",
+    "text": "8.4 Exercise 6.4\nThe file sleep.xls contains data for 706 individuals concerning sleeping habits and possible determinants of sleeping time. Estimate the following regression equation:\n\\[\\text{sleep} = b_0 + b_1 \\text{totwrk} + b_2 \\text{educ} + b_3 \\text{age} + b_4 \\text{yngkid} + b_5 \\text{male} + u\\]\n\nCheck whether there is evidence of heteroskedasticity.\nIs the estimated variance of \\(u\\) higher for men than women?\nRe-estimate the model, correcting for heteroskedasticity. Compare the results obtained from this method with the simple OLS estimation results that were initially obtained.",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.5",
+    "href": "ch6-heteroskedasticity-questions.html#exercise-6.5",
+    "title": "8  Heteroskedasticity — Exercises",
+    "section": "8.5 Exercise 6.5",
+    "text": "8.5 Exercise 6.5\nUse the data in the file houseprice.xls to estimate the following equation:\n\\[\\text{price} = b_0 + b_1 \\text{lotsize} + b_2 \\text{sqrft} + b_3 \\text{bdrms} + u\\]\n\nCheck whether there is evidence of heteroskedasticity.\nRe-estimate the equation but this time instead of price use log(price) as the dependent variable. Check for heteroskedasticity again. Is there any change in your conclusion in (a)?\nWhat does this example suggest about heteroskedasticity and the transformation used for the dependent variable?",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch6-heteroskedasticity-questions.html#exercise-6.6",
+    "href": "ch6-heteroskedasticity-questions.html#exercise-6.6",
+    "title": "8  Heteroskedasticity — Exercises",
+    "section": "8.6 Exercise 6.6",
+    "text": "8.6 Exercise 6.6\nA mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index “MoF: Means of Funds” is constructed for every country. The data classify all countries according to their total capitalisation (see variable “size”). The data are also provided in the file Mutual_Funds.xlsx.\n\n\n\n\n\n\nNoteData\n\n\n\n\n\n\n\n\nCountry\nMoF (Y)\nSize (X)\nY/σ\nX/σ\n\n\n\n\nAustria\n0.1866\n9\n3.0112\n145.2236\n\n\nBelgium\n11.077\n7\n0.8403\n0.531\n\n\nDenmark\n487.92307\n12\n0.3352\n0.008245\n\n\nFrance\n7.4615\n3\n0.5405\n0.217\n\n\nGermany\n22.92307\n2\n0.3141\n0.0274\n\n\nGreece\n1.3846\n8\n0.3066\n1.7716\n\n\nIreland\n424.0769\n10\n0.7914\n0.0187\n\n\nItaly\n103.92308\n5\n0.5946\n0.028607\n\n\nLuxemburg\n62.07692\n13\n0.35903\n0.07518\n\n\nPortugal\n401.1538\n11\n0.5163\n0.01416\n\n\nSpain\n84.3846\n6\n0.5581\n0.03968\n\n\nSwitzerland\n250.6153\n4\n0.2911\n0.004647\n\n\nUnited Kingdom\n0.1866\n1\n0.884\n0.00109\n\n\n\n\n\n\n\nEstimate the regression model: \\(Y = a + bX + u\\) and explain the results.\nCheck for heteroskedasticity in the model using both the graphical and formal approaches.\nSince there is heteroskedasticity in the model, the investor decided to re-estimate the model transforming Y and X by dividing both of them with the standard deviation of the MoF variable for each country. The variables are given in the table above. Re-estimate the model and discuss the results. Is heteroskedasticity resolved?",
+    "crumbs": [
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Heteroskedasticity — Exercises</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html",
     "href": "ch6-heteroskedasticity-solutions.html",
-    "title": "10  Heteroskedasticity — Solutions",
+    "title": "9  Heteroskedasticity — Solutions",
     "section": "",
-    "text": "10.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(lmtest)\nlibrary(sandwich)",
+    "text": "9.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(lmtest)\nlibrary(sandwich)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html#exercise-6.1",
     "href": "ch6-heteroskedasticity-solutions.html#exercise-6.1",
-    "title": "10  Heteroskedasticity — Solutions",
-    "section": "10.2 Exercise 6.1",
-    "text": "10.2 Exercise 6.1\n(a) Estimate the model\n(b) White test\n(c) Goldfeld–Quandt test\n(d) GLS with Var(u) = σ²·sqfeet\n(e) GLS with Var(u) = σ²·sqfeet²\n(f) Re-test for heteroskedasticity after correction",
+    "title": "9  Heteroskedasticity — Solutions",
+    "section": "9.2 Exercise 6.1",
+    "text": "9.2 Exercise 6.1\n(a) Estimate the model\n(b) White test\n(c) Goldfeld–Quandt test\n(d) GLS with Var(u) = σ²·sqfeet\n(e) GLS with Var(u) = σ²·sqfeet²\n(f) Re-test for heteroskedasticity after correction",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html#exercise-6.2",
     "href": "ch6-heteroskedasticity-solutions.html#exercise-6.2",
-    "title": "10  Heteroskedasticity — Solutions",
-    "section": "10.3 Exercise 6.2",
-    "text": "10.3 Exercise 6.2\n(a) Estimate effect of size on profit/sales ratio\n(b) Tests for heteroskedasticity\n(c) White’s corrected standard errors\n(d) Confidence intervals comparison",
+    "title": "9  Heteroskedasticity — Solutions",
+    "section": "9.3 Exercise 6.2",
+    "text": "9.3 Exercise 6.2\n(a) Estimate effect of size on profit/sales ratio\n(b) Tests for heteroskedasticity\n(c) White’s corrected standard errors\n(d) Confidence intervals comparison",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html#exercise-6.3",
     "href": "ch6-heteroskedasticity-solutions.html#exercise-6.3",
-    "title": "10  Heteroskedasticity — Solutions",
-    "section": "10.4 Exercise 6.3",
-    "text": "10.4 Exercise 6.3\n(a) Estimate budget model\n(b) Heteroskedasticity tests",
+    "title": "9  Heteroskedasticity — Solutions",
+    "section": "9.4 Exercise 6.3",
+    "text": "9.4 Exercise 6.3\n(a) Estimate budget model\n(b) Heteroskedasticity tests",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html#exercise-6.4",
     "href": "ch6-heteroskedasticity-solutions.html#exercise-6.4",
-    "title": "10  Heteroskedasticity — Solutions",
-    "section": "10.5 Exercise 6.4",
-    "text": "10.5 Exercise 6.4\n(a) Check for heteroskedasticity\n(b) Variance comparison: men vs women\n(c) Re-estimate correcting for heteroskedasticity",
+    "title": "9  Heteroskedasticity — Solutions",
+    "section": "9.5 Exercise 6.4",
+    "text": "9.5 Exercise 6.4\n(a) Check for heteroskedasticity\n(b) Variance comparison: men vs women\n(c) Re-estimate correcting for heteroskedasticity",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html#exercise-6.5",
     "href": "ch6-heteroskedasticity-solutions.html#exercise-6.5",
-    "title": "10  Heteroskedasticity — Solutions",
-    "section": "10.6 Exercise 6.5",
-    "text": "10.6 Exercise 6.5\n(a) Check for heteroskedasticity\n(b) Re-estimate with log(price) and re-test\n(c) Discussion on transformation and heteroskedasticity",
+    "title": "9  Heteroskedasticity — Solutions",
+    "section": "9.6 Exercise 6.5",
+    "text": "9.6 Exercise 6.5\n(a) Check for heteroskedasticity\n(b) Re-estimate with log(price) and re-test\n(c) Discussion on transformation and heteroskedasticity",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
     ]
   },
   {
     "objectID": "ch6-heteroskedasticity-solutions.html#exercise-6.6",
     "href": "ch6-heteroskedasticity-solutions.html#exercise-6.6",
-    "title": "10  Heteroskedasticity — Solutions",
-    "section": "10.7 Exercise 6.6",
-    "text": "10.7 Exercise 6.6\n(a) Estimate Y = a + bX + u\n(b) Check for heteroskedasticity\n(c) Re-estimate with transformed variables",
+    "title": "9  Heteroskedasticity — Solutions",
+    "section": "9.7 Exercise 6.6",
+    "text": "9.7 Exercise 6.6\n(a) Estimate Y = a + bX + u\n(b) Check for heteroskedasticity\n(c) Re-estimate with transformed variables",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+      "Chapter 6: Heteroskedasticity",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Heteroskedasticity — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-key-ideas.html",
+    "href": "ch8-misspecification-key-ideas.html",
+    "title": "10  Misspecification — Key Ideas",
+    "section": "",
+    "text": "10.1 What is model misspecification?\nYour regression assumes a specific relationship between variables. If that assumption is wrong — wrong functional form, missing variables, or irrelevant variables included — your model is misspecified. The estimates may be biased, and your conclusions unreliable.",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Misspecification — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-key-ideas.html#types-of-misspecification",
+    "href": "ch8-misspecification-key-ideas.html#types-of-misspecification",
+    "title": "10  Misspecification — Key Ideas",
+    "section": "10.2 Types of misspecification",
+    "text": "10.2 Types of misspecification\nWrong functional form — The true relationship is curved but you fitted a straight line. Or it’s logarithmic but you used levels.\nOmitted variables — You left out something important that’s correlated with your included variables. This biases your estimates.\nIrrelevant variables — You included something that doesn’t belong. This doesn’t bias anything but inflates standard errors (wastes degrees of freedom).",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Misspecification — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-key-ideas.html#functional-forms-which-to-use",
+    "href": "ch8-misspecification-key-ideas.html#functional-forms-which-to-use",
+    "title": "10  Misspecification — Key Ideas",
+    "section": "10.3 Functional forms — which to use?",
+    "text": "10.3 Functional forms — which to use?\n\n\n\n\n\n\n\n\nModel\nEquation\nInterpretation of β\n\n\n\n\nLinear\n\\(Y = \\beta X\\)\n1-unit increase in X → β-unit change in Y\n\n\nLog-linear\n\\(\\ln(Y) = \\beta X\\)\n1-unit increase in X → (β×100)% change in Y\n\n\nLinear-log\n\\(Y = \\beta \\ln(X)\\)\n1% increase in X → β/100 change in Y\n\n\nDouble-log\n\\(\\ln(Y) = \\beta \\ln(X)\\)\n1% increase in X → β% change in Y (elasticity)",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Misspecification — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-key-ideas.html#key-tools",
+    "href": "ch8-misspecification-key-ideas.html#key-tools",
+    "title": "10  Misspecification — Key Ideas",
+    "section": "10.4 Key tools",
+    "text": "10.4 Key tools\nRamsey RESET test — Tests whether your model needs nonlinear terms (squared, cubed values of fitted Y). If it rejects, your functional form is likely wrong.\nBox-Cox transformation — Helps you choose between linear and log specifications using a data-driven parameter λ. When λ = 1, use linear; when λ → 0, use logs.\nWald/F-tests for restrictions — Test whether higher-order polynomial terms are needed (is the cost function cubic? quadratic? linear?).",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Misspecification — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-key-ideas.html#intuition-for-the-exercises",
+    "href": "ch8-misspecification-key-ideas.html#intuition-for-the-exercises",
+    "title": "10  Misspecification — Key Ideas",
+    "section": "10.5 Intuition for the exercises",
+    "text": "10.5 Intuition for the exercises\nExercise 8.2 asks: is the cost function linear, quadratic, or cubic? You start with the most general form (cubic) and test downward. Exercise 8.4 compares four different functional forms for the same relationship — the point is that the “right” specification isn’t obvious; you need to test for it.",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Misspecification — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-questions.html",
+    "href": "ch8-misspecification-questions.html",
+    "title": "11  Misspecification — Exercises",
+    "section": "",
+    "text": "11.1 Exercise 8.1\nThe file wages_01.wf1 contains data for monthly wage rates (measured in UK pounds) and IQ scores of a large number of City University graduates after five years of employment:",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-questions.html#exercise-8.1",
+    "href": "ch8-misspecification-questions.html#exercise-8.1",
+    "title": "11  Misspecification — Exercises",
+    "section": "",
+    "text": "Find summary statistics for the above-mentioned variables and discuss them.\nEstimate a functional form that will show how a one-point increase in the IQ score will change the respective wage rate by a constant amount measured in UK pounds. What is the change in the wage rate for a ten-point increase in the IQ score?\nEstimate a functional form that will show how a one-point increase in the IQ score will have a percentage change effect on the wage rate. What is the percentage change in the wage rate for a ten-point increase in the IQ score?\nUse the Box–Cox transformation to decide which of the two models is more appropriate.",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-questions.html#exercise-8.2",
+    "href": "ch8-misspecification-questions.html#exercise-8.2",
+    "title": "11  Misspecification — Exercises",
+    "section": "11.2 Exercise 8.2",
+    "text": "11.2 Exercise 8.2\nThe file Costs.xlsx contains data for real costs (cost) and real production (prod) for a car industry for the last 15 years.\n\nEstimate the following regression model:\n\n\\[C_t = \\beta_0 + \\beta_1 P_t + \\beta_2 P_t^2 + \\beta_3 P_t^3 + u_t\\]\nand discuss the results.\n\nCheck the hypothesis that the cost function is of second degree only.\nCheck the hypothesis that the cost function is linear.\nObtain and plot the marginal cost function.",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-questions.html#exercise-8.3",
+    "href": "ch8-misspecification-questions.html#exercise-8.3",
+    "title": "11  Misspecification — Exercises",
+    "section": "11.3 Exercise 8.3",
+    "text": "11.3 Exercise 8.3\nThe file CD.xlsx contains data for the variables Production (Y), Labour (X1) and Capital (X2) of a hypothetical industry.\n\nEstimate the following Cobb–Douglas production function: \\(Y_t = \\beta_0 X_{1t}^{\\beta_1} X_{2t}^{\\beta_2}\\)\nCheck statistically whether \\(\\beta_1 = 0\\), \\(\\beta_2 = 0\\) as well as the overall significance of the model.\nCheck whether the hypothesis of constant returns to scale is valid.\nCalculate the average productivity of labour (APL) and the marginal productivity of labour (MPL) for the values (Y, X1, X2).\nAssume that in (a) a researcher wrongfully omitted the Capital (X2) variable. Perform the Ramsey RESET test to check if the model is correctly specified without this variable.",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch8-misspecification-questions.html#exercise-8.4",
+    "href": "ch8-misspecification-questions.html#exercise-8.4",
+    "title": "11  Misspecification — Exercises",
+    "section": "11.4 Exercise 8.4",
+    "text": "11.4 Exercise 8.4\nThe file OECD.xlsx contains data for income per capita (inc_pc) and consumption per capita (cons_pc) for the 25 OECD country-members for the year 2020.\n\nEstimate the relationship between consumption per capita and income per capita using a linear model. Interpret the results.\nEstimate the relationship between consumption per capita and income per capita using a log-linear model. Interpret the results.\nEstimate the relationship between consumption per capita and income per capita using a linear-log model. Interpret the results.\nEstimate the relationship between consumption per capita and income per capita using a double-log model. Interpret the results.\nCompare the models estimated in (a) linear, and (d) double-log. Which one is better and why?",
+    "crumbs": [
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Exercises</span>"
     ]
   },
   {
     "objectID": "ch8-misspecification-solutions.html",
     "href": "ch8-misspecification-solutions.html",
-    "title": "11  Misspecification — Solutions",
+    "title": "12  Misspecification — Solutions",
     "section": "",
-    "text": "11.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(lmtest)",
+    "text": "12.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(lmtest)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
     ]
   },
   {
     "objectID": "ch8-misspecification-solutions.html#exercise-8.1",
     "href": "ch8-misspecification-solutions.html#exercise-8.1",
-    "title": "11  Misspecification — Solutions",
-    "section": "11.2 Exercise 8.1",
-    "text": "11.2 Exercise 8.1\n(a) Summary statistics\n(b) Linear model: wage = f(IQ)\n(c) Log-linear model: log(wage) = f(IQ)\n(d) Box–Cox transformation",
+    "title": "12  Misspecification — Solutions",
+    "section": "12.2 Exercise 8.1",
+    "text": "12.2 Exercise 8.1\n(a) Summary statistics\n(b) Linear model: wage = f(IQ)\n(c) Log-linear model: log(wage) = f(IQ)\n(d) Box–Cox transformation",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
     ]
   },
   {
     "objectID": "ch8-misspecification-solutions.html#exercise-8.2",
     "href": "ch8-misspecification-solutions.html#exercise-8.2",
-    "title": "11  Misspecification — Solutions",
-    "section": "11.3 Exercise 8.2",
-    "text": "11.3 Exercise 8.2\n(a) Estimate cubic cost function\n(b) Test: cost function is second degree only\n(c) Test: cost function is linear\n(d) Plot marginal cost function",
+    "title": "12  Misspecification — Solutions",
+    "section": "12.3 Exercise 8.2",
+    "text": "12.3 Exercise 8.2\n(a) Estimate cubic cost function\n(b) Test: cost function is second degree only\n(c) Test: cost function is linear\n(d) Plot marginal cost function",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
     ]
   },
   {
     "objectID": "ch8-misspecification-solutions.html#exercise-8.3",
     "href": "ch8-misspecification-solutions.html#exercise-8.3",
-    "title": "11  Misspecification — Solutions",
-    "section": "11.4 Exercise 8.3",
-    "text": "11.4 Exercise 8.3\n(a) Estimate Cobb–Douglas production function\n(b) Test significance of β1, β2 and overall model\n(c) Test constant returns to scale\n(d) Calculate APL and MPL\n(e) Ramsey RESET test (omitting X2)",
+    "title": "12  Misspecification — Solutions",
+    "section": "12.4 Exercise 8.3",
+    "text": "12.4 Exercise 8.3\n(a) Estimate Cobb–Douglas production function\n(b) Test significance of β1, β2 and overall model\n(c) Test constant returns to scale\n(d) Calculate APL and MPL\n(e) Ramsey RESET test (omitting X2)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
     ]
   },
   {
     "objectID": "ch8-misspecification-solutions.html#exercise-8.4",
     "href": "ch8-misspecification-solutions.html#exercise-8.4",
-    "title": "11  Misspecification — Solutions",
-    "section": "11.5 Exercise 8.4",
-    "text": "11.5 Exercise 8.4\n(a) Linear model\n(b) Log-linear model\n(c) Linear-log model\n(d) Double-log model\n(e) Compare linear vs double-log",
+    "title": "12  Misspecification — Solutions",
+    "section": "12.5 Exercise 8.4",
+    "text": "12.5 Exercise 8.4\n(a) Linear model\n(b) Log-linear model\n(c) Linear-log model\n(d) Double-log model\n(e) Compare linear vs double-log",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
+      "Chapter 8: Misspecification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Misspecification — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-key-ideas.html",
+    "href": "ch9-dummy-variables-key-ideas.html",
+    "title": "13  Dummy Variables — Key Ideas",
+    "section": "",
+    "text": "13.1 What are dummy variables?\nDummy variables turn qualitative categories (male/female, married/single, north/south) into numbers your regression can use. They take the value 1 or 0:\n\\[\\text{male} = \\begin{cases} 1 & \\text{if male} \\\\ 0 & \\text{if female} \\end{cases}\\]",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dummy Variables — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-key-ideas.html#how-do-they-work-in-regression",
+    "href": "ch9-dummy-variables-key-ideas.html#how-do-they-work-in-regression",
+    "title": "13  Dummy Variables — Key Ideas",
+    "section": "13.2 How do they work in regression?",
+    "text": "13.2 How do they work in regression?\nIn the model \\(\\text{wage} = \\beta_0 + \\beta_1 \\text{male} + u\\):\n\nFor females: \\(E[\\text{wage}] = \\beta_0\\) (the baseline)\nFor males: \\(E[\\text{wage}] = \\beta_0 + \\beta_1\\)\n\nSo \\(\\beta_1\\) is the difference between the two groups. If \\(\\beta_1 = 200\\), males earn $200 more on average.",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dummy Variables — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-key-ideas.html#the-dummy-variable-trap",
+    "href": "ch9-dummy-variables-key-ideas.html#the-dummy-variable-trap",
+    "title": "13  Dummy Variables — Key Ideas",
+    "section": "13.3 The dummy variable trap",
+    "text": "13.3 The dummy variable trap\nIf you have 3 categories (north/south/west), you need only 2 dummies. If you include all 3 plus a constant, you get perfect multicollinearity. The excluded category becomes your reference group — all coefficients are measured relative to it.",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dummy Variables — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-key-ideas.html#interaction-effects",
+    "href": "ch9-dummy-variables-key-ideas.html#interaction-effects",
+    "title": "13  Dummy Variables — Key Ideas",
+    "section": "13.4 Interaction effects",
+    "text": "13.4 Interaction effects\nYou can let a dummy change both the intercept and the slope:\n\\[Y = \\beta_0 + \\beta_1 D + \\beta_2 X + \\beta_3 (D \\times X) + u\\]\nHere \\(\\beta_1\\) shifts the intercept for group D=1, and \\(\\beta_3\\) changes how X affects Y for that group.",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dummy Variables — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-key-ideas.html#structural-breaks-chow-test",
+    "href": "ch9-dummy-variables-key-ideas.html#structural-breaks-chow-test",
+    "title": "13  Dummy Variables — Key Ideas",
+    "section": "13.5 Structural breaks (Chow test)",
+    "text": "13.5 Structural breaks (Chow test)\nDoes the relationship change before and after an event? Use dummies for time periods and test whether coefficients differ. If they do, you have a “structural break” — one model doesn’t fit both periods.",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dummy Variables — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-key-ideas.html#intuition-for-the-exercises",
+    "href": "ch9-dummy-variables-key-ideas.html#intuition-for-the-exercises",
+    "title": "13  Dummy Variables — Key Ideas",
+    "section": "13.6 Intuition for the exercises",
+    "text": "13.6 Intuition for the exercises\nExercise 9.1 asks whether being Black affects wages. First a simple comparison (just the dummy), then adding controls (education, experience). The key insight: the raw wage gap combines discrimination and differences in characteristics. Adding controls isolates the gap that can’t be explained by observable differences. Watch how the dummy coefficient changes as you add variables — that tells you what’s driving the gap.",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dummy Variables — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-questions.html",
+    "href": "ch9-dummy-variables-questions.html",
+    "title": "14  Dummy Variables — Exercises",
+    "section": "",
+    "text": "14.1 Exercise 9.1\nThe file wage2.dum.xls contains cross-sectional data on wages and individual characteristics.\n\\[\\log(\\text{wage}) = \\beta_0 + \\beta_1 \\text{black} + u\\]\nInterpret the results and discuss whether or not a person belonging in the Black ethnic minority receives on average a lower/higher salary.\n\\[\\log(\\text{wage}) = \\beta_0 + \\beta_1 \\text{black} + \\beta_2 \\text{educ} + \\beta_3 \\text{exper} + \\beta_4 \\text{tenure} + u\\]\nDiscuss your results. Has the coefficient for the dummy variable “black” changed substantially or not? What does this mean?",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-questions.html#exercise-9.1",
+    "href": "ch9-dummy-variables-questions.html#exercise-9.1",
+    "title": "14  Dummy Variables — Exercises",
+    "section": "",
+    "text": "NoteData Description\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nwage\nmonthly earnings\n\n\nhours\naverage weekly hours\n\n\nIQ\nIQ score\n\n\nKWW\nknowledge of work score\n\n\neduc\nyears of education\n\n\nexper\nyears of work experience\n\n\ntenure\nyears with current employer\n\n\nage\nage in years\n\n\nmarried\n= 1 if married\n\n\nblack\n= 1 if Black\n\n\nsouth\n= 1 if live in South\n\n\nurban\n= 1 if live in SMSA\n\n\nsibs\nnumber of siblings\n\n\nbrthord\nbirth order\n\n\nmeduc\nmother’s education\n\n\nfeduc\nfather’s education\n\n\n\n\n\n\n\nUse the data to estimate the following model:\n\n\n\n\nNow, extend the model to control for other characteristics by estimating the following version:\n\n\n\n\nIntroduce in your model variables such as IQ and KWW. What happens now?\nInclude more dummies, like married, south and urban. Discuss the results.\nFind the average wage of a person that has 10 years of education, 7 years of experience, 3 years of tenure, is married, belongs in the Black ethnic minority, lives in the south and in a non-urban region, has an IQ of 128 and a KWW score of 33.\nCompare the salary of the person above to a similar person who is non-Black and lives in an area in the north and urban. What do you conclude?",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-questions.html#exercise-9.2",
+    "href": "ch9-dummy-variables-questions.html#exercise-9.2",
+    "title": "14  Dummy Variables — Exercises",
+    "section": "14.2 Exercise 9.2",
+    "text": "14.2 Exercise 9.2\nThe file BWGHT_DUM.xls contains data for 1,388 US mothers on birth weight and related factors.\n\n\n\n\n\n\nNoteData Description\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nfaminc\n1988 family income, $1000s\n\n\ncigtax\ncigarette tax in home state, 1988\n\n\ncigprice\ncigarette price in home state, 1988\n\n\nbwght\nbirth weight, ounces\n\n\nfatheduc\nfather’s years of education\n\n\nmotheduc\nmother’s years of education\n\n\nparity\nbirth order of children\n\n\nmale\n= 1 if male child\n\n\nwhite\n= 1 if White\n\n\ncigs\ncigarettes smoked per day while pregnant\n\n\nlbwght\nlog of birthweight\n\n\nbwghtlbs\nbirth weight, pounds\n\n\npacks\npacks smoked per day while pregnant\n\n\nlfaminc\nlog(family income)\n\n\n\n\n\n\n\nUse the data to estimate the following regression:\n\n\\[\\log(\\text{bwght}) = \\beta_0 + \\beta_1 \\text{cigs} + \\beta_2 \\log(\\text{faminc}) + \\beta_3 \\text{parity} + \\beta_4 \\text{male} + \\beta_5 \\text{white} + u\\]\nand discuss your results.\n\nInterpret the coefficient of cigs. In particular, what is the effect on birth weight from smoking a pack of cigarettes a day? (Note: a pack contains 20 cigarettes.)\nHolding the other factors in the equation fixed, on average how much more is a White child predicted to weigh than a non-White child? Is the difference statistically significant?\nHolding the other factors in the equation fixed, on average how much more is a male child predicted to weigh than a female child? Is the difference statistically significant?\nRe-estimate the model adding now the education levels of the father and the mother. What do you expect to find? Are the results consistent with your expectation?",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch9-dummy-variables-questions.html#exercise-9.3",
+    "href": "ch9-dummy-variables-questions.html#exercise-9.3",
+    "title": "14  Dummy Variables — Exercises",
+    "section": "14.3 Exercise 9.3",
+    "text": "14.3 Exercise 9.3\nThe file SLEEP_DUM.xls contains data on sleep patterns, wages, and individual characteristics.\n\n\n\n\n\n\nNoteData Description\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nage\nin years\n\n\nblack\n= 1 if Black\n\n\nclerical\n= 1 if clerical worker\n\n\nconstruc\n= 1 if construction worker\n\n\neduc\nyears of schooling\n\n\nearns74\ntotal earnings, 1974\n\n\ngdhlth\n= 1 if in good or excellent health\n\n\ninlf\n= 1 if in labour force\n\n\nlhrwage\nlog hourly wage\n\n\nmale\n= 1 if male\n\n\nmarr\n= 1 if married\n\n\nprot\n= 1 if Protestant\n\n\nselfe\n= 1 if self employed\n\n\nsleep\nminutes of sleep at night, per week\n\n\nsouth\n= 1 if lives in South\n\n\nspwrk75\n= 1 if spouse works\n\n\ntotwrk\nminutes worked per week\n\n\nunion\n= 1 if belong to union\n\n\nexper\nage − educ − 6\n\n\nyngkid\n= 1 if children under 3 years old present\n\n\nyrsmarr\nyears married\n\n\nhrwage\nhourly wage\n\n\n\n\n\n\n\nEstimate a model to check if males sleep more on average than females. What do you conclude?\nAdd more explanatory variables in the model (try to find variables that affect sleep patterns). Is the male effect estimated above still dominant?\nEstimate a model to check if males obtain higher wages than females. What do you conclude?\nAdd more explanatory variables in the model (try to find variables that affect wage patterns). Is the male effect estimated above still dominant?\nDo the same for workers that belong in the Black ethnic minority. What do your results suggest?",
+    "crumbs": [
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Dummy Variables — Exercises</span>"
     ]
   },
   {
     "objectID": "ch9-dummy-variables-solutions.html",
     "href": "ch9-dummy-variables-solutions.html",
-    "title": "12  Dummy Variables — Solutions",
+    "title": "15  Dummy Variables — Solutions",
     "section": "",
-    "text": "12.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)",
+    "text": "15.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
     ]
   },
   {
     "objectID": "ch9-dummy-variables-solutions.html#exercise-9.1",
     "href": "ch9-dummy-variables-solutions.html#exercise-9.1",
-    "title": "12  Dummy Variables — Solutions",
-    "section": "12.2 Exercise 9.1",
-    "text": "12.2 Exercise 9.1\n(a) Simple model: log(wage) on black\n(b) Extended model with educ, exper, tenure\n(c) Add IQ and KWW\n(d) Add married, south, urban dummies\n(e) Predicted wage for specific individual\n(f) Compare to non-Black, north, urban individual",
+    "title": "15  Dummy Variables — Solutions",
+    "section": "15.2 Exercise 9.1",
+    "text": "15.2 Exercise 9.1\n(a) Simple model: log(wage) on black\n(b) Extended model with educ, exper, tenure\n(c) Add IQ and KWW\n(d) Add married, south, urban dummies\n(e) Predicted wage for specific individual\n(f) Compare to non-Black, north, urban individual",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
     ]
   },
   {
     "objectID": "ch9-dummy-variables-solutions.html#exercise-9.2",
     "href": "ch9-dummy-variables-solutions.html#exercise-9.2",
-    "title": "12  Dummy Variables — Solutions",
-    "section": "12.3 Exercise 9.2",
-    "text": "12.3 Exercise 9.2\n(a) Estimate log(bwght) model\n(b) Interpret coefficient of cigs (effect of one pack)\n(c) White vs non-White difference\n(d) Male vs female difference\n(e) Add father’s and mother’s education",
+    "title": "15  Dummy Variables — Solutions",
+    "section": "15.3 Exercise 9.2",
+    "text": "15.3 Exercise 9.2\n(a) Estimate log(bwght) model\n(b) Interpret coefficient of cigs (effect of one pack)\n(c) White vs non-White difference\n(d) Male vs female difference\n(e) Add father’s and mother’s education",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
     ]
   },
   {
     "objectID": "ch9-dummy-variables-solutions.html#exercise-9.3",
     "href": "ch9-dummy-variables-solutions.html#exercise-9.3",
-    "title": "12  Dummy Variables — Solutions",
-    "section": "12.4 Exercise 9.3",
-    "text": "12.4 Exercise 9.3\n(a) Do males sleep more than females?\n(b) Add more explanatory variables for sleep\n(c) Do males earn higher wages?\n(d) Add more explanatory variables for wages\n(e) Black ethnic minority analysis",
+    "title": "15  Dummy Variables — Solutions",
+    "section": "15.4 Exercise 9.3",
+    "text": "15.4 Exercise 9.3\n(a) Do males sleep more than females?\n(b) Add more explanatory variables for sleep\n(c) Do males earn higher wages?\n(d) Add more explanatory variables for wages\n(e) Black ethnic minority analysis",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
+      "Chapter 9: Dummy Variables",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dummy Variables — Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-key-ideas.html",
+    "href": "ch12-limited-dependent-variable-key-ideas.html",
+    "title": "16  Limited Dependent Variable — Key Ideas",
+    "section": "",
+    "text": "16.1 What’s the problem?\nSometimes your dependent variable is binary — yes/no, approved/denied, pass/fail. Standard OLS doesn’t work well here because:",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Limited Dependent Variable — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-key-ideas.html#whats-the-problem",
+    "href": "ch12-limited-dependent-variable-key-ideas.html#whats-the-problem",
+    "title": "16  Limited Dependent Variable — Key Ideas",
+    "section": "",
+    "text": "It can predict probabilities below 0 or above 1 (nonsense)\nThe errors can’t be normally distributed when Y is only 0 or 1\nThe relationship between X and P(Y=1) isn’t linear — it’s S-shaped",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Limited Dependent Variable — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-key-ideas.html#three-approaches",
+    "href": "ch12-limited-dependent-variable-key-ideas.html#three-approaches",
+    "title": "16  Limited Dependent Variable — Key Ideas",
+    "section": "16.2 Three approaches",
+    "text": "16.2 Three approaches\nLinear Probability Model (LPM) — Just run OLS anyway. Simple and often “good enough” for marginal effects, but gives impossible predictions and has heteroskedastic errors by construction.\nProbit — Assumes the underlying latent variable has a normal distribution. The probability follows the cumulative normal (Φ):\n\\[P(Y=1|X) = \\Phi(\\beta_0 + \\beta_1 X)\\]\nLogit — Uses the logistic function instead. Very similar results to probit in practice:\n\\[P(Y=1|X) = \\frac{e^{\\beta_0 + \\beta_1 X}}{1 + e^{\\beta_0 + \\beta_1 X}}\\]",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Limited Dependent Variable — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-key-ideas.html#interpreting-coefficients",
+    "href": "ch12-limited-dependent-variable-key-ideas.html#interpreting-coefficients",
+    "title": "16  Limited Dependent Variable — Key Ideas",
+    "section": "16.3 Interpreting coefficients",
+    "text": "16.3 Interpreting coefficients\nIn probit/logit, the raw coefficients don’t directly tell you “a 1-unit increase in X changes the probability by β.” You need marginal effects — the change in probability for a small change in X, evaluated at some point (usually the mean).",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Limited Dependent Variable — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-key-ideas.html#key-insight",
+    "href": "ch12-limited-dependent-variable-key-ideas.html#key-insight",
+    "title": "16  Limited Dependent Variable — Key Ideas",
+    "section": "16.4 Key insight",
+    "text": "16.4 Key insight\nThe S-shape means the effect of X on probability depends on where you are. Moving from 10% to 20% probability is different from moving from 45% to 55%, even if the change in X is the same. Effects are largest in the middle and shrink near 0 and 1.",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Limited Dependent Variable — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-key-ideas.html#intuition-for-the-exercises",
+    "href": "ch12-limited-dependent-variable-key-ideas.html#intuition-for-the-exercises",
+    "title": "16  Limited Dependent Variable — Key Ideas",
+    "section": "16.5 Intuition for the exercises",
+    "text": "16.5 Intuition for the exercises\nExercise 12.1 examines loan approval discrimination. You estimate whether being White increases approval probability — first alone, then controlling for financial characteristics. The question is: does the “race effect” shrink or disappear once you account for income, credit history, etc.? If it persists, that’s evidence of discrimination beyond what financial factors explain.",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Limited Dependent Variable — Key Ideas</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-questions.html",
+    "href": "ch12-limited-dependent-variable-questions.html",
+    "title": "17  Limited Dependent Variable — Exercises",
+    "section": "",
+    "text": "17.1 Exercise 12.1\nThe file Binary_Loan contains data on loan approval decisions and applicant characteristics.",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-questions.html#exercise-12.1",
+    "href": "ch12-limited-dependent-variable-questions.html#exercise-12.1",
+    "title": "17  Limited Dependent Variable — Exercises",
+    "section": "",
+    "text": "NoteData Description\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nappinc\napplicant income, $1000s\n\n\nmarried\n= 1 if married\n\n\ndep\nnumber of dependents\n\n\nemp\nyears employed in line of work\n\n\nyjob\nyears at this job\n\n\nself\n= 1 if self employed\n\n\npubrec\n= 1 if filed bankruptcy\n\n\nhrat\nhousing expenses % total income\n\n\nobrat\nother obligations % total income\n\n\nschool\n= 1 if &gt; 12 years schooling\n\n\nblack\n= 1 if Black\n\n\nhispan\n= 1 if Hispanic\n\n\nmale\n= 1 if male\n\n\napprove\n= 1 if action == 1 or 2\n\n\nmortperf\nno late mortgage payments\n\n\nmortlat1\none or two late payments\n\n\nmortlat2\n&gt; 2 late payments\n\n\nloanprc\namount/price\n\n\nwhite\n= 1 if White\n\n\n\n\n\n\n\nEstimate the effect of White on approve, using the Probit model.\nFind the estimated probability of loan approval for both Whites and non-Whites.\nEstimate the same relationship with the linear probability model and compare your results.\nRe-estimate the model adding more determinants of loan-approval, such as: hrat, mortperf, mortlat1, mortlat2, married, dep, school and emp. What happens to the estimation of the White coefficient obtained in (a)? Is discrimination against non-Whites evident?",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-questions.html#exercise-12.2",
+    "href": "ch12-limited-dependent-variable-questions.html#exercise-12.2",
+    "title": "17  Limited Dependent Variable — Exercises",
+    "section": "17.2 Exercise 12.2",
+    "text": "17.2 Exercise 12.2\nUse the file Binary_Loan to repeat Exercise 12.1 in order to check if there is discrimination between males and females or between married and non-married individuals using a simple model that includes one explanatory variable only. What are your conclusions? If you add more variables how are your results affected?",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "ch12-limited-dependent-variable-questions.html#exercise-12.3",
+    "href": "ch12-limited-dependent-variable-questions.html#exercise-12.3",
+    "title": "17  Limited Dependent Variable — Exercises",
+    "section": "17.3 Exercise 12.3",
+    "text": "17.3 Exercise 12.3\nUse the file Binary_Loan to repeat Exercise 12.1 in order to check if there is discrimination for individuals that belong to the Black and Hispanic ethnic minorities in a simple model that includes one explanatory variable only. What are your conclusions? If you add additional determinants, does the discrimination disappear or not?",
+    "crumbs": [
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Limited Dependent Variable — Exercises</span>"
     ]
   },
   {
     "objectID": "ch12-limited-dependent-variable-solutions.html",
     "href": "ch12-limited-dependent-variable-solutions.html",
-    "title": "13  Limited Dependent Variable — Solutions",
+    "title": "18  Limited Dependent Variable — Solutions",
     "section": "",
-    "text": "13.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(margins)",
+    "text": "18.1 Setup\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(modelsummary)\nlibrary(margins)",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
     ]
   },
   {
     "objectID": "ch12-limited-dependent-variable-solutions.html#exercise-12.1",
     "href": "ch12-limited-dependent-variable-solutions.html#exercise-12.1",
-    "title": "13  Limited Dependent Variable — Solutions",
-    "section": "13.2 Exercise 12.1",
-    "text": "13.2 Exercise 12.1\n(a) Probit model: effect of White on approve\n(b) Estimated probability for Whites and non-Whites\n(c) Linear probability model comparison\n(d) Extended model with additional determinants",
+    "title": "18  Limited Dependent Variable — Solutions",
+    "section": "18.2 Exercise 12.1",
+    "text": "18.2 Exercise 12.1\n(a) Probit model: effect of White on approve\n(b) Estimated probability for Whites and non-Whites\n(c) Linear probability model comparison\n(d) Extended model with additional determinants",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
     ]
   },
   {
     "objectID": "ch12-limited-dependent-variable-solutions.html#exercise-12.2",
     "href": "ch12-limited-dependent-variable-solutions.html#exercise-12.2",
-    "title": "13  Limited Dependent Variable — Solutions",
-    "section": "13.3 Exercise 12.2",
-    "text": "13.3 Exercise 12.2\n(a) Discrimination: male vs female\n(b) Discrimination: married vs non-married\n(c) Extended model with additional variables",
+    "title": "18  Limited Dependent Variable — Solutions",
+    "section": "18.3 Exercise 12.2",
+    "text": "18.3 Exercise 12.2\n(a) Discrimination: male vs female\n(b) Discrimination: married vs non-married\n(c) Extended model with additional variables",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
     ]
   },
   {
     "objectID": "ch12-limited-dependent-variable-solutions.html#exercise-12.3",
     "href": "ch12-limited-dependent-variable-solutions.html#exercise-12.3",
-    "title": "13  Limited Dependent Variable — Solutions",
-    "section": "13.4 Exercise 12.3",
-    "text": "13.4 Exercise 12.3\n(a) Discrimination: Black and Hispanic minorities\n(b) Extended model with additional determinants",
+    "title": "18  Limited Dependent Variable — Solutions",
+    "section": "18.4 Exercise 12.3",
+    "text": "18.4 Exercise 12.3\n(a) Discrimination: Black and Hispanic minorities\n(b) Extended model with additional determinants",
     "crumbs": [
-      "Solutions",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
+      "Chapter 12: Limited Dependent Variable",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Limited Dependent Variable — Solutions</span>"
     ]
   }
 ]

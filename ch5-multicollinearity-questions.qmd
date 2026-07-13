@@ -38,8 +38,9 @@ where $R_{1t}$ is the three-month treasury bill rate. For the rest of the variab
 
 ## Exercise 5.4
 
-The file `cars.wf1` contains annual data from 1971–1986 (16 observations) for new cars sales in the US. The variables are defined as follows:
+The file `cars.wf1` contains annual data from 1971–1986 (16 observations) for new cars sales in the US.
 
+::: {.callout-note collapse="true" title="Data Description"}
 | Variable | Description |
 |----------|-------------|
 | cars_sold | new passenger cars sold (thousands) |
@@ -48,6 +49,7 @@ The file `cars.wf1` contains annual data from 1971–1986 (16 observations) for 
 | disp | real personal disposable income (billions of dollars) |
 | int_rate | interest rate (percentage) |
 | lab_force | employed civilian labor force (thousands) |
+:::
 
 (a) Estimate a log-linear model that examines a demand function for new cars, including all explanatory variables as regressors. Discuss your results.
 
@@ -84,8 +86,9 @@ using the data given above?
 
 ## Exercise 5.6
 
-The file `manhours.xls` contains the following variables:
+The file `manhours.xls` contains data describing the manpower needs for operating a US Navy bachelor officers' quarters. It contains cross-sectional observations for 25 establishments.
 
+::: {.callout-note collapse="true" title="Data Description"}
 | Variable | Description |
 |----------|-------------|
 | manhours | monthly manhours needed to operate an establishment |
@@ -96,8 +99,7 @@ The file `manhours.xls` contains the following variables:
 | no_wings | number of building wings |
 | berthing | operational berthing capacity |
 | no_rooms | number of rooms |
-
-The data describes the manpower needs for operating a US Navy bachelor officers' quarters. It contains cross-sectional observations for 25 establishments.
+:::
 
 (a) Estimate a regression model that explains average daily occupancy (`occup`) from all available explanatory variables. Do the results suggest multicollinearity?
 

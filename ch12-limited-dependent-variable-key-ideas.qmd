@@ -1,0 +1,33 @@
+# Limited Dependent Variable — Key Ideas
+
+## What's the problem?
+
+Sometimes your dependent variable is binary — yes/no, approved/denied, pass/fail. Standard OLS doesn't work well here because:
+
+- It can predict probabilities below 0 or above 1 (nonsense)
+- The errors can't be normally distributed when Y is only 0 or 1
+- The relationship between X and P(Y=1) isn't linear — it's S-shaped
+
+## Three approaches
+
+**Linear Probability Model (LPM)** — Just run OLS anyway. Simple and often "good enough" for marginal effects, but gives impossible predictions and has heteroskedastic errors by construction.
+
+**Probit** — Assumes the underlying latent variable has a normal distribution. The probability follows the cumulative normal (Φ):
+
+$$P(Y=1|X) = \Phi(\beta_0 + \beta_1 X)$$
+
+**Logit** — Uses the logistic function instead. Very similar results to probit in practice:
+
+$$P(Y=1|X) = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}}$$
+
+## Interpreting coefficients
+
+In probit/logit, the raw coefficients don't directly tell you "a 1-unit increase in X changes the probability by β." You need **marginal effects** — the change in probability for a small change in X, evaluated at some point (usually the mean).
+
+## Key insight
+
+The S-shape means the effect of X on probability depends on *where you are*. Moving from 10% to 20% probability is different from moving from 45% to 55%, even if the change in X is the same. Effects are largest in the middle and shrink near 0 and 1.
+
+## Intuition for the exercises
+
+Exercise 12.1 examines loan approval discrimination. You estimate whether being White increases approval probability — first alone, then controlling for financial characteristics. The question is: does the "race effect" shrink or disappear once you account for income, credit history, etc.? If it persists, that's evidence of discrimination beyond what financial factors explain.

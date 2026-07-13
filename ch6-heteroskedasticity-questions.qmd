@@ -42,8 +42,9 @@ $$\text{price} = b_0 + b_1 \text{lotsize} + b_2 \text{sqrft} + b_3 \text{bdrms} 
 
 ## Exercise 6.6
 
-A mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index "MoF: Means of Funds" is constructed for every country and is given in the table below. Also, the data classify all countries according to their total capitalisation (see variable "size"). The data are also provided in the file `Mutual_Funds.xlsx`.
+A mutual funds investor wants to examine the relationship between the number of mutual funds and the degree of market capitalisation in EU countries in 2001. Her dataset for mutual funds includes property funds, derivatives funds, venture capital funds, funds of funds, speculative funds, open end funds, closed end funds, equities funds, bond funds, etc. From all these funds the index "MoF: Means of Funds" is constructed for every country. The data classify all countries according to their total capitalisation (see variable "size"). The data are also provided in the file `Mutual_Funds.xlsx`.
 
+::: {.callout-note collapse="true" title="Data"}
 | Country | MoF (Y) | Size (X) | Y/σ | X/σ |
 |---------|---------|----------|-----|-----|
 | Austria | 0.1866 | 9 | 3.0112 | 145.2236 |
@@ -59,6 +60,7 @@ A mutual funds investor wants to examine the relationship between the number of 
 | Spain | 84.3846 | 6 | 0.5581 | 0.03968 |
 | Switzerland | 250.6153 | 4 | 0.2911 | 0.004647 |
 | United Kingdom | 0.1866 | 1 | 0.884 | 0.00109 |
+:::
 
 (a) Estimate the regression model: $Y = a + bX + u$ and explain the results.
 

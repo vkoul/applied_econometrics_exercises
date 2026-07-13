@@ -1,0 +1,34 @@
+# Multicollinearity — Key Ideas
+
+## What is multicollinearity?
+
+Multicollinearity means your explanatory variables are highly correlated with each other. Imagine trying to figure out whether it's heat or humidity making you uncomfortable — when both always move together, it's hard to separate their individual effects.
+
+## Why is it a problem?
+
+OLS still works — your estimates are still unbiased. But:
+
+- **Standard errors blow up** — you can't precisely estimate individual coefficients
+- **t-statistics shrink** — variables appear insignificant even when they matter
+- **Coefficients become unstable** — small changes in data cause big swings in estimates
+- **Signs may flip** — a variable you expect to be positive shows up negative
+
+The model as a whole (F-test, R²) can still look great. The damage is to *individual* coefficient estimates.
+
+## How to detect it
+
+- **Correlation matrix** — high pairwise correlations (above 0.8) are a red flag
+- **VIF (Variance Inflation Factor)** — measures how much a coefficient's variance is inflated. VIF > 10 signals a serious problem
+- **Auxiliary regressions** — regress each X on all other Xs. High R² means that X is well-explained by the others (it's redundant)
+- **Symptom check** — high R² but few significant t-stats? Classic multicollinearity sign
+
+## What to do about it
+
+- Drop one of the collinear variables (if theory permits)
+- Combine variables (e.g., use a ratio or index)
+- Get more data (sometimes helps, often doesn't)
+- Accept it — if you only care about prediction, not individual coefficients, multicollinearity isn't really a problem
+
+## Intuition for the exercises
+
+In Exercise 5.1, you have GDP and CPI as explanatory variables for imports. Both tend to grow over time — they're correlated. You'll see that running separate regressions gives different results than running them together. The auxiliary regression (GDP on CPI) tells you how much of the "blame" goes to multicollinearity vs. genuine insignificance.

@@ -2,8 +2,9 @@
 
 ## Exercise 12.1
 
-The file `Binary_Loan` contains data for the following variables:
+The file `Binary_Loan` contains data on loan approval decisions and applicant characteristics.
 
+::: {.callout-note collapse="true" title="Data Description"}
 | Variable | Description |
 |----------|-------------|
 | appinc | applicant income, $1000s |
@@ -25,6 +26,7 @@ The file `Binary_Loan` contains data for the following variables:
 | mortlat2 | > 2 late payments |
 | loanprc | amount/price |
 | white | = 1 if White |
+:::
 
 (a) Estimate the effect of White on approve, using the Probit model.
 

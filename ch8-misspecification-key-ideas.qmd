@@ -1,0 +1,34 @@
+# Misspecification — Key Ideas
+
+## What is model misspecification?
+
+Your regression assumes a specific relationship between variables. If that assumption is wrong — wrong functional form, missing variables, or irrelevant variables included — your model is *misspecified*. The estimates may be biased, and your conclusions unreliable.
+
+## Types of misspecification
+
+**Wrong functional form** — The true relationship is curved but you fitted a straight line. Or it's logarithmic but you used levels.
+
+**Omitted variables** — You left out something important that's correlated with your included variables. This biases your estimates.
+
+**Irrelevant variables** — You included something that doesn't belong. This doesn't bias anything but inflates standard errors (wastes degrees of freedom).
+
+## Functional forms — which to use?
+
+| Model | Equation | Interpretation of β |
+|-------|----------|-------------------|
+| Linear | $Y = \beta X$ | 1-unit increase in X → β-unit change in Y |
+| Log-linear | $\ln(Y) = \beta X$ | 1-unit increase in X → (β×100)% change in Y |
+| Linear-log | $Y = \beta \ln(X)$ | 1% increase in X → β/100 change in Y |
+| Double-log | $\ln(Y) = \beta \ln(X)$ | 1% increase in X → β% change in Y (elasticity) |
+
+## Key tools
+
+**Ramsey RESET test** — Tests whether your model needs nonlinear terms (squared, cubed values of fitted Y). If it rejects, your functional form is likely wrong.
+
+**Box-Cox transformation** — Helps you choose between linear and log specifications using a data-driven parameter λ. When λ = 1, use linear; when λ → 0, use logs.
+
+**Wald/F-tests for restrictions** — Test whether higher-order polynomial terms are needed (is the cost function cubic? quadratic? linear?).
+
+## Intuition for the exercises
+
+Exercise 8.2 asks: is the cost function linear, quadratic, or cubic? You start with the most general form (cubic) and test downward. Exercise 8.4 compares four different functional forms for the same relationship — the point is that the "right" specification isn't obvious; you need to test for it.

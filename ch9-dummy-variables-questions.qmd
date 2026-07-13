@@ -2,8 +2,9 @@
 
 ## Exercise 9.1
 
-The file `wage2.dum.xls` contains the following cross-sectional data:
+The file `wage2.dum.xls` contains cross-sectional data on wages and individual characteristics.
 
+::: {.callout-note collapse="true" title="Data Description"}
 | Variable | Description |
 |----------|-------------|
 | wage | monthly earnings |
@@ -22,6 +23,7 @@ The file `wage2.dum.xls` contains the following cross-sectional data:
 | brthord | birth order |
 | meduc | mother's education |
 | feduc | father's education |
+:::
 
 (a) Use the data to estimate the following model:
 
@@ -45,8 +47,9 @@ Discuss your results. Has the coefficient for the dummy variable "black" changed
 
 ## Exercise 9.2
 
-The file `BWGHT_DUM.xls` contains the following variables for 1,388 US mothers:
+The file `BWGHT_DUM.xls` contains data for 1,388 US mothers on birth weight and related factors.
 
+::: {.callout-note collapse="true" title="Data Description"}
 | Variable | Description |
 |----------|-------------|
 | faminc | 1988 family income, $1000s |
@@ -63,6 +66,7 @@ The file `BWGHT_DUM.xls` contains the following variables for 1,388 US mothers:
 | bwghtlbs | birth weight, pounds |
 | packs | packs smoked per day while pregnant |
 | lfaminc | log(family income) |
+:::
 
 (a) Use the data to estimate the following regression:
 
@@ -80,8 +84,9 @@ and discuss your results.
 
 ## Exercise 9.3
 
-The file `SLEEP_DUM.xls` contains the following variables:
+The file `SLEEP_DUM.xls` contains data on sleep patterns, wages, and individual characteristics.
 
+::: {.callout-note collapse="true" title="Data Description"}
 | Variable | Description |
 |----------|-------------|
 | age | in years |
@@ -106,6 +111,7 @@ The file `SLEEP_DUM.xls` contains the following variables:
 | yngkid | = 1 if children under 3 years old present |
 | yrsmarr | years married |
 | hrwage | hourly wage |
+:::
 
 (a) Estimate a model to check if males sleep more on average than females. What do you conclude?
 

@@ -1,0 +1,35 @@
+# Heteroskedasticity — Key Ideas
+
+## What is heteroskedasticity?
+
+In a well-behaved regression, the "noise" (error term) has the same spread for all observations — that's *homoskedasticity*. When the spread of errors changes systematically (e.g., richer people have more variable spending), that's *heteroskedasticity*.
+
+Think of it this way: if you're predicting house prices, your model might be off by $5,000 for cheap houses but off by $50,000 for expensive ones. The error variance grows with price.
+
+## Why is it a problem?
+
+- OLS estimates are still **unbiased** — the coefficients are still centred on the truth
+- But standard errors are **wrong** — your confidence intervals and t-tests can't be trusted
+- You might think a variable is significant when it's not (or vice versa)
+
+## How to detect it
+
+**Informal:**
+
+- Plot residuals vs. fitted values — look for a "funnel" or "fan" shape
+
+**Formal tests:**
+
+- **White test** — general test, doesn't assume a specific form of heteroskedasticity
+- **Breusch-Pagan test** — tests if error variance depends on the explanatory variables
+- **Goldfeld-Quandt test** — splits data into two groups and compares variances
+
+## How to fix it
+
+- **Robust standard errors (White/HC)** — keep OLS but correct the standard errors. Simplest fix and often sufficient
+- **Weighted Least Squares (WLS)** — give less weight to observations with higher variance. Requires knowing (or guessing) the form of heteroskedasticity
+- **Log transformation** — taking logs of the dependent variable often stabilises variance (because it compresses large values)
+
+## Intuition for the exercises
+
+In Exercise 6.1, house prices have more variable errors for larger houses (more sqfeet = more variation in price). You'll test for this, then try fixing it by "weighting down" the noisy observations. Exercise 6.5 shows that simply taking log(price) can eliminate heteroskedasticity — a practical trick used constantly in applied work.

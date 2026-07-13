@@ -68,6 +68,7 @@ The file `Cobb_Douglas_us.wf1` contains data for output ($Y$), labour ($L$) and 
 
 The Excel dataset `MRW.xls` contains data on real GDP per capita and related variables from the Penn World Table for a sample of 121 countries. This dataset was used to estimate growth equations by N. G. Mankiw, D. Romer and D. N. Weil, "A contribution to the empirics of economic growth", *Quarterly Journal of Economics*, 1992.
 
+::: {.callout-note collapse="true" title="Data Description"}
 The dataset contains 11 variables:
 
 | Variable | Description |
@@ -83,6 +84,7 @@ The dataset contains 11 variables:
 | popgrowth | average annual growth rate of working age population (1960–1985) |
 | iy | real investment as share of real GDP, averaged 1960–85 |
 | school | % of working age population in secondary school |
+:::
 
 (a) Create a suitable data frame for cross-sectional data for 121 observations.
 

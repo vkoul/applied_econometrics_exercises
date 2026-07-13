@@ -1,0 +1,36 @@
+# Dummy Variables — Key Ideas
+
+## What are dummy variables?
+
+Dummy variables turn qualitative categories (male/female, married/single, north/south) into numbers your regression can use. They take the value 1 or 0:
+
+$$\text{male} = \begin{cases} 1 & \text{if male} \\ 0 & \text{if female} \end{cases}$$
+
+## How do they work in regression?
+
+In the model $\text{wage} = \beta_0 + \beta_1 \text{male} + u$:
+
+- For females: $E[\text{wage}] = \beta_0$ (the baseline)
+- For males: $E[\text{wage}] = \beta_0 + \beta_1$
+
+So $\beta_1$ is the *difference* between the two groups. If $\beta_1 = 200$, males earn $200 more on average.
+
+## The dummy variable trap
+
+If you have 3 categories (north/south/west), you need only **2** dummies. If you include all 3 plus a constant, you get perfect multicollinearity. The excluded category becomes your *reference group* — all coefficients are measured relative to it.
+
+## Interaction effects
+
+You can let a dummy change both the intercept *and* the slope:
+
+$$Y = \beta_0 + \beta_1 D + \beta_2 X + \beta_3 (D \times X) + u$$
+
+Here $\beta_1$ shifts the intercept for group D=1, and $\beta_3$ changes how X affects Y for that group.
+
+## Structural breaks (Chow test)
+
+Does the relationship change before and after an event? Use dummies for time periods and test whether coefficients differ. If they do, you have a "structural break" — one model doesn't fit both periods.
+
+## Intuition for the exercises
+
+Exercise 9.1 asks whether being Black affects wages. First a simple comparison (just the dummy), then adding controls (education, experience). The key insight: the raw wage gap combines discrimination *and* differences in characteristics. Adding controls isolates the gap that can't be explained by observable differences. Watch how the dummy coefficient changes as you add variables — that tells you what's driving the gap.
